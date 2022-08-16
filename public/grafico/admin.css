@@ -218,6 +218,52 @@
     margin-bottom: 15px;
 }
 
+/* ========== Atualizacao do dispositivo ========== */
+.frame-update {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.frame-update .update{
+  height: 530px;
+  width: 586px;
+  background-image: url('../img/fundo lista 584x528.png');
+  border: none;
+  align-items: left;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.frame-update .update .info{
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  flex-direction: column;
+}
+
+.frame-update .update .info p{
+  height: 12px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.frame-update .loading{
+  animation: is-rotating 1.5s linear infinite;
+  border: 8px solid #FAEFC0;
+  border-radius: 50%;
+  border-top-color: #F37021;
+  background-color: transparent;
+  margin-top: 15px;
+  margin-bottom: 17px;
+  margin-left: 220px;
+  height: 53px;
+  width: 53px;
+}
+
 /* ========== Janela para confirmar exclusao ========== */
 .janela-confirmaExclusao {
   height:280px;
