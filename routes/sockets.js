@@ -43,6 +43,8 @@ var emailTramontina = 'gabriel.romio@tramontina.com' //Configura e-mail interno 
 var cargaBateria = 0
 var arrayBateria = []
 
+var identificacaoOrganizador = require("./identificacao");
+
 //Variáveis referentes à childprocess
 var childCam1
 var childCam2
@@ -235,7 +237,7 @@ function enviaEmail(data, novosRegistros){
       to: configuracaoAtual.email,
       bcc: emailTramontina,
       subject:'Relatório SmartManager4.0',
-      text: '',
+      text: 'Relatório' + String(identificacaoOrganizador),
       attachments: [
         {
           filename: data + '.csv',
@@ -250,7 +252,7 @@ function enviaEmail(data, novosRegistros){
       to: configuracaoAtual.email,
       bcc: emailTramontina,
       subject:'Relatório SmartManager4.0',
-      text: 'Nenhum registro novo.'
+      text: 'Relatório ' + String(identificacaoOrganizador) + '\nNenhum registro novo.'
     }
   }
   remetente.sendMail(email, function(error){
@@ -542,7 +544,7 @@ const method = function (io) {
               return;
             }
             if (stdout) {
-              console.log('Retorno bateria: ' + stdout)
+              //console.log('Retorno bateria: ' + stdout)
               if(stdout[1]=='0' && stdout[2]=='0'){ //Bateria com o carregador desconectado
                 if (arrayBateria.length==0){
                   cargaBateria = stdout[0]
