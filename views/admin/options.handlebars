@@ -176,7 +176,7 @@
                 <div style="margin-top: 120px">
                   <p>Excluir registros com ferramentas devolvidas:</p>
                 </div>
-                <div style="margin-top:20px; margin-left: 80px">
+                <div style="margin-top:20px; margin-left: 70px">
                   <button type="submit" class="btns" onclick="excluirRegistros(0)">
                     <p>Excluir</p>
                   </button>
@@ -184,7 +184,7 @@
                 <div style="margin-top: 50px">
                   <p>Excluir todos os registros:</p>
                 </div>
-                <div style="margin-top:20px; margin-left: 80px">
+                <div style="margin-top:20px; margin-left: 70px">
                   <button type="submit" class="btns" onclick="excluirRegistros(1)">
                     <p>Excluir</p>
                   </button>
@@ -198,7 +198,7 @@
                 <div style="margin-top: 200px">
                   <p>Atualizar dispositivo para a versão mais recente:</p>
                 </div>
-                <div style="margin-top:20px; margin-left: 90px">
+                <div style="margin-top:20px; margin-left: 80px">
                   <a href="/admin/atualizacao" style="text-decoration: none"><button type="submit" class="btns">
                     <p>Atualizar</p>
                   </button></a>
@@ -222,6 +222,7 @@
       var strFechamento = ['5 min', '10 min', '20 min', '30 min', 'Nunca']
       var confCartao = {{configuracoes.cartao}};
       var confDesligamento = {{configuracoes.desligamento}};
+      var emailAtual = document.getElementById("boxEmail").value
       var strDesligamento = ['15 min', '30 min', '1 hora', '2 horas', 'Nunca']
       //var mail = document.getElementById("email").innerHTML;
       //confEmail = document.getElementById("email").innerHTML;
@@ -328,6 +329,7 @@
 
       function editEmail(){
         //document.getElementById("boxEmail").value = '';
+        document.getElementById("boxEmail").value = emailAtual;
         document.getElementById("SelectOptions").style = "visibility:visible";
         document.getElementById("Tab1").style = "display:none";
         document.getElementById("line-1").style = "display:none";
@@ -389,6 +391,7 @@
 
       function salvaConfig(){
         var confEmail = document.getElementById("boxEmail").value
+        emailAtual = confEmail
         socket.emit('salvaConfiguracoes', confFechamento, confCartao, confDesligamento, confEmail)
       }
 
