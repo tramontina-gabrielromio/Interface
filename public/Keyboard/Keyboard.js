@@ -56,9 +56,17 @@ const Keyboard = {
 
         const concernedElementA = document.querySelector(".keyboard")
         const concernedElementB = document.querySelector(".use-keyboard-input")
+        const concernedElementC = document.querySelector(".use-keyboard-input-null")
 
         document.addEventListener("mousedown", (event) => {
             if (concernedElementA.contains(event.target)==0 && concernedElementB.contains(event.target)==0){
+                memoriaAcento = ''
+                this.close();
+            }
+        })
+
+        document.addEventListener("mousedown", (event) => {
+            if (concernedElementA.contains(event.target)==0 && concernedElementC.contains(event.target)==0){
                 memoriaAcento = ''
                 this.close();
             }
