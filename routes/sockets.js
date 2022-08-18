@@ -237,7 +237,7 @@ function enviaEmail(data, novosRegistros){
       to: configuracaoAtual.email,
       bcc: emailTramontina,
       subject:'Relatório SmartManager4.0',
-      text: 'Relatório' + String(identificacaoOrganizador),
+      text: 'Relatório ' + String(identificacaoOrganizador),
       attachments: [
         {
           filename: data + '.csv',
