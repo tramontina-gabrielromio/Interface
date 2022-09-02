@@ -9,7 +9,7 @@ const app = express()
 const admin = require("./routes/admin") //Vincula com o arquivo admin.js
 
 //Descomentar a linha para alimentar o banco de dados com informações referentes às ferramentas
-//const database = require("./routes/database") //Vincula com o arquivo database.js
+//7const database = require("./routes/database") //Vincula com o arquivo database.js
 
 const path = require("path")
 const session = require("express-session")
