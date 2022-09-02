@@ -28,6 +28,7 @@ const usb = require('usb')
 const ngrok = require('ngrok')
 const child_process_dateTime = require("child_process");
 const dateFormat = require("dateformat");
+var kill = require("tree-kill");
 
 var redesNeuraisCarregadas = 0
 var FuncSenha = require("./senha");
@@ -97,7 +98,7 @@ timer.resume();*/
 
 //Carrega redes neurais durante a inicialização
 var childRedeNeural
-inicializaRedesNeurais()
+//inicializaRedesNeurais()
 function inicializaRedesNeurais() {
   console.log('Carregando redes neurais...')
   childRedeNeural = spawn('/home/tramontina/Downloads/Interface/RedesNeurais', [], {detached: false});
@@ -256,11 +257,11 @@ function enviaEmail(data, novosRegistros){
     }
   }
   remetente.sendMail(email, function(error){
-      if(error){
-        console.log('Erro ao enviar email: ' + error);
+      //if(error){
+      //  console.log('Erro ao enviar email: ' + error);
         //Ao ocorrer um erro, tenta enviar e-mail novamente alguns instantes depois
-        adiaEnvioEmail()
-      }else{
+      //  adiaEnvioEmail()
+      //}else{
         console.log('Email enviado com sucesso')
         Evento.updateMany({enviado:0}, {enviado:1}).then((eventos) => { //Atualiza multiplos eventos, indicando que já foram transmitidos
           console.log("Eventos atualizados")
@@ -272,7 +273,7 @@ function enviaEmail(data, novosRegistros){
         }).catch((err) => {
           console.log("Erro ao sobrescrever configuracao: " + err)
         })
-      }
+      //}
   })
 }
 
@@ -641,6 +642,18 @@ const method = function (io) {
             abreGaveta(data)
             //carregaRedeNeural(data)
             //iniciaCameras(data)
+            //console.log("PID: " + childCam1.pid)
+            //console.log("PID: " + childCam2.pid)
+            try {
+              process.kill(childCam1.pid)
+            } catch (error){
+              console.log('Kill cam1 - Erro encontrado: ' + error)
+            }
+            try {
+              process.kill(childCam2.pid)
+            } catch (error){
+              console.log('Kill cam2 - Erro encontrado: ' + error)
+            }
             iniciaCam1(data)
             iniciaCam2(data)
           }
@@ -716,6 +729,16 @@ const method = function (io) {
             abrindoGV = 1
             bloqueiaAbertura = 1
             //carregaRedeNeural(gavetaEmMovimento)
+            try {
+              process.kill(childCam1.pid)
+            } catch (error){
+              console.log('Kill cam1 - Erro encontrado: ' + error)
+            }
+            try {
+              process.kill(childCam2.pid)
+            } catch (error){
+              console.log('Kill cam2 - Erro encontrado: ' + error)
+            }
             iniciaCam1(gavetaEmMovimento)
             iniciaCam2(gavetaEmMovimento)            
             abreGaveta(gavetaEmMovimento)
@@ -724,17 +747,17 @@ const method = function (io) {
         socket.on('GvTrancadaFGV', function() {
           auxFGVSemRedeNeural = 1
           try {
-            process.kill(-childCam1.pid)
+            process.kill(childCam1.pid)
           } catch (error){
             console.log('Kill cam1 - Erro encontrado: ' + error)
           }
           try {
-            process.kill(-childCam2.pid)
+            process.kill(childCam2.pid)
           } catch (error){
             console.log('Kill cam2 - Erro encontrado: ' + error)
           }
           try {
-            process.kill(-childRedeNeural.pid)
+            process.kill(childRedeNeural.pid)
           } catch (error){
             console.log('Kill rede neural - Erro encontrado: ' + error)
           }
@@ -760,7 +783,7 @@ const method = function (io) {
         function iniciaCam1(data){
           //console.log('iniciando camera da gaveta ' + data)
           childCam1 = spawn('/home/tramontina/Downloads/Interface/GetImages_GV' + data + '_c1', [], {detached: false});
-
+          console.log('PID inicial: ' + childCam1.pid)
           childCam1.on('exit', (code) => {
             console.log("Cam1 finalizada...")
           });
@@ -981,6 +1004,11 @@ const method = function (io) {
                 console.log("Gaveta fechada")
                 socket.emit('gavetaFechada', data);
                 if (auxFGVSemRedeNeural==0){
+                  try {
+                    process.kill(childRedeNeural.pid)
+                  } catch (error){
+                    console.log('Kill rede neural - Erro encontrado: ' + error)
+                  }
                   carregaRedeNeural(data)
                 }
                 else{
@@ -1008,17 +1036,17 @@ const method = function (io) {
                 //fechandoGV = 0
                 auxFGVSemRedeNeural = 1
                 try {
-                  process.kill(-childCam1.pid)
+                  process.kill(childCam1.pid)
                 } catch (error){
                   console.log('Kill cam1 - Erro encontrado: ' + error)
                 }
                 try {
-                  process.kill(-childCam2.pid)
+                  process.kill(childCam2.pid)
                 } catch (error){
                   console.log('Kill cam2 - Erro encontrado: ' + error)
                 }
                 try {
-                  process.kill(-childRedeNeural.pid)
+                  process.kill(childRedeNeural.pid)
                 } catch (error){
                   console.log('Kill rede neural - Erro encontrado: ' + error)
                 }
