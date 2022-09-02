@@ -23,6 +23,7 @@
     "pkg": "^5.7.0",
     "set-system-clock": "^1.0.4",
     "socket.io": "^4.4.1",
+    "tree-kill": "^1.2.2",
     "usb": "^2.4.1",
     "virtual-keyboard": "^1.30.3",
     "websub": "^0.4.0"
