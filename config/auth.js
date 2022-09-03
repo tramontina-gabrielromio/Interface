@@ -14,7 +14,7 @@ const method = function(passport){
     passwordField: 'senha',
   },
     function(nome, senha, done) {
-      if (senha==0){
+      if (senha.length<=3){
           console.log("Verificando rfid... ")
           Usuario.findOne({rfid: nome}).then((usuario) => {
             if(!usuario){
