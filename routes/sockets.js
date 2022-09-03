@@ -783,7 +783,7 @@ const method = function (io) {
         function iniciaCam1(data){
           //console.log('iniciando camera da gaveta ' + data)
           childCam1 = spawn('/home/tramontina/Downloads/Interface/GetImages_GV' + data + '_c1', [], {detached: false});
-          console.log('PID inicial: ' + childCam1.pid)
+          //console.log('PID inicial: ' + childCam1.pid)
           childCam1.on('exit', (code) => {
             console.log("Cam1 finalizada...")
           });
