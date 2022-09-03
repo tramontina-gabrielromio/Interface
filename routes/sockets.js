@@ -28,7 +28,6 @@ const usb = require('usb')
 const ngrok = require('ngrok')
 const child_process_dateTime = require("child_process");
 const dateFormat = require("dateformat");
-var kill = require("tree-kill");
 
 var redesNeuraisCarregadas = 0
 var FuncSenha = require("./senha");
