@@ -28,6 +28,7 @@ const usb = require('usb')
 const ngrok = require('ngrok')
 const child_process_dateTime = require("child_process");
 const dateFormat = require("dateformat");
+var kill = require("tree-kill");
 
 var redesNeuraisCarregadas = 0
 var FuncSenha = require("./senha");
@@ -49,6 +50,7 @@ var identificacaoOrganizador = require("./identificacao");
 var childCam1
 var childCam2
 var childRedeNeural
+var childVerificacao
 
 //Variáveis auxiliares para testes das gavetas
 var contRepeticoesGVEspecifica = 0
@@ -756,7 +758,7 @@ const method = function (io) {
             console.log('Kill cam2 - Erro encontrado: ' + error)
           }
           try {
-            process.kill(childRedeNeural.pid)
+            process.kill(childVerificacao.pid)
           } catch (error){
             console.log('Kill rede neural - Erro encontrado: ' + error)
           }
@@ -871,9 +873,9 @@ const method = function (io) {
         function carregaRedeNeural(gaveta) {
           //console.log('Carregando rede neural da gaveta ' + gaveta)
           var falhaCameras = 0;
-          childRedeNeural = spawn('/home/tramontina/Downloads/Interface/Verificacao', ['GV'+gaveta], {detached: false});
+          childVerificacao = spawn('/home/tramontina/Downloads/Interface/Verificacao', ['GV'+gaveta], {detached: false});
           
-          childRedeNeural.on('exit', (code) => {
+          childVerificacao.on('exit', (code) => {
               //impedeFGV1 = 0;
               //socket.emit('show_view', 1);
               //console.log('Child process exited with code ' + code);
@@ -886,7 +888,7 @@ const method = function (io) {
               //}
               //enviaResultadoRedeNeural(ItensErrados[gaveta-1]);
           });
-          childRedeNeural.stdout.on('data', (data) => {
+          childVerificacao.stdout.on('data', (data) => {
               console.log('Resultado da rede: ' + data)
               if(data=='FCAM1'){ 
                 falhaCameras = 1;
@@ -934,7 +936,7 @@ const method = function (io) {
                 }
               }
           });
-          childRedeNeural.stderr.on('data', (data) => {
+          childVerificacao.stderr.on('data', (data) => {
               //console.log('stderr: ' + data);
           });
         }
@@ -1004,7 +1006,7 @@ const method = function (io) {
                 socket.emit('gavetaFechada', data);
                 if (auxFGVSemRedeNeural==0){
                   try {
-                    process.kill(childRedeNeural.pid)
+                    process.kill(childVerificacao.pid)
                   } catch (error){
                     console.log('Kill rede neural - Erro encontrado: ' + error)
                   }
@@ -1045,7 +1047,7 @@ const method = function (io) {
                   console.log('Kill cam2 - Erro encontrado: ' + error)
                 }
                 try {
-                  process.kill(childRedeNeural.pid)
+                  process.kill(childVerificacao.pid)
                 } catch (error){
                   console.log('Kill rede neural - Erro encontrado: ' + error)
                 }
