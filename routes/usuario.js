@@ -58,7 +58,7 @@ router.get("/historico", (req, res) => {
         res.render("usuarios/historico", {eventos: eventos, busca: '', skip: 0, pgi:1, pgf:parseInt(count/qtdRegistros)+1})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     })
   }
@@ -101,7 +101,7 @@ router.post("/historico/skipm", (req, res) => {
         res.render("usuarios/historico", {eventos: eventos, busca: req.body.dataSearch, skip:skip, pgi:parseInt(skip/qtdRegistros)+1, pgf:parseInt(count/qtdRegistros)+1})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     })
   }
@@ -140,7 +140,7 @@ router.post("/historico/skipp", (req, res) => {
         res.render("usuarios/historico", {eventos: eventos, busca: req.body.dataSearch, skip:skip, pgi:parseInt(skip/qtdRegistros)+1, pgf:parseInt(count/qtdRegistros)+1})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     })
   }
@@ -176,7 +176,7 @@ router.post("/historico/buscar", (req, res) => {
         res.render("usuarios/historico", {eventos: eventos, busca: req.body.dataSearch, skip: 0, pgi:1, pgf:parseInt(count/qtdRegistros)+1})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     })
   }
@@ -285,7 +285,7 @@ router.post("/historico/reordenar", (req, res) => {
         res.render("usuarios/historico", {eventos: eventos, /*reordenar: reordenar,*/ busca: req.body.dataSearch, skip: 0, pgi:1, pgf:parseInt(count/qtdRegistros)+1})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     })
   }
@@ -318,7 +318,7 @@ router.get("/tools",  (req, res) => {
       res.render("usuarios/tools", {ferramentas: ferramentas, busca: ''})
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro interno")
-      res.redirect("/404")
+      res.redirect("/404?data=" + err);
     })
   }
   else
@@ -350,7 +350,7 @@ router.post("/tools/buscar",  (req, res) => {
       res.render("usuarios/tools", {ferramentas: ferramentas, busca: req.body.toolSearch})
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro interno")
-      res.redirect("/404")
+      res.redirect("/404?data=" + err);
     })
   }
   else
@@ -366,12 +366,12 @@ router.get("/retiradas:id",  (req, res) => {
         res.render("usuarios/retiradas", {ferramentas: ferramentas, retiradas:-ferramentas.length})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     }
   }).catch((err) => {
     req.flash("error_msg", "Houve um erro interno")
-    res.redirect("/404")
+    res.redirect("/404?data=" + err);
   })
 })
 
@@ -411,7 +411,7 @@ router.get("/main", logged, (req, res) => {
       res.render("usuarios/main", {/*usuario: req.user.nome, */eventos: eventos, usuario: usuarioatual})
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro interno")
-      res.redirect("/404")
+      res.redirect("/404?data=" + err);
     })
   }
   else
@@ -443,12 +443,12 @@ router.get("/gaveta:gaveta", logged, (req, res) => {
       res.render("usuarios/gaveta", {gaveta: req.params.gaveta, usuario: usuarioatual, ferramentas: ferramentas})
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro interno")
-      res.redirect("/404")
+      res.redirect("/404?data=" + err);
     })
   }
   else{
     req.flash("error_msg", "A gaveta não pode ser acessada pelo usuário")
-    res.redirect("/404")
+    res.redirect("/404?data=" + err);
   }
 })
 
@@ -482,12 +482,12 @@ router.post("/gaveta", logged, (req, res) => {
         res.render("usuarios/gaveta", {gaveta: req.body.gav, usuario: usuarioatual, ferramentas: ferramentas})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     }
     else{
       req.flash("error_msg", "A gaveta não pode ser acessada pelo usuário")
-      res.redirect("/404")
+      res.redirect("/404?data=" + err);
     }
   }
 })

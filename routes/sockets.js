@@ -568,7 +568,8 @@ const method = function (io) {
                 //console.log('Array bateria: ' + arrayBateria)
                 //console.log('Carga bateria: ' + cargaBateria)
                 //console.log('Nivel bateria: ' + ((cargaBateria-2)*20+'%'));
-                socket.emit('atualizaBateria', ((cargaBateria-2)*20+'%'))
+				if (cargaBateria>6) cargaBateria=6;
+                socket.emit('atualizaBateria', ((cargaBateria-1)*20+'%'))
 
                 if (cargaBateria==1){ //Nivel de bateria minimo, desliga pc
                                       //1 é o nivel minimo, 0 indica que a placa está desconectada

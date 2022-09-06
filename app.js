@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const {spawn} = require('child_process');
 const app = express()
+const router = express.Router()
 
 const admin = require("./routes/admin") //Vincula com o arquivo admin.js
 
@@ -111,6 +112,11 @@ app.use("/socketglobal", socketglobal)
     res.render("index", {layout:false}); //Rendeniza a tela sem o template utilizado nas demais telas
   })
 
+  app.get('/404', (req, res) => {
+    console.log("Error: " + req.query.data)
+    res.render("404", {erro:req.query.data});
+  })
+
   app.get('/usuarios', (req, res) => {
     req.logout(function (err){
       if (err){return next(err);}
@@ -120,11 +126,11 @@ app.use("/socketglobal", socketglobal)
         res.render("usuarios/usuarios", {usuarios: usuarios, configuracoes: configuracoes})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
-        res.redirect("/404")
+        res.redirect("/404?data=" + err);
       })
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro interno")
-      res.redirect("/404")
+      res.redirect("/404?data=" + err);
     })
   })
 
