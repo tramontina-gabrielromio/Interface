@@ -101,7 +101,7 @@ timer.resume();*/
 
 //Carrega redes neurais durante a inicialização
 var childRedeNeural
-//inicializaRedesNeurais()
+inicializaRedesNeurais()
 function inicializaRedesNeurais() {
   console.log('Carregando redes neurais...')
   childRedeNeural = spawn('/home/tramontina/Downloads/Interface/RedesNeurais', [], {detached: false});
@@ -369,9 +369,9 @@ function adiaEnvioEmail(){
   today=new Date();
   var min = today.getMinutes()
   var hora = today.getHours()
-  min = min+1
+  min = min+5
   if (min >= 60){
-    hora = hora+5
+    hora = hora+1
     min = 0
     if (hora >= 24){
       hora = 0
