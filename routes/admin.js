@@ -68,7 +68,7 @@ router.get("/options", admin,  (req, res) => {
     //console.log(configuracoes)
   }).catch((err) => {
     req.flash("error_msg", "Houve um erro interno")
-    res.redirect("/404")
+    res.redirect("/404?data=" + err);
   })
 })
 
@@ -171,7 +171,7 @@ router.get("/gvespecificahistorico", admin,  (req, res) => {
     res.render("admin/gvespecificahistorico", {eventos: dadosTestes})
   }).catch((err) => {
     req.flash("error_msg", "Houve um erro interno")
-    res.redirect("/404")
+    res.redirect("/404?data=" + err);
   })
 })
 
@@ -180,7 +180,7 @@ router.get("/todasgvhistorico", admin,  (req, res) => {
     res.render("admin/todasgvhistorico", {eventos: dadosTestes})
   }).catch((err) => {
     req.flash("error_msg", "Houve um erro interno")
-    res.redirect("/404")
+    res.redirect("/404?data=" + err);
   })
 })
 
@@ -197,7 +197,7 @@ router.get("/edituser", admin,  (req, res) => {
     res.render("admin/edituser", {usuarios: usuarios, busca: ''})
   }).catch((err) => {
     req.flash("error_msg", "Houve um erro interno")
-    res.redirect("/404")
+    res.redirect("/404?data=" + err);
   })
 })
 
@@ -206,7 +206,7 @@ router.post("/edituser/buscar", admin,  (req, res) => {
     res.render("admin/edituser", {usuarios: usuarios, busca: req.body.userLogin})
   }).catch((err) => {
     req.flash("error_msg", "Houve um erro interno")
-    res.redirect("/404")
+    res.redirect("/404?data=" + err);
   })
 })
 
