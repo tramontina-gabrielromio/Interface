@@ -28,6 +28,9 @@ const usb = require('usb')
 const ngrok = require('ngrok')
 const child_process_dateTime = require("child_process");
 const dateFormat = require("dateformat");
+const sgMail = require('@sendgrid/mail')
+const fs = require("fs")
+require('dotenv').config({path:'./sendgrid.env'});
 
 var redesNeuraisCarregadas = 0
 var FuncSenha = require("./senha");
@@ -98,7 +101,7 @@ timer.resume();*/
 
 //Carrega redes neurais durante a inicialização
 var childRedeNeural
-inicializaRedesNeurais()
+//inicializaRedesNeurais()
 function inicializaRedesNeurais() {
   console.log('Carregando redes neurais...')
   childRedeNeural = spawn('/home/tramontina/Downloads/Interface/RedesNeurais', [], {detached: false});
@@ -230,7 +233,7 @@ function geraRelatorio(data){
 }
 
 //enviaEmail('27/05/2022', 1)
-
+/*
 function enviaEmail(data, novosRegistros){
   if(novosRegistros==1){
     var email={
@@ -275,15 +278,100 @@ function enviaEmail(data, novosRegistros){
         })
       //}
   })
+}*/
+
+/*
+sendMailSendGrid()
+function sendMailSendGrid() {
+  pathToAttachment = `./relatorio.csv`;
+  attachment = fs.readFileSync(pathToAttachment).toString("base64");
+  const msg = {
+    to: 'gabrielbromio@hotmail.com', // Change to your recipientz
+    from: 'smart_manager4.0@outlook.com', // Change to your verified sender
+    bcc: emailTramontina,
+    subject:'Relatório SmartManager4.0',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    attachments: [
+      {
+        content: attachment,
+        filename: data + '.csv',
+        type: 'application/csv',
+        disposition: 'attachment'
+      },
+    ],
+  }
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email enviado com sucesso')
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+}*/
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+function enviaEmail(data, novosRegistros){
+  var email
+  if(novosRegistros==1){
+    pathToAttachment = `./relatorio.csv`;
+    attachment = fs.readFileSync(pathToAttachment).toString("base64");
+    email = {
+      to: configuracaoAtual.email, // Change to your recipientz
+      from: 'smart_manager4.0@outlook.com', // Change to your verified sender
+      bcc: emailTramontina,
+      subject:'Relatório SmartManager4.0',
+      text: 'Relatório ' + String(identificacaoOrganizador),
+      attachments: [
+        {
+          content: attachment,
+          filename: data + '.csv',
+          type: 'application/csv',
+          disposition: 'attachment'
+        },
+      ],
+    }
+  }
+  else{
+    email = {
+      to: configuracaoAtual.email, // Change to your recipientz
+      from: 'smart_manager4.0@outlook.com', // Change to your verified sender
+      bcc: emailTramontina,
+      subject:'Relatório SmartManager4.0',
+      text: 'Relatório ' + String(identificacaoOrganizador) + '\nNenhum registro novo.'
+    }
+  }
+  sgMail
+    .send(email)
+    .then(() => {
+      console.log('Email enviado com sucesso')
+      Evento.updateMany({enviado:0}, {enviado:1}).then((eventos) => { //Atualiza multiplos eventos, indicando que já foram transmitidos
+        console.log("Eventos atualizados")
+      }).catch((err) => {
+        console.log(err)
+      })
+      var date=new Date();
+      Configuracao.updateOne({_id:'000000000000000000000001'}, {$set: {dataRelatorio: String(date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear())}}).then(() => {
+      }).catch((err) => {
+        console.log("Erro ao sobrescrever configuracao: " + err)
+      })
+    })
+    .catch((error) => {
+      console.log('Erro ao enviar email: ' + error);
+      //Ao ocorrer um erro, tenta enviar e-mail novamente alguns instantes depois
+      adiaEnvioEmail()
+    })
 }
 
 function adiaEnvioEmail(){
   today=new Date();
   var min = today.getMinutes()
   var hora = today.getHours()
-  min = min+5
+  min = min+1
   if (min >= 60){
-    hora = hora+1
+    hora = hora+5
     min = 0
     if (hora >= 24){
       hora = 0
