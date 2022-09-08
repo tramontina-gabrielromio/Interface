@@ -16,7 +16,7 @@
       <div class="start" style="margin-top: 28vh">
         <div class="column">
           <div class="row">
-            <div class="logo_loading"></div>
+            <div onmousedown="skipLoadingMouseDown()" onmouseup="skipLoadingMouseUp()" class="logo_loading"></div>
           </div>
           <div class="row">
             <div class="logo_smartsystem"></div>
@@ -37,11 +37,24 @@
   <script>
     var socket = io.connect();
     contLoading = 1;
+    var start, end, dif;
 
     //setTimeout('showLoading()', 4400)
     //function showLoading(){
     //  document.getElementById("showLoading").style = "visibility:visible"
     //}
+
+    function skipLoadingMouseDown(){
+      start = Date.now()
+    }
+
+    function skipLoadingMouseUp(){
+      end = Date.now()
+      dif = end-start + 1
+      if((dif)>5000){//Clique maior do que 5s pula o carregamento
+        location.replace("/skiploading")
+      }
+    }
 
     verificaStatusRedesNeurais()
     function verificaStatusRedesNeurais(){

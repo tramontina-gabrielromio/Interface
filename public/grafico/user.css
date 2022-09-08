@@ -1088,6 +1088,26 @@
   background-image: url('../img/user msg 96x96.svg');
 }
 
+.bg-confirmacao .janela-confirmacao .contents .crash {
+  width: 96px;
+  height: 96px;
+  margin-left: 52px;
+  display: flex;
+  background-color: transparent;
+  border: transparent;
+  background-image: url('../img/crash.svg');
+}
+
+.bg-confirmacao .janela-confirmacao .contents .question {
+  width: 96px;
+  height: 96px;
+  margin-left: 52px;
+  display: flex;
+  background-color: transparent;
+  border: transparent;
+  background-image: url('../img/question.svg');
+}
+
 .bg-confirmacao .janela-confirmacao .contents .user:focus {
   width: 96px;
   height: 96px;

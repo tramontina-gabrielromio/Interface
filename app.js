@@ -112,6 +112,10 @@ app.use("/socketglobal", socketglobal)
     res.render("index", {layout:false}); //Rendeniza a tela sem o template utilizado nas demais telas
   })
 
+  app.get('/skiploading', (req, res) => {
+    res.render("skiploading"); //Rendeniza a tela sem o template utilizado nas demais telas
+  })
+
   app.get('/404', (req, res) => {
     console.log("Error: " + req.query.data)
     res.render("404", {erro:req.query.data});
