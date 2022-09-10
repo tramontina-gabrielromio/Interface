@@ -101,7 +101,7 @@ timer.resume();*/
 
 //Carrega redes neurais durante a inicialização
 var childRedeNeural
-inicializaRedesNeurais()
+//inicializaRedesNeurais()
 function inicializaRedesNeurais() {
   console.log('Carregando redes neurais...')
   childRedeNeural = spawn('/home/tramontina/Downloads/Interface/RedesNeurais', [], {detached: false});
@@ -134,8 +134,8 @@ function setDateTime(dateTime) {
 }
 
 //Configura leitura de pendrive
-const drivelist = require('drivelist')
-console.log("Drives encontrados: " + drivelist.list()) 
+//const drivelist = require('drivelist')
+//console.log("Drives encontrados: " + drivelist.list()) 
 
 //Configura acesso remoto
 //ngrokConnect()
@@ -177,7 +177,7 @@ schedule.scheduleJob('0 0 * * *', function(){
   geraRelatorio('registros')
 })
 
-var remetente = nodemailer.createTransport({
+/*var remetente = nodemailer.createTransport({
   host:'smtp.office365.com',
   service:'smtp.office365.com',
   port:587,
@@ -186,7 +186,7 @@ var remetente = nodemailer.createTransport({
     user:'smart_manager4.0@outlook.com',
     pass:'smartmanager40'
   }
-})
+})*/
 /*
 var remetente = nodemailer.createTransport({
   host:'smtp.gmail.com',
@@ -213,8 +213,11 @@ function geraRelatorio(data){
     .lean().populate("eventos").sort({_id: "asc"}).then((eventos) => {
       if(eventos.length>0){
         const csv = new ObjectsToCsv(eventos);
-        csv.toDisk('relatorio.csv')
-        enviaEmail(data, 1)
+        console.log('Gerando relatorio...')
+        csv.toDisk('relatorio.csv').then(function(){
+          console.log('Iniciando envio de e-mail...')
+          enviaEmail(data, 1)
+        })
       }
       else{
         enviaEmail(data, 0)
@@ -369,7 +372,7 @@ function adiaEnvioEmail(){
   today=new Date();
   var min = today.getMinutes()
   var hora = today.getHours()
-  min = min+5
+  min = min+1//5
   if (min >= 60){
     hora = hora+1
     min = 0
@@ -409,6 +412,11 @@ function editaConfiguracao(fechamento, cartao, desligamento, email){
     }
     else{
       Configuracao.updateOne({_id:'000000000000000000000001'}, {$set: {fechamento:fechamento, cartao:cartao, desligamento: desligamento, email: email}}).then(() => {
+        configuracaoAtual = {
+        fechamento: fechamento,
+        cartao: cartao,
+        desligamento: desligamento,
+        email: email}
       }).catch((err) => {
         console.log("Erro ao sobrescrever configuracao: " + err)
       })
