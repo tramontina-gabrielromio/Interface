@@ -225,9 +225,6 @@ function geraRelatorio(data){
     }).catch((err) => {
       console.log(err)
     })
-    schedule.scheduleJob('0 0 * * *', function(){
-      geraRelatorio('registros')
-    })
   }
   else{
     console.log('Wifi não conectado... adiando envio de e-mail')
@@ -350,6 +347,9 @@ function enviaEmail(data, novosRegistros){
     .send(email)
     .then(() => {
       console.log('Email enviado com sucesso')
+      setTimeout(() => { schedule.scheduleJob('0 0 * * *', function(){
+        geraRelatorio('registros')
+      });}, 90000);
       Evento.updateMany({enviado:0}, {enviado:1}).then((eventos) => { //Atualiza multiplos eventos, indicando que já foram transmitidos
         console.log("Eventos atualizados")
       }).catch((err) => {
@@ -372,7 +372,7 @@ function adiaEnvioEmail(){
   today=new Date();
   var min = today.getMinutes()
   var hora = today.getHours()
-  min = min+1//5
+  min = min+5
   if (min >= 60){
     hora = hora+1
     min = 0
