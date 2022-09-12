@@ -101,7 +101,7 @@ timer.resume();*/
 
 //Carrega redes neurais durante a inicialização
 var childRedeNeural
-//inicializaRedesNeurais()
+inicializaRedesNeurais()
 function inicializaRedesNeurais() {
   console.log('Carregando redes neurais...')
   childRedeNeural = spawn('/home/tramontina/Downloads/Interface/RedesNeurais', [], {detached: false});
