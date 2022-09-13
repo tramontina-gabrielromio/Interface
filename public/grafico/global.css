@@ -110,6 +110,14 @@
     display: flex;
 }
 
+.bateria-96 {
+    background: url('../img/bateria 96.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
 .bateria-80 {
     background: url('../img/bateria 80.svg') no-repeat;
     width: 49px;
@@ -118,24 +126,32 @@
     display: flex;
 }
 
-.bateria-60 {
-    background: url('../img/bateria 60.svg') no-repeat;
+.bateria-64 {
+    background: url('../img/bateria 64.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
     display: flex;
 }
 
-.bateria-40 {
-    background: url('../img/bateria 40.svg') no-repeat;
+.bateria-48 {
+    background: url('../img/bateria 48.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
     display: flex;
 }
 
-.bateria-20 {
-    background: url('../img/bateria 20.svg') no-repeat;
+.bateria-32 {
+    background: url('../img/bateria 32.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
+.bateria-16 {
+    background: url('../img/bateria 16.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
