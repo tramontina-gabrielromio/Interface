@@ -44,6 +44,8 @@ var redeWifiOk = 0
 var wifiLevel = 0
 var emailTramontina = 'gabriel.romio@tramontina.com' //Configura e-mail interno de usuario Tramontina para envio de registros
 var cargaBateria = 0
+var BateriaCarregando = 0
+var BateriaCarregada = 0
 var arrayBateria = []
 
 var identificacaoOrganizador = require("./identificacao");
@@ -101,7 +103,7 @@ timer.resume();*/
 
 //Carrega redes neurais durante a inicialização
 var childRedeNeural
-inicializaRedesNeurais()
+//inicializaRedesNeurais()
 function inicializaRedesNeurais() {
   console.log('Carregando redes neurais...')
   childRedeNeural = spawn('/home/tramontina/Downloads/Interface/RedesNeurais', [], {detached: false});
@@ -225,9 +227,6 @@ function geraRelatorio(data){
     }).catch((err) => {
       console.log(err)
     })
-    schedule.scheduleJob('0 0 * * *', function(){
-      geraRelatorio('registros')
-    })
   }
   else{
     console.log('Wifi não conectado... adiando envio de e-mail')
@@ -350,6 +349,9 @@ function enviaEmail(data, novosRegistros){
     .send(email)
     .then(() => {
       console.log('Email enviado com sucesso')
+      setTimeout(() => { schedule.scheduleJob('0 0 * * *', function(){
+        geraRelatorio('registros')
+      });}, 90000);
       Evento.updateMany({enviado:0}, {enviado:1}).then((eventos) => { //Atualiza multiplos eventos, indicando que já foram transmitidos
         console.log("Eventos atualizados")
       }).catch((err) => {
@@ -372,7 +374,7 @@ function adiaEnvioEmail(){
   today=new Date();
   var min = today.getMinutes()
   var hora = today.getHours()
-  min = min+1//5
+  min = min+5
   if (min >= 60){
     hora = hora+1
     min = 0
@@ -478,6 +480,13 @@ function shutdownPC() {
 
 function rebootPC() {
   const child = spawn('reboot');
+}
+
+function auxDesligamentoBateriaBaixa() {
+  if (BateriaCarregando==0){
+    console.log('Desligando o sistema por bateria baixa')
+    shutdownPC()
+  }
 }
 
 function novoEvento(ferramenta){
@@ -643,6 +652,8 @@ const method = function (io) {
             if (stdout) {
               //console.log('Retorno bateria: ' + stdout)
               if(stdout[1]=='0' && stdout[2]=='0'){ //Bateria com o carregador desconectado
+                BateriaCarregada = 0
+                BateriaCarregando = 0
                 if (arrayBateria.length==0){
                   cargaBateria = stdout[0]
                   arrayBateria[0] = cargaBateria
@@ -664,18 +675,27 @@ const method = function (io) {
                 //console.log('Array bateria: ' + arrayBateria)
                 //console.log('Carga bateria: ' + cargaBateria)
                 //console.log('Nivel bateria: ' + ((cargaBateria-2)*20+'%'));
-                socket.emit('atualizaBateria', ((cargaBateria-2)*20+'%'))
+                socket.emit('atualizaBateria', ((cargaBateria-1)*16+'%'))
+                console.log('Nivel bateria: ' + ((cargaBateria-1)*16+'%'))
 
-                if (cargaBateria==1){ //Nivel de bateria minimo, desliga pc
+                if (cargaBateria==1){ //Nivel de bateria minimo, desliga pc após temporizacao
                                       //1 é o nivel minimo, 0 indica que a placa está desconectada
-                  shutdownPC()
+                  console.log('Inicia timer de 5 minutos para desligar o sistema por bateria baixa')
+                  setTimeout(() => {  //Desliga sistema após 5 minutos
+                    //shutdownPC()
+                    auxDesligamentoBateriaBaixa()
+                  }, 300000);
                 }
               }
               else if (stdout[1]=='1'){ //Bateria carregada
+                BateriaCarregada = 1
+                BateriaCarregando = 0
                 arrayBateria = []
                 socket.emit('atualizaBateria', 'carregada')
               }
               else if (stdout[2]=='1'){ //Bateria carregando
+                BateriaCarregada = 0
+                BateriaCarregando = 1
                 arrayBateria = []
                 socket.emit('atualizaBateria', 'carregando')
               }
