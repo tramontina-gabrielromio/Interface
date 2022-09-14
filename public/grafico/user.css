@@ -34,6 +34,18 @@
     background-size: auto 100%;
 }
 
+.page-user .imagem_manual {
+    margin-top: 30px;
+    width: 889px;
+    height: 500px;
+    border: 1px solid #FAEFC0;
+    background-color: transparent;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
 /*.page-user .btn_up {
     width: 50px;
     height: 72px;
@@ -69,13 +81,13 @@
   background: url('../img/button-opacity-default-88.svg') no-repeat;
   width: 64px;
   height: 64px;
-  margin-right: 50px;
+  margin-right: 0px;
   justify-content: space-between;
   border: none;
   display: flex;
 }
 
-.page-user .btn_left:focus {
+.page-user .btn_left:active {
   background: url('../img/button-opacity-default-88.svg') no-repeat;
   width: 64px;
   height: 64px;
@@ -95,13 +107,13 @@
   background: url('../img/button-opacity-default-88.svg') no-repeat;
   width: 64px;
   height: 64px;
-  margin-left: 50px;
+  margin-left: 0px;
   justify-content: space-between;
   border: none;
   display: flex;
 }
 
-.page-user .btn_right:focus {
+.page-user .btn_right:active {
   background: url('../img/button-opacity-default-88.svg') no-repeat;
   width: 64px;
   height: 64px;
@@ -114,6 +126,21 @@
   margin: auto;
   font-size: 25px;
   width: 64px;
+  text-align: center;
+}
+
+.page-user .info-column {
+  margin-left: 10px;
+  flex-direction: column;
+}
+
+.page-user .info-column p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: #FAEFC0;
+  margin-top: 17px;
+  font-size: 20px;
+  margin-left: 0;
+  width: 180px;
   text-align: center;
 }
 
@@ -1101,7 +1128,7 @@
 .bg-confirmacao .janela-confirmacao .contents .question {
   width: 96px;
   height: 96px;
-  margin-left: 52px;
+  margin-left: 0px;
   display: flex;
   background-color: transparent;
   border: transparent;

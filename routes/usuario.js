@@ -375,7 +375,12 @@ router.get("/retiradas:id",  (req, res) => {
   })
 })
 
+const fs = require("fs")
+
 router.get("/usermanual", (req, res, next) => {
+  //var data = fs.readFileSync('/home/tramontina/Downloads/Interface/views/usuarios/manual.pdf')
+  //res.contentType("application/pdf")
+  //res.send(data)
   res.render("usuarios/usermanual")
 })
 
