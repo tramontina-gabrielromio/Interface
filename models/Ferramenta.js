@@ -25,6 +25,10 @@ const Ferramenta = new Schema({
   desconhecido:{
     type: Number,
     required: true
+  },
+  documentacao:{
+    type: String,
+    required: false
   }
 })
 

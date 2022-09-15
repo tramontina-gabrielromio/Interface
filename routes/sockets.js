@@ -671,12 +671,13 @@ const method = function (io) {
                   if(arrayBateria[0] == arrayBateria[1] && arrayBateria[1] == arrayBateria[2] && arrayBateria[2] == arrayBateria[3] 
                   && arrayBateria[3] == arrayBateria[4] && cargaBateria >= arrayBateria[0])
                     cargaBateria = arrayBateria[0];
+                    if (cargaBateria>5) cargaBateria=5;
                 }
                 //console.log('Array bateria: ' + arrayBateria)
                 //console.log('Carga bateria: ' + cargaBateria)
                 //console.log('Nivel bateria: ' + ((cargaBateria-2)*20+'%'));
-                socket.emit('atualizaBateria', ((cargaBateria-1)*16+'%'))
-                console.log('Nivel bateria: ' + ((cargaBateria-1)*16+'%'))
+                socket.emit('atualizaBateria', ((cargaBateria-1)*25+'%'))
+                console.log('Nivel bateria: ' + ((cargaBateria-1)*25+'%'))
 
                 if (cargaBateria==1){ //Nivel de bateria minimo, desliga pc após temporizacao
                                       //1 é o nivel minimo, 0 indica que a placa está desconectada
@@ -684,7 +685,7 @@ const method = function (io) {
                   setTimeout(() => {  //Desliga sistema após 5 minutos
                     //shutdownPC()
                     auxDesligamentoBateriaBaixa()
-                  }, 300000);
+                  }, 600000);
                 }
               }
               else if (stdout[1]=='1'){ //Bateria carregada

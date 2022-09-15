@@ -110,6 +110,30 @@
     display: flex;
 }
 
+.bateria-75 {
+    background: url('../img/bateria 75.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
+.bateria-50 {
+    background: url('../img/bateria 50.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
+.bateria-25 {
+    background: url('../img/bateria 25.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
 .bateria-96 {
     background: url('../img/bateria 96.svg') no-repeat;
     width: 49px;
@@ -313,6 +337,32 @@
     opacity: 0.5;
     border: none;
     display: flex;
+}
+
+.button-180 {
+    background: url('../img/button-opacity-default-216.svg') no-repeat;
+    width: 180px;
+    height: 55px;
+    border: none;
+    display: flex;
+}
+
+.button-180:active {
+    background: url('../img/button-opacity-default-216.svg') no-repeat;
+    width: 180px;
+    height: 55px;
+    opacity: 0.5;
+    border: none;
+    display: flex;
+}
+
+.button-180 p {
+    font-family: 'Coda', Arial, Helvetica, sans-serif;
+    color: #FAEFC0;
+    margin: auto 10px;
+    font-size: 20px;
+    width: 180px;
+    text-align: center;
 }
 
 .button-216 {

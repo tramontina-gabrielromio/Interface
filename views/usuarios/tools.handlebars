@@ -58,6 +58,7 @@
                 {{else}}
                   <td style="border-bottom:1px solid #FAEFC0; width: 15%; background-color: red; color: #FAEFC0">ausente</td>
                 {{/if}}
+                  <td style="display:none">{{documentacao}}</td>
                 </tr>
               {{else}}
                 </table>
@@ -82,6 +83,14 @@
           <div id="gav" class="button-132" style="margin-top:15px">
             <button onclick="abreGaveta()" id="botgav" class="btn-abregaveta"/>
           </div>
+        </div>
+        <div class="second-column" id="btn_documentacao" style="flex-direction:row; display:flex; justify-content:space-between; display:none">
+          <form action="/usuarios/documentacao" method="POST">
+            <input type="hidden" name="documentacao" id="idDocumentacao"/>
+            <button class="button-180" style="margin-top:12px; margin-left:51px" id="btShowDocumentacao" type="submit">
+              <p>Documentos</p>
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -135,6 +144,7 @@
     var tabela = document.getElementById("Tabela2");
     var linhas = tabela.getElementsByTagName("tr");
     document.getElementById("idShowGaveta").value = "";
+    document.getElementById("idDocumentacao").value = "";
     //document.getElementById("LogDeleteUser").value = "";
     //document.getElementById("CampoBusca").value = "";
     document.getElementById("CampoBusca").value=auxBusca
@@ -215,6 +225,8 @@
       gavetaSelecionada = selecionado[2].innerHTML;
       //document.getElementById("LogDeleteUser").value = selecionado[1].innerHTML;
       document.getElementById("img-tool").style = "background-image:url('../../imgTools/"+selecionado[0].innerHTML+".jpg')";
+      if(selecionado[4].innerHTML!='') document.getElementById("btn_documentacao").style = "display:visible";
+      else document.getElementById("btn_documentacao").style = "display:none";
     }
 
     /*Exemplo de como capturar os dados*/

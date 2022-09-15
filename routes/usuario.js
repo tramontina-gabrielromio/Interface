@@ -384,6 +384,10 @@ router.get("/usermanual", (req, res, next) => {
   res.render("usuarios/usermanual")
 })
 
+router.post("/documentacao", (req, res, next) => {
+  res.render("usuarios/documentacao")
+})
+
 router.get("/composicao", logged, (req, res) => {
   //userLogged('insertUserdata', req.user) //Após o login, armazena informações do usuário logado
   var usuarioatual = userLogged('showUserdata')

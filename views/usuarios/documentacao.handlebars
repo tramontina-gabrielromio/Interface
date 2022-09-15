@@ -1,0 +1,86 @@
+
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Viewer</title>
+  </head>
+  <body>
+  
+    <div>
+        <iframe src='manual.pdf' width="500" height="678"></iframe>
+    </div>
+
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/grafico/user.css">
+  <div class="head-left">
+    <a href="/usuarios/main"><button class="btn_home"></button></a>
+  </div>
+  <div class="head-right">
+    <a href="/usuarios/teladesligar"><button class="btn_shutdown"></button></a>
+  </div>
+</head>
+<body>
+  <div class="title">Documentos</div>
+  <div class="page-user" id="frame-main">
+    <div style="margin-left: 0px">
+      <div id="titulo" class="title"></div>
+      <div class="imagem_manual" id="paginaManual" style="background-image: url('../manual/manual-1.png')"></div>
+      <div class="page-user" style="margin-top: 33px">
+        <button id="idGaveta_up" onclick="manualPage_inicial()" class="btn_left"><p><<</p></button>
+        <button id="idGaveta_up" onclick="manualPage_down()" class="btn_left" style="margin-left:10px"><p><</p></button>
+        <div class="info-column">
+          <p id="identPagina"></p>
+        </div>
+        <button id="idGaveta_down" onclick="manualPage_up()" class="btn_right" style="margin-left:10px"><p>></p></button>
+        <button id="idGaveta_down" onclick="manualPage_final()" class="btn_right" style="margin-left:10px"><p>>></p></button>
+        </div>
+    </div>
+  </div>
+</body>
+<script  src="/socket.io/socket.io.js"></script>
+<script>
+  var pagina = 1
+  var numeroPaginas = 34
+  document.getElementById("identPagina").innerHTML = "Página " + String(pagina) + " de " + String(numeroPaginas)
+
+  function manualPage_up(){
+    if (pagina<numeroPaginas){
+      pagina = pagina+1
+      document.getElementById("identPagina").innerHTML = "Página " + String(pagina) + " de " + String(numeroPaginas)
+      document.getElementById('paginaManual').style.backgroundImage = "url('../manual/manual-" + String(pagina) + ".png')"
+    }
+  }
+
+  function manualPage_down(){
+    if (pagina>1){
+      pagina = pagina-1
+      document.getElementById("identPagina").innerHTML = "Página " + String(pagina) + " de " + String(numeroPaginas)
+      document.getElementById('paginaManual').style.backgroundImage = "url('../manual/manual-" + String(pagina) + ".png')"
+    }
+  }
+
+  function manualPage_inicial(){
+    pagina = 1
+    document.getElementById("identPagina").innerHTML = "Página " + String(pagina) + " de " + String(numeroPaginas)
+    document.getElementById('paginaManual').style.backgroundImage = "url('../manual/manual-" + String(pagina) + ".png')"
+  }
+
+  function manualPage_final(){
+    pagina = numeroPaginas
+    document.getElementById("identPagina").innerHTML = "Página " + String(pagina) + " de " + String(numeroPaginas)
+    document.getElementById('paginaManual').style.backgroundImage = "url('../manual/manual-" + String(pagina) + ".png')"
+  }
+
+</script>
+<foot>
+  <div class="footer">
+    <!--<a href="/usuarios/tools"><button class="btn_return"></button></a>-->
+    <button class="btn_return" onclick="history.back()"></button>
+  </div>
+</foot>
+</html>

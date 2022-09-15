@@ -52,18 +52,14 @@
         document.getElementById('bateria-show').className="bateria-carregada";
       else if (data == 'carregando')
         document.getElementById('bateria-show').className="bateria-carregando";
-      else if (data == '96%')
-        document.getElementById('bateria-show').className="bateria-96";
-      else if (data == '80%')
-        document.getElementById('bateria-show').className="bateria-80";
-      else if (data == '64%')
-        document.getElementById('bateria-show').className="bateria-64";
-      else if (data == '48%')
-        document.getElementById('bateria-show').className="bateria-48";
-      else if (data == '32%')
-        document.getElementById('bateria-show').className="bateria-32";
-      else if (data == '16%')
-        document.getElementById('bateria-show').className="bateria-16";
+      else if (data == '100%')
+        document.getElementById('bateria-show').className="bateria-full";
+      else if (data == '75%')
+        document.getElementById('bateria-show').className="bateria-75";
+      else if (data == '50%')
+        document.getElementById('bateria-show').className="bateria-50";
+      else if (data == '25%')
+        document.getElementById('bateria-show').className="bateria-25";
       else
         document.getElementById('bateria-show').className="bateria-piscando";
     })

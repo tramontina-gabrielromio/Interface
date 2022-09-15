@@ -199,12 +199,18 @@
     }
   });
 
+  function pageReturn(){
+    if (document.referrer=="http://localhost:8081/usuarios/main") window.location = "/usuarios/main"
+    else history.back()
+  }
+
 </script>
 
 <foot>
   <div class="footer" id="frame-rodape">
-    <a href="/usuarios/composicao"><button class="btn_return"></button></a>
-    <!--<button class="btn_return" onclick="pageReturn()"></button></a>-->
+    <!--<a href="/usuarios/composicao"><button class="btn_return"></button></a>-->
+    <button class="btn_return" onclick="pageReturn()"></button>
+    <!--<button class="btn_return" onclick="history.back()"></button>-->
   </div>
 </foot>
 </html>
