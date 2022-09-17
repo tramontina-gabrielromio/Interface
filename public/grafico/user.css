@@ -793,7 +793,7 @@
     margin-top: 20px;
 }
 
-.historico .lista-eventos .scroll {
+.historico .lista-eventos .scroll-eventos {
     height:399px;
     width:1210px;
     overflow:auto;
@@ -808,14 +808,14 @@
     overflow-y: scroll;
 }
   
-.historico .lista-eventos .scroll::-webkit-scrollbar {
+.historico .lista-eventos .scroll-eventos::-webkit-scrollbar {
   width: 20px;
 }
-.historico .lista-eventos .scroll::-webkit-scrollbar-track {
+.historico .lista-eventos .scroll-eventos::-webkit-scrollbar-track {
   background: transparent;
   border: 1px solid #FAEFC0;
 }
-.historico .lista-eventos .scroll::-webkit-scrollbar-thumb {
+.historico .lista-eventos .scroll-eventos::-webkit-scrollbar-thumb {
   background-color: #FAEFC0;
   border-radius: 0px;
   border: 3px solid transparent;
