@@ -682,10 +682,10 @@ const method = function (io) {
                 if (cargaBateria==0){ //Nivel de bateria minimo, desliga pc após temporizacao
                                       //1 é o nivel minimo, 0 indica que a placa está desconectada
                   console.log('Inicia timer de 5 minutos para desligar o sistema por bateria baixa')
-                  /*setTimeout(() => {  //Desliga sistema após 5 minutos
+                  setTimeout(() => {  //Desliga sistema após 5 minutos
                     //shutdownPC()
                     auxDesligamentoBateriaBaixa()
-                  }, 300000);*/
+                  }, 300000);
                 }
               }
               else if (stdout[1]=='1'){ //Bateria carregada
