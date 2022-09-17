@@ -110,16 +110,16 @@
     display: flex;
 }
 
-.bateria-75 {
-    background: url('../img/bateria 75.svg') no-repeat;
+.bateria-16 {
+    background: url('../img/bateria 16.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
     display: flex;
 }
 
-.bateria-50 {
-    background: url('../img/bateria 50.svg') no-repeat;
+.bateria-20 {
+    background: url('../img/bateria 20.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
@@ -134,24 +134,16 @@
     display: flex;
 }
 
-.bateria-96 {
-    background: url('../img/bateria 96.svg') no-repeat;
+.bateria-32 {
+    background: url('../img/bateria 32.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
     display: flex;
 }
 
-.bateria-80 {
-    background: url('../img/bateria 80.svg') no-repeat;
-    width: 49px;
-    height: 19px;
-    border: none;
-    display: flex;
-}
-
-.bateria-64 {
-    background: url('../img/bateria 64.svg') no-repeat;
+.bateria-40 {
+    background: url('../img/bateria 40.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
@@ -166,16 +158,48 @@
     display: flex;
 }
 
-.bateria-32 {
-    background: url('../img/bateria 32.svg') no-repeat;
+.bateria-50 {
+    background: url('../img/bateria 50.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;
     display: flex;
 }
 
-.bateria-16 {
-    background: url('../img/bateria 16.svg') no-repeat;
+.bateria-60 {
+    background: url('../img/bateria 60.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
+.bateria-64 {
+    background: url('../img/bateria 64.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
+.bateria-75 {
+    background: url('../img/bateria 75.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
+.bateria-80 {
+    background: url('../img/bateria 80.svg') no-repeat;
+    width: 49px;
+    height: 19px;
+    border: none;
+    display: flex;
+}
+
+.bateria-96 {
+    background: url('../img/bateria 96.svg') no-repeat;
     width: 49px;
     height: 19px;
     border: none;

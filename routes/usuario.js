@@ -385,7 +385,7 @@ router.get("/usermanual", (req, res, next) => {
 })
 
 router.post("/documentacao", (req, res, next) => {
-  res.render("usuarios/documentacao")
+  res.render("usuarios/documentacao", {documentacao: req.body.documentacao})
 })
 
 router.get("/composicao", logged, (req, res) => {

@@ -46,6 +46,47 @@
     background-size: auto 100%;
 }
 
+.page-user .scroll {
+  height:501px;
+  width:868px;
+  overflow:auto;
+  margin-left: 0px;
+  background: transparent;
+  border-top: 1px solid #FAEFC0;
+  border: transparent;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  overflow-x: hidden; /*Desabilita scrollbar horizontal*/
+  overflow-y: scroll;
+}
+
+.page-user .scroll::-webkit-scrollbar {
+  width: 20px;
+}
+.page-user .scroll::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid #FAEFC0;
+}
+.page-user .scroll::-webkit-scrollbar-thumb {
+  background-color: #FAEFC0;
+  border-radius: 0px;
+  border: 3px solid transparent;
+}
+
+.page-user .scroll .imagem_documento {
+    margin-top: 0px;
+    margin-left: -20px;
+    width: 889px;
+    height: 1200px;
+    border: 1px solid #FAEFC0;
+    background-color: transparent;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
 /*.page-user .btn_up {
     width: 50px;
     height: 72px;

@@ -46,7 +46,7 @@
               <td style="width: 15%; background-color: #202020; color: #FAEFC0">Estado</td>
             </tr>
           </table>
-          <div class="scroll" style="margin-top: -1px">
+          <div class="scroll">
             <table id='Tabela2'>
               {{#each ferramentas}}
                 <tr>
@@ -99,7 +99,7 @@
   </div>
 
   <dialog id="dialogGVTrancada" style="background: none; border: transparent">
-    <form method="dialog" >
+    <form method="dialog">
       <div class="janela-gavetaTrancada">
         <div class="contents" style="margin-top: 40px; margin-left: 40px">
           <div class="error"></div>
@@ -225,6 +225,7 @@
       gavetaSelecionada = selecionado[2].innerHTML;
       //document.getElementById("LogDeleteUser").value = selecionado[1].innerHTML;
       document.getElementById("img-tool").style = "background-image:url('../../imgTools/"+selecionado[0].innerHTML+".jpg')";
+      document.getElementById("idDocumentacao").value = selecionado[4].innerHTML;
       if(selecionado[4].innerHTML!='') document.getElementById("btn_documentacao").style = "display:visible";
       else document.getElementById("btn_documentacao").style = "display:none";
     }

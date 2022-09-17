@@ -676,16 +676,16 @@ const method = function (io) {
                 //console.log('Array bateria: ' + arrayBateria)
                 //console.log('Carga bateria: ' + cargaBateria)
                 //console.log('Nivel bateria: ' + ((cargaBateria-2)*20+'%'));
-                socket.emit('atualizaBateria', ((cargaBateria-1)*25+'%'))
-                console.log('Nivel bateria: ' + ((cargaBateria-1)*25+'%'))
+                socket.emit('atualizaBateria', ((cargaBateria)*20+'%'))
+                console.log('Nivel bateria: ' + ((cargaBateria)*20+'%'))
 
-                if (cargaBateria==1){ //Nivel de bateria minimo, desliga pc após temporizacao
+                if (cargaBateria==0){ //Nivel de bateria minimo, desliga pc após temporizacao
                                       //1 é o nivel minimo, 0 indica que a placa está desconectada
                   console.log('Inicia timer de 5 minutos para desligar o sistema por bateria baixa')
-                  setTimeout(() => {  //Desliga sistema após 5 minutos
+                  /*setTimeout(() => {  //Desliga sistema após 5 minutos
                     //shutdownPC()
                     auxDesligamentoBateriaBaixa()
-                  }, 600000);
+                  }, 300000);*/
                 }
               }
               else if (stdout[1]=='1'){ //Bateria carregada
