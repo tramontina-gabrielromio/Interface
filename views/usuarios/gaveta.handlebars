@@ -101,6 +101,7 @@
   var socket = io.connect();
   var estadoGV='F';
   var gavetaAtual = {{gaveta}}
+  var pgRetorno = {{pgBack}}
 
   document.getElementById('titulo').innerHTML = "Gaveta " + gavetaAtual;
 
@@ -200,8 +201,21 @@
   });
 
   function pageReturn(){
-    if (document.referrer=="http://localhost:8081/usuarios/main") window.location = "/usuarios/main"
-    else history.back()
+    //if (document.referrer=="http://localhost:8081/usuarios/main") window.location = "/usuarios/main"
+    //else history.back()
+    //if('referrer' in document){
+    //  window.location = document.referrer;
+    //}
+    //else{
+    //  history.go(-1)
+    //}
+    //window.location.assign(history.back())
+    if (pgRetorno==0) //Retorna e recarrega a página main
+      window.location = "/usuarios/main"
+    else if (pgRetorno==1) //Retorna e recarrega a página ferramentas
+      window.location = "/usuarios/tools"
+    else //Retorna e recarrega a página composiçao
+      window.location = "/usuarios/composicao"
   }
 
 </script>

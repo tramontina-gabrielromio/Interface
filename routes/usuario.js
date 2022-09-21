@@ -427,6 +427,40 @@ router.get("/main", logged, (req, res) => {
     res.render("usuarios/main", {/*usuario: req.user.nome, */eventos: null, usuario: usuarioatual})
 })
 
+router.get("/compGaveta:gaveta", logged, (req, res) => {
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv2) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv3) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv4) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv5) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv6) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv7) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv8) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+
+  if (buscaAcessiveis[(req.params.gaveta)-1]==1){
+    Ferramenta.find({gaveta:req.params.gaveta}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+      res.render("usuarios/gaveta", {gaveta: req.params.gaveta, usuario: usuarioatual, ferramentas: ferramentas, pgBack: 2})
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro interno")
+      res.redirect("/404?data=" + err);
+    })
+  }
+  else{
+    req.flash("error_msg", "A gaveta não pode ser acessada pelo usuário")
+    res.redirect("/404?data=" + err);
+  }
+})
+
 router.get("/gaveta:gaveta", logged, (req, res) => {
   var usuarioatual = userLogged('showUserdata')
   var buscaAcessiveis = []
@@ -449,7 +483,7 @@ router.get("/gaveta:gaveta", logged, (req, res) => {
 
   if (buscaAcessiveis[(req.params.gaveta)-1]==1){
     Ferramenta.find({gaveta:req.params.gaveta}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
-      res.render("usuarios/gaveta", {gaveta: req.params.gaveta, usuario: usuarioatual, ferramentas: ferramentas})
+      res.render("usuarios/gaveta", {gaveta: req.params.gaveta, usuario: usuarioatual, ferramentas: ferramentas, pgBack: 0})
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro interno")
       res.redirect("/404?data=" + err);
@@ -488,7 +522,7 @@ router.post("/gaveta", logged, (req, res) => {
   else{
     if (buscaAcessiveis[(req.body.gav)-1]==1){
       Ferramenta.find({gaveta:req.body.gav}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
-        res.render("usuarios/gaveta", {gaveta: req.body.gav, usuario: usuarioatual, ferramentas: ferramentas})
+        res.render("usuarios/gaveta", {gaveta: req.body.gav, usuario: usuarioatual, ferramentas: ferramentas, pgBack: 1})
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro interno")
         res.redirect("/404?data=" + err);
