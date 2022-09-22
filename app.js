@@ -89,14 +89,17 @@ app.use("/socketglobal", socketglobal)
   app.set('view engine', 'handlebars')
   //Mongoose
   mongoose.Promise = global.Promise
-  mongoose.connect("mongodb://administrador:EapIk9oc@127.0.0.1/organizadorinteligente?authSource=admin", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }).then(() => {
-    console.log("Conectado ao database")
-  }).catch((err) => {
-    console.log("Erro ao se conectar: " + err)
-  })
+  conectaDatabase()
+  async function conectaDatabase(){
+	  await mongoose.connect("mongodb://administrador:EapIk9oc@127.0.0.1/organizadorinteligente?authSource=admin", {
+		useNewUrlParser: true,
+		useUnifiedTopology: true
+	  }).then(() => {
+		console.log("Conectado ao database")
+	  }).catch((err) => {
+		console.log("Erro ao se conectar: " + err)
+	  })
+  }
   //Public
   app.use(express.static(path.join(__dirname, "public"))) //Indica que o diretório em que estão os arquivos estáticos é a pasta public
 
