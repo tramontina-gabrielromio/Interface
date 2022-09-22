@@ -89,7 +89,7 @@ app.use("/socketglobal", socketglobal)
   app.set('view engine', 'handlebars')
   //Mongoose
   mongoose.Promise = global.Promise
-  mongoose.connect("mongodb://administrador:EapIk9oc@localhost/organizadorinteligente?authSource=admin", {
+  mongoose.connect("mongodb://administrador:EapIk9oc@127.0.0.1/organizadorinteligente?authSource=admin", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   }).then(() => {
