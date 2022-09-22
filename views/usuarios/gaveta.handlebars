@@ -2,11 +2,13 @@
 <html>
 <head>
   <link rel="stylesheet" href="/grafico/user.css">
-  <div class="head-left">
-    <a href="/usuarios/main"><button class="btn_home"></button></a>
-  </div>
-  <div class="head-right">
-    <a href="/usuarios/teladesligar"><button class="btn_shutdown"></button></a>
+  <div id="frame-head">
+    <div class="head-left">
+      <a href="/usuarios/main"><button class="btn_home"></button></a>
+    </div>
+    <div class="head-right">
+      <a href="/usuarios/teladesligar"><button class="btn_shutdown"></button></a>
+    </div>
   </div>
 </head>
 <body>
@@ -141,11 +143,13 @@
   socket.on('bloqueiaInteracaoUsuario', function(){
       document.getElementById('frame-main').style.pointerEvents = "none"
       document.getElementById('frame-rodape').style.pointerEvents = "none"
+      document.getElementById('frame-head').style.pointerEvents = "none"
     })
 
   socket.on('gavetaAberta', function(data){
     document.getElementById('frame-main').style.pointerEvents = "auto"
     document.getElementById('frame-rodape').style.pointerEvents = "auto"
+    document.getElementById('frame-head').style.pointerEvents = "auto"
     estadoGV = 'A';
     document.getElementById('gav').className = "button-216-green";
     document.getElementById('botgav').className = "btn-fechagaveta";
