@@ -204,7 +204,7 @@
                   </button></a>
                 </div>
                 <div style="margin-top: 175px; margin-left: -70px">
-                  <p>Versão atual: 0.101</p>
+                  <p id="versaoAtual"></p>
                 </div>
               </div>
             </div>
@@ -233,6 +233,11 @@
       document.getElementById("fech["+confFechamento+"]").style = "display:visible";
       document.getElementById("desl["+confDesligamento+"]").style = "display:visible";
       
+      socket.emit('verificaVersaoSoftware')
+      socket.on('versaoSoftware', function(data){
+        document.getElementById('versaoAtual').innerHTML = "Versão atual: " + data;
+      })
+
       if (confCartao==1)
         document.getElementById("switch-cartao").className = "switch-on";
       else

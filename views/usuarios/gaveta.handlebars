@@ -19,7 +19,7 @@
           <input type=hidden name="gav" id="inputGaveta_up"></input>
           <button id="idGaveta_up" type="submit" class="btn_left"><p><</p></button>
         </form>-->
-        <div id="gav" class="button-216">
+        <div id="gav" class="button-216" style="display: none">
           <button onclick="abreGaveta({{gaveta}})" id="botgav" class="btn-abregaveta"></button>
         </div>
         <!--<form action="/usuarios/gaveta" method="POST">
@@ -108,14 +108,25 @@
   socket.emit('estadoGavetas');
 
   socket.on('estadoGavetas', function(data){
+    var qualquerGvAberta
+    if (data[0]=='A'||data[1]=='A'||data[2]=='A'||data[3]=='A'||data[4]=='A'||data[5]=='A'||data[6]=='A'||data[7]=='A') 
+      qualquerGvAberta = 1
+    else 
+      qualquerGvAberta = 0
     estadoGV = data[{{gaveta}}-1];
     if (estadoGV=='A'){
+      document.getElementById('gav').style = "display: visible"
       document.getElementById('gav').className = "button-216-green";
       document.getElementById('botgav').className = "btn-fechagaveta";}
+    else if(qualquerGvAberta){
+      document.getElementById('gav').style = "display: none"
+    }
     else if (estadoGV=='F'){
+      document.getElementById('gav').style = "display: visible"
       document.getElementById('gav').className = "button-216";
       document.getElementById('botgav').className = "btn-abregaveta";}
     else if (estadoGV=='D'){
+      document.getElementById('gav').style = "display: visible"
       document.getElementById('gav').className = "button-216";
       document.getElementById('botgav').className = "btn-abregaveta";}
  	});

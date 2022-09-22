@@ -39,7 +39,7 @@ var abrindoGV = 0
 var fechandoGV = 0
 var bloqueiaAbertura = 0
 var ItensErrados = [0, 0, 0, 0, 0, 0, 0, 0] //404 indica estado desconhecido
-var auxFGVSemRedeNeural = 0
+var auxFGVSemRedeNeural = 1
 var redeWifiOk = 0
 var wifiLevel = 0
 var emailTramontina = 'gabriel.romio@tramontina.com' //Configura e-mail interno de usuario Tramontina para envio de registros
@@ -49,6 +49,7 @@ var BateriaCarregada = 0
 var arrayBateria = []
 
 var identificacaoOrganizador = require("./identificacao");
+var versaoSoftware = require("./versao");
 
 //Variáveis referentes à childprocess
 var childCam1
@@ -777,7 +778,7 @@ const method = function (io) {
         });
         socket.on('fechaGaveta', function(data) {
           if (abrindoGV==0 && fechandoGV==0){
-            auxFGVSemRedeNeural = 0
+            //auxFGVSemRedeNeural = 0
             fechandoGV = 1
             gavetaEmMovimento = data
             socket.emit('bloqueiaInteracaoUsuario')
@@ -1493,6 +1494,11 @@ const method = function (io) {
               console.log("Houve um erro ao deletar o histórico: " + err)
             })
           }
+        })
+
+        //Retorna versão atual do software
+        socket.on('verificaVersaoSoftware', function(){ //Executa ngrok para acesso de interface gráfica
+          socket.emit('versaoSoftware', versaoSoftware)
         })
 
         //Configura acesso remoto
