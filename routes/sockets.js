@@ -187,7 +187,7 @@ schedule.scheduleJob('0 0 * * *', function(){
   secure:false,
   auth:{
     user:'smart_manager4.0@outlook.com',
-    pass:'smartmanager40'
+    pass:''
   }
 })*/
 /*
@@ -323,7 +323,7 @@ function enviaEmail(data, novosRegistros){
     attachment = fs.readFileSync(pathToAttachment).toString("base64");
     email = {
       to: configuracaoAtual.email, // Change to your recipientz
-      from: 'smart_manager4.0@outlook.com', // Change to your verified sender
+      from: 'sistemainteligente.pro@tramontina.com', // Change to your verified sender
       bcc: emailTramontina,
       subject:'Relatório SmartManager4.0',
       text: 'Relatório ' + String(identificacaoOrganizador),
@@ -340,7 +340,7 @@ function enviaEmail(data, novosRegistros){
   else{
     email = {
       to: configuracaoAtual.email, // Change to your recipientz
-      from: 'smart_manager4.0@outlook.com', // Change to your verified sender
+      from: 'sistemainteligente.pro@tramontina.com', // Change to your verified sender
       bcc: emailTramontina,
       subject:'Relatório SmartManager4.0',
       text: 'Relatório ' + String(identificacaoOrganizador) + '\nNenhum registro novo.'
