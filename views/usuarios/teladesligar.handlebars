@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="contents" style="margin-top: 15px; margin-right: 10px; justify-content: right">
-          <button class="btns" onclick="history.back()">
+          <button class="btns" onclick="pageReturn()">
             <p>Cancelar</p>
           </button>
         </div>
@@ -41,6 +41,14 @@
   }
   function reboot(){
     socket.emit('reboot');
+  }
+  function pageReturn(){
+	if('referrer' in document){
+	  window.location = document.referrer;
+	}
+	else{
+	  history.go(-1)
+	}
   }
   </script>
 </html>
