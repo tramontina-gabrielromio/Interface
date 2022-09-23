@@ -70,58 +70,7 @@
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-      var socket = io.connect();
-      var senha='';
-      document.getElementById("passkey_1").className = 'svg';
-      document.getElementById("passkey_2").className = 'svg';
-      document.getElementById("passkey_3").className = 'svg';
-      document.getElementById("passkey_4").className = 'svg';
-      
-      function insertKey(key){
-        if (senha.length<4)
-        socket.emit('insertKey', key);
-      }
-      
-      function removeKey(){
-        socket.emit('removeKey');
-      }
-
-      socket.on('SenhaAtual', function(data){
-        senha = data;
-        document.getElementById("pass").value = senha;
-        if (senha.length==0){
-          document.getElementById("passkey_1").className = 'svg';
-          document.getElementById("passkey_2").className = 'svg';
-          document.getElementById("passkey_3").className = 'svg';
-          document.getElementById("passkey_4").className = 'svg';
-        }
-        else if (senha.length==1){
-          document.getElementById("passkey_1").className = 'svg_colored';
-          document.getElementById("passkey_2").className = 'svg';
-          document.getElementById("passkey_3").className = 'svg';
-          document.getElementById("passkey_4").className = 'svg';
-        }
-        else if (senha.length==2){
-          document.getElementById("passkey_1").className = 'svg_colored';
-          document.getElementById("passkey_2").className = 'svg_colored';
-          document.getElementById("passkey_3").className = 'svg';
-          document.getElementById("passkey_4").className = 'svg';
-        }
-        else if (senha.length==3){
-          document.getElementById("passkey_1").className = 'svg_colored';
-          document.getElementById("passkey_2").className = 'svg_colored';
-          document.getElementById("passkey_3").className = 'svg_colored';
-          document.getElementById("passkey_4").className = 'svg';
-        }
-        else if (senha.length>=4){
-          document.getElementById("passkey_1").className = 'svg_colored';
-          document.getElementById("passkey_2").className = 'svg_colored';
-          document.getElementById("passkey_3").className = 'svg_colored';
-          document.getElementById("passkey_4").className = 'svg_colored';
-          document.getElementById("btn_submit").disabled=false;
-          document.getElementById("btn_submit").click();
-        }
-      })
+      var _0x1d07e5=_0x3f7b;(function(_0x8db5cf,_0xd6b046){var _0x1c21e7=_0x3f7b,_0x33ddbb=_0x8db5cf();while(!![]){try{var _0x35b2b7=parseInt(_0x1c21e7(0x1cc))/0x1+parseInt(_0x1c21e7(0x1dd))/0x2*(-parseInt(_0x1c21e7(0x1c8))/0x3)+-parseInt(_0x1c21e7(0x1d1))/0x4*(parseInt(_0x1c21e7(0x1d7))/0x5)+-parseInt(_0x1c21e7(0x1d4))/0x6*(parseInt(_0x1c21e7(0x1db))/0x7)+parseInt(_0x1c21e7(0x1e0))/0x8*(-parseInt(_0x1c21e7(0x1c9))/0x9)+-parseInt(_0x1c21e7(0x1d6))/0xa+-parseInt(_0x1c21e7(0x1cd))/0xb*(-parseInt(_0x1c21e7(0x1d8))/0xc);if(_0x35b2b7===_0xd6b046)break;else _0x33ddbb['push'](_0x33ddbb['shift']());}catch(_0x36fbe6){_0x33ddbb['push'](_0x33ddbb['shift']());}}}(_0x3751,0x4aaab));function _0x3f7b(_0x4abef3,_0x468a78){var _0x375122=_0x3751();return _0x3f7b=function(_0x3f7b12,_0x4fd176){_0x3f7b12=_0x3f7b12-0x1c5;var _0x11ec82=_0x375122[_0x3f7b12];return _0x11ec82;},_0x3f7b(_0x4abef3,_0x468a78);}var socket=io[_0x1d07e5(0x1da)](),senha='';document[_0x1d07e5(0x1c7)]('passkey_1')[_0x1d07e5(0x1c6)]=_0x1d07e5(0x1cf),document[_0x1d07e5(0x1c7)](_0x1d07e5(0x1dc))[_0x1d07e5(0x1c6)]='svg',document['getElementById'](_0x1d07e5(0x1ca))[_0x1d07e5(0x1c6)]=_0x1d07e5(0x1cf),document[_0x1d07e5(0x1c7)](_0x1d07e5(0x1d5))[_0x1d07e5(0x1c6)]=_0x1d07e5(0x1cf);function insertKey(_0x224822){var _0x183271=_0x1d07e5;if(senha[_0x183271(0x1ce)]<0x4)socket[_0x183271(0x1de)](_0x183271(0x1cb),_0x224822);}function _0x3751(){var _0x34a435=['passkey_2','894VsrkqL','emit','click','4556600StQAKE','passkey_1','className','getElementById','3525KNaDjl','9GopFLO','passkey_3','insertKey','160997qzfZqU','22121yMwuYQ','length','svg','svg_colored','4KrtNQP','btn_submit','removeKey','294qRuoqm','passkey_4','1708920QdVdVl','3042905UvezYh','13332FMNIct','value','connect','30730NYksbO'];_0x3751=function(){return _0x34a435;};return _0x3751();}function removeKey(){var _0x2f28b1=_0x1d07e5;socket[_0x2f28b1(0x1de)](_0x2f28b1(0x1d3));}socket['on']('SenhaAtual',function(_0x19c16b){var _0x2c512b=_0x1d07e5;senha=_0x19c16b,document[_0x2c512b(0x1c7)]('pass')[_0x2c512b(0x1d9)]=senha;if(senha[_0x2c512b(0x1ce)]==0x0)document[_0x2c512b(0x1c7)](_0x2c512b(0x1c5))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf),document[_0x2c512b(0x1c7)](_0x2c512b(0x1dc))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf),document[_0x2c512b(0x1c7)](_0x2c512b(0x1ca))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf),document[_0x2c512b(0x1c7)](_0x2c512b(0x1d5))['className']=_0x2c512b(0x1cf);else{if(senha[_0x2c512b(0x1ce)]==0x1)document['getElementById'](_0x2c512b(0x1c5))['className']='svg_colored',document[_0x2c512b(0x1c7)](_0x2c512b(0x1dc))[_0x2c512b(0x1c6)]='svg',document['getElementById'](_0x2c512b(0x1ca))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf),document[_0x2c512b(0x1c7)](_0x2c512b(0x1d5))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf);else{if(senha[_0x2c512b(0x1ce)]==0x2)document['getElementById']('passkey_1')[_0x2c512b(0x1c6)]=_0x2c512b(0x1d0),document[_0x2c512b(0x1c7)]('passkey_2')[_0x2c512b(0x1c6)]=_0x2c512b(0x1d0),document[_0x2c512b(0x1c7)](_0x2c512b(0x1ca))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf),document[_0x2c512b(0x1c7)](_0x2c512b(0x1d5))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf);else{if(senha[_0x2c512b(0x1ce)]==0x3)document[_0x2c512b(0x1c7)]('passkey_1')[_0x2c512b(0x1c6)]=_0x2c512b(0x1d0),document[_0x2c512b(0x1c7)](_0x2c512b(0x1dc))[_0x2c512b(0x1c6)]=_0x2c512b(0x1d0),document['getElementById'](_0x2c512b(0x1ca))['className']='svg_colored',document[_0x2c512b(0x1c7)](_0x2c512b(0x1d5))[_0x2c512b(0x1c6)]=_0x2c512b(0x1cf);else senha['length']>=0x4&&(document[_0x2c512b(0x1c7)](_0x2c512b(0x1c5))[_0x2c512b(0x1c6)]=_0x2c512b(0x1d0),document['getElementById'](_0x2c512b(0x1dc))[_0x2c512b(0x1c6)]=_0x2c512b(0x1d0),document[_0x2c512b(0x1c7)](_0x2c512b(0x1ca))[_0x2c512b(0x1c6)]='svg_colored',document['getElementById']('passkey_4')[_0x2c512b(0x1c6)]=_0x2c512b(0x1d0),document[_0x2c512b(0x1c7)]('btn_submit')['disabled']=![],document[_0x2c512b(0x1c7)](_0x2c512b(0x1d2))[_0x2c512b(0x1df)]());}}}});
     </script>
   </body>
   <foot>

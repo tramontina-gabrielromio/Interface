@@ -35,46 +35,6 @@
   </body>
   <script  src="/socket.io/socket.io.js"></script>
   <script>
-    var socket = io.connect();
-    contLoading = 1;
-    var start, end, dif;
-
-    //setTimeout('showLoading()', 4400)
-    //function showLoading(){
-    //  document.getElementById("showLoading").style = "visibility:visible"
-    //}
-
-    function skipLoadingMouseDown(){
-      start = Date.now()
-    }
-
-    function skipLoadingMouseUp(){
-      end = Date.now()
-      dif = end-start + 1
-      if((dif)>5000){//Clique maior do que 5s pula o carregamento
-        location.replace("/skiploading")
-      }
-    }
-
-    verificaStatusRedesNeurais()
-    function verificaStatusRedesNeurais(){
-      socket.emit('statusRedesNeurais')
-      t=setTimeout('verificaStatusRedesNeurais()', 1000);
-    }
-
-    /*setTimeout('transicaoLoading()', 2000)
-    function transicaoLoading(){
-      document.getElementById("logo_loading").className = "logo_loading_" + contLoading
-      contLoading = contLoading + 1
-      if (contLoading>3){
-        contLoading = 1
-      }
-      t=setTimeout('transicaoLoading()', 500);
-    }*/
-
-    socket.on('redesNeuraisCarregadas', function(data){
-      if(data==1)
-        document.getElementById("btn_home").click();
-    })
+var _0x755470=_0x5772;(function(_0x1b29bb,_0x4f2932){var _0x19440c=_0x5772,_0x3c7623=_0x1b29bb();while(!![]){try{var _0x47b9c7=parseInt(_0x19440c(0xeb))/0x1*(-parseInt(_0x19440c(0xee))/0x2)+-parseInt(_0x19440c(0xf2))/0x3*(-parseInt(_0x19440c(0xe0))/0x4)+-parseInt(_0x19440c(0xea))/0x5*(-parseInt(_0x19440c(0xef))/0x6)+-parseInt(_0x19440c(0xe7))/0x7*(parseInt(_0x19440c(0xec))/0x8)+parseInt(_0x19440c(0xe8))/0x9*(-parseInt(_0x19440c(0xe6))/0xa)+parseInt(_0x19440c(0xe1))/0xb+parseInt(_0x19440c(0xe2))/0xc*(parseInt(_0x19440c(0xf4))/0xd);if(_0x47b9c7===_0x4f2932)break;else _0x3c7623['push'](_0x3c7623['shift']());}catch(_0x7f85f6){_0x3c7623['push'](_0x3c7623['shift']());}}}(_0x2171,0xb113f));var socket=io[_0x755470(0xe4)]();contLoading=0x1;var start,end,dif;function skipLoadingMouseDown(){start=Date['now']();}function skipLoadingMouseUp(){var _0x5c2114=_0x755470;end=Date[_0x5c2114(0xf1)](),dif=end-start+0x1,dif>0x1388&&location['replace'](_0x5c2114(0xe9));}function _0x5772(_0x57a15e,_0x6e6e75){var _0x21715f=_0x2171();return _0x5772=function(_0x57729a,_0x3976ed){_0x57729a=_0x57729a-0xe0;var _0xe23d69=_0x21715f[_0x57729a];return _0xe23d69;},_0x5772(_0x57a15e,_0x6e6e75);}verificaStatusRedesNeurais();function _0x2171(){var _0x56119a=['/skiploading','50pPonFw','1pbkUGv','4696EqKgMI','verificaStatusRedesNeurais()','2221820fQfWTq','721398Yxfcim','click','now','33324WAGRDf','emit','13TOIAKC','384gKMqmw','6851856WSExMC','583080aoffOb','getElementById','connect','statusRedesNeurais','80aqMiPK','1407vWftkR','1109223thVwlS'];_0x2171=function(){return _0x56119a;};return _0x2171();}function verificaStatusRedesNeurais(){var _0x5a73dc=_0x755470;socket[_0x5a73dc(0xf3)](_0x5a73dc(0xe5)),t=setTimeout(_0x5a73dc(0xed),0x3e8);}socket['on']('redesNeuraisCarregadas',function(_0x2c77b3){var _0x414ee8=_0x755470;if(_0x2c77b3==0x1)document[_0x414ee8(0xe3)]('btn_home')[_0x414ee8(0xf0)]();});
   </script>
 </html>
