@@ -123,6 +123,21 @@ function inicializaRedesNeurais() {
   });
 }
 
+verificaGavetasInicial() //Verifica gavetas ao ligar o organizador, evitando possíveis falhas
+function verificaGavetasInicial(){
+	execFile('/home/tramontina/Downloads/Interface/Gavetas', ['GAVETAS'], (error, stdout, stderr) => {
+	  if (error) {
+		console.error('error: ' + error);
+		return;
+		}
+	  if (stderr) {
+		console.error('stderr: ' + stderr);
+		return;
+	  }
+	  console.log('stdout: ' + stdout);
+	});
+}
+
 //Altera data e hora do sistema
 //setDateTime('3/31/2022 14:10:00') //mm/dd/yyyy HH:MM:ss
 function setDateTime(dateTime) {
