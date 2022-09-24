@@ -1,1 +1,575 @@
-function _0x4989(){var _0x2bf00e=['/usuarios','dataDevolucao','post','showUserdata','/usuarios/login/','populate','usuarios/login','lean','descricao','then','/logout','1pZgrno','horaDevolucao','ferramentas','catch','gv6','264KBFIUh','local','countDocuments','log','find','Deslogado\x20com\x20sucesso!','../models/Evento','setor','gav','gv2','usuarios/tools','/main','passport','usuarios/main','/gaveta','body','referencia','63rVCnNH','desc','/usuarios/tools','119595jZErFH','toolSearch','/404?data=','11463375UeWKqF','length','flash','12eRWwhN','gv7','/login','Houve\x20um\x20erro\x20interno','36470vUoBed','gv3','/compGaveta:gaveta','exports','814754EaZnsm','dataSearch','/tools','../routes/userLogged','usuarios/historico','5023920jzNfcy','../helpers/logado','get','/usermanual','user','skip','../models/Ferramenta','usuarios/gaveta','/historico','gv1','push','usuarios/composicao','redirect','params','22136ytFEDC','documentacao','model','23493ZBKBOh','usuarios/teladesligar','horaRetirada','/tools/buscar','error_msg','/composicao','rfid:\x20','limit','gaveta','/usuarios/main','usuarios/documentacao','reordenar','render','usuarios/retiradas','gv4','asc','usuario','gv5','eventos','Router','/historico/reordenar','sort','gv8','success_msg','express','nome','/historico/buscar','authenticate','A\x20gaveta\x20não\x20pode\x20ser\x20acessada\x20pelo\x20usuário','logout'];_0x4989=function(){return _0x2bf00e;};return _0x4989();}var _0x5f47ea=_0x228a;(function(_0x16e414,_0x1f2ae0){var _0x422d29=_0x228a,_0x10607a=_0x16e414();while(!![]){try{var _0xcfb646=-parseInt(_0x422d29(0x1b2))/0x1*(parseInt(_0x422d29(0x1d9))/0x2)+-parseInt(_0x422d29(0x1ef))/0x3+-parseInt(_0x422d29(0x1d1))/0x4*(-parseInt(_0x422d29(0x1cb))/0x5)+-parseInt(_0x422d29(0x1b7))/0x6*(-parseInt(_0x422d29(0x1d5))/0x7)+-parseInt(_0x422d29(0x1ec))/0x8*(parseInt(_0x422d29(0x1c8))/0x9)+-parseInt(_0x422d29(0x1de))/0xa+parseInt(_0x422d29(0x1ce))/0xb;if(_0xcfb646===_0x1f2ae0)break;else _0x10607a['push'](_0x10607a['shift']());}catch(_0x25aeb3){_0x10607a['push'](_0x10607a['shift']());}}}(_0x4989,0x63289));const express=require(_0x5f47ea(0x1a1)),router=express[_0x5f47ea(0x19c)](),mongoose=require('mongoose');require(_0x5f47ea(0x1bd));const Evento=mongoose[_0x5f47ea(0x1ee)](_0x5f47ea(0x19b));require(_0x5f47ea(0x1e4));const Ferramenta=mongoose['model']('ferramentas');var userLogged=require(_0x5f47ea(0x1dc));const passport=require(_0x5f47ea(0x1c3)),{logged}=require(_0x5f47ea(0x1df));var reordenarUltimo=0x0;router[_0x5f47ea(0x1e0)]('/login/:nome',(_0x2471c2,_0x10def5,_0xce172e)=>{var _0x16a0b4=_0x5f47ea;_0x10def5[_0x16a0b4(0x1fb)]('usuarios/login',{'nome':_0x2471c2[_0x16a0b4(0x1eb)][_0x16a0b4(0x1a2)]});}),router[_0x5f47ea(0x1e0)](_0x5f47ea(0x1d3),(_0xfc78a9,_0x39cb75,_0x438572)=>{var _0x170d8f=_0x5f47ea;_0x39cb75[_0x170d8f(0x1fb)](_0x170d8f(0x1ad));}),router[_0x5f47ea(0x1e0)]('/teladesligar',(_0x16f1f9,_0x37836e,_0x1b2549)=>{var _0x59cb83=_0x5f47ea;_0x37836e['render'](_0x59cb83(0x1f0));});var qtdRegistros=0x64;router['get'](_0x5f47ea(0x1e6),(_0x1700f3,_0x2998c5)=>{var _0x1d0113=_0x5f47ea,_0x4f6479=userLogged(_0x1d0113(0x1aa)),_0x57d117=[];reordenarUltimo=0x0;if(_0x4f6479['gv1'])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x1});if(_0x4f6479['gv2'])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x2});if(_0x4f6479[_0x1d0113(0x1d6)])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x3});if(_0x4f6479[_0x1d0113(0x197)])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x4});if(_0x4f6479[_0x1d0113(0x19a)])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x5});if(_0x4f6479[_0x1d0113(0x1b6)])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x6});if(_0x4f6479['gv7'])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x7});if(_0x4f6479[_0x1d0113(0x19f)])_0x57d117[_0x1d0113(0x1e8)]({'gaveta':0x8});if(_0x57d117['length']>0x0)Evento['countDocuments']({'$or':_0x57d117},function(_0x5031dd,_0x2f7240){var _0x4b1a33=_0x1d0113;Evento[_0x4b1a33(0x1bb)]({'$or':_0x57d117})[_0x4b1a33(0x1ae)]()['populate'](_0x4b1a33(0x19b))[_0x4b1a33(0x19e)]({'_id':_0x4b1a33(0x1c9)})[_0x4b1a33(0x1f6)](qtdRegistros)['skip'](0x0)[_0x4b1a33(0x1b0)](_0x496677=>{var _0x19d2df=_0x4b1a33;_0x2998c5['render'](_0x19d2df(0x1dd),{'eventos':_0x496677,'busca':'','skip':0x0,'pgi':0x1,'pgf':parseInt(_0x2f7240/qtdRegistros)+0x1});})[_0x4b1a33(0x1b5)](_0x979ae7=>{var _0x2b5298=_0x4b1a33;_0x1700f3[_0x2b5298(0x1d0)](_0x2b5298(0x1f3),_0x2b5298(0x1d4)),_0x2998c5[_0x2b5298(0x1ea)]('/404?data='+_0x979ae7);});});else _0x2998c5[_0x1d0113(0x1fb)](_0x1d0113(0x1dd),{'eventos':null,'busca':'','skip':0x0,'pgi':0x1,'pgf':0x1});}),router[_0x5f47ea(0x1a9)]('/historico/skipm',(_0x6a2df9,_0x3acdf5)=>{var _0x5ab37a=_0x5f47ea,_0x2f7988=userLogged(_0x5ab37a(0x1aa)),_0x189188=[];if(_0x2f7988['gv1'])_0x189188[_0x5ab37a(0x1e8)]({'gaveta':0x1});if(_0x2f7988[_0x5ab37a(0x1c0)])_0x189188[_0x5ab37a(0x1e8)]({'gaveta':0x2});if(_0x2f7988['gv3'])_0x189188['push']({'gaveta':0x3});if(_0x2f7988[_0x5ab37a(0x197)])_0x189188[_0x5ab37a(0x1e8)]({'gaveta':0x4});if(_0x2f7988[_0x5ab37a(0x19a)])_0x189188[_0x5ab37a(0x1e8)]({'gaveta':0x5});if(_0x2f7988[_0x5ab37a(0x1b6)])_0x189188[_0x5ab37a(0x1e8)]({'gaveta':0x6});if(_0x2f7988['gv7'])_0x189188[_0x5ab37a(0x1e8)]({'gaveta':0x7});if(_0x2f7988['gv8'])_0x189188['push']({'gaveta':0x8});if(_0x189188['length']>0x0)Evento[_0x5ab37a(0x1bb)]({'$or':_0x189188,'descricao':new RegExp(_0x6a2df9[_0x5ab37a(0x1c6)][_0x5ab37a(0x1da)],'i')})[_0x5ab37a(0x1b9)]({},function(_0x24731e,_0x1345ca){var _0x1f276d=_0x5ab37a,_0x2658ac=Number(_0x6a2df9[_0x1f276d(0x1c6)][_0x1f276d(0x1e3)])-qtdRegistros;if(_0x2658ac<0x0)_0x2658ac=0x0;Evento[_0x1f276d(0x1bb)]({'$or':_0x189188,'descricao':new RegExp(_0x6a2df9['body']['dataSearch'],'i')})[_0x1f276d(0x1ae)]()[_0x1f276d(0x1ac)]('eventos')['sort']({'_id':'desc'})[_0x1f276d(0x1f6)](qtdRegistros)[_0x1f276d(0x1e3)](_0x2658ac)[_0x1f276d(0x1b0)](_0x6d603d=>{var _0x11a92a=_0x1f276d;_0x3acdf5[_0x11a92a(0x1fb)](_0x11a92a(0x1dd),{'eventos':_0x6d603d,'busca':_0x6a2df9['body']['dataSearch'],'skip':_0x2658ac,'pgi':parseInt(_0x2658ac/qtdRegistros)+0x1,'pgf':parseInt(_0x1345ca/qtdRegistros)+0x1});})[_0x1f276d(0x1b5)](_0x178082=>{var _0x58e290=_0x1f276d;_0x6a2df9[_0x58e290(0x1d0)](_0x58e290(0x1f3),'Houve\x20um\x20erro\x20interno'),_0x3acdf5[_0x58e290(0x1ea)]('/404?data='+_0x178082);});});else _0x3acdf5[_0x5ab37a(0x1fb)](_0x5ab37a(0x1dd),{'eventos':null,'busca':_0x6a2df9[_0x5ab37a(0x1c6)][_0x5ab37a(0x1da)],'skip':0x0,'pgi':0x1,'pgf':0x1});}),router[_0x5f47ea(0x1a9)]('/historico/skipp',(_0x5ceb1b,_0x983785)=>{var _0x237413=_0x5f47ea,_0x49c1e7=userLogged(_0x237413(0x1aa)),_0x493ff0=[];if(_0x49c1e7['gv1'])_0x493ff0['push']({'gaveta':0x1});if(_0x49c1e7[_0x237413(0x1c0)])_0x493ff0[_0x237413(0x1e8)]({'gaveta':0x2});if(_0x49c1e7[_0x237413(0x1d6)])_0x493ff0['push']({'gaveta':0x3});if(_0x49c1e7['gv4'])_0x493ff0[_0x237413(0x1e8)]({'gaveta':0x4});if(_0x49c1e7['gv5'])_0x493ff0[_0x237413(0x1e8)]({'gaveta':0x5});if(_0x49c1e7['gv6'])_0x493ff0['push']({'gaveta':0x6});if(_0x49c1e7[_0x237413(0x1d2)])_0x493ff0['push']({'gaveta':0x7});if(_0x49c1e7['gv8'])_0x493ff0[_0x237413(0x1e8)]({'gaveta':0x8});if(_0x493ff0[_0x237413(0x1cf)]>0x0)Evento['find']({'$or':_0x493ff0,'descricao':new RegExp(_0x5ceb1b[_0x237413(0x1c6)][_0x237413(0x1da)],'i')})[_0x237413(0x1b9)]({},function(_0x2f6b7d,_0x1d50ee){var _0x252dae=_0x237413,_0x5b1879=Number(_0x5ceb1b[_0x252dae(0x1c6)]['skip'])+qtdRegistros;if(_0x5b1879>_0x1d50ee)_0x5b1879=_0x5b1879-qtdRegistros;Evento[_0x252dae(0x1bb)]({'$or':_0x493ff0,'descricao':new RegExp(_0x5ceb1b[_0x252dae(0x1c6)][_0x252dae(0x1da)],'i')})['lean']()[_0x252dae(0x1ac)](_0x252dae(0x19b))[_0x252dae(0x19e)]({'_id':_0x252dae(0x1c9)})[_0x252dae(0x1f6)](qtdRegistros)[_0x252dae(0x1e3)](_0x5b1879)[_0x252dae(0x1b0)](_0x2fe9da=>{var _0x1fef53=_0x252dae;_0x983785[_0x1fef53(0x1fb)](_0x1fef53(0x1dd),{'eventos':_0x2fe9da,'busca':_0x5ceb1b['body'][_0x1fef53(0x1da)],'skip':_0x5b1879,'pgi':parseInt(_0x5b1879/qtdRegistros)+0x1,'pgf':parseInt(_0x1d50ee/qtdRegistros)+0x1});})[_0x252dae(0x1b5)](_0x26f6d8=>{var _0x10760c=_0x252dae;_0x5ceb1b['flash'](_0x10760c(0x1f3),_0x10760c(0x1d4)),_0x983785[_0x10760c(0x1ea)]('/404?data='+_0x26f6d8);});});else _0x983785[_0x237413(0x1fb)]('usuarios/historico',{'eventos':null,'busca':_0x5ceb1b[_0x237413(0x1c6)][_0x237413(0x1da)],'skip':0x0,'pgi':0x1,'pgf':0x1});}),router[_0x5f47ea(0x1a9)](_0x5f47ea(0x1a3),(_0x4849fc,_0x11a741)=>{var _0x201f8e=_0x5f47ea,_0x337aca=userLogged(_0x201f8e(0x1aa)),_0x67a48e=[];reordenarUltimo=0x0;if(_0x337aca['gv1'])_0x67a48e[_0x201f8e(0x1e8)]({'gaveta':0x1});if(_0x337aca[_0x201f8e(0x1c0)])_0x67a48e[_0x201f8e(0x1e8)]({'gaveta':0x2});if(_0x337aca[_0x201f8e(0x1d6)])_0x67a48e[_0x201f8e(0x1e8)]({'gaveta':0x3});if(_0x337aca[_0x201f8e(0x197)])_0x67a48e[_0x201f8e(0x1e8)]({'gaveta':0x4});if(_0x337aca[_0x201f8e(0x19a)])_0x67a48e[_0x201f8e(0x1e8)]({'gaveta':0x5});if(_0x337aca[_0x201f8e(0x1b6)])_0x67a48e['push']({'gaveta':0x6});if(_0x337aca[_0x201f8e(0x1d2)])_0x67a48e[_0x201f8e(0x1e8)]({'gaveta':0x7});if(_0x337aca['gv8'])_0x67a48e['push']({'gaveta':0x8});if(_0x67a48e[_0x201f8e(0x1cf)]>0x0)Evento[_0x201f8e(0x1bb)]({'$or':_0x67a48e,'descricao':new RegExp(_0x4849fc[_0x201f8e(0x1c6)][_0x201f8e(0x1da)],'i')})[_0x201f8e(0x1b9)]({},function(_0x139bd1,_0x3869ac){var _0x18344a=_0x201f8e;Evento['find']({'$or':_0x67a48e,'descricao':new RegExp(_0x4849fc['body'][_0x18344a(0x1da)],'i')})[_0x18344a(0x1ae)]()[_0x18344a(0x1ac)]('eventos')[_0x18344a(0x19e)]({'_id':_0x18344a(0x1c9)})['limit'](qtdRegistros)[_0x18344a(0x1e3)](0x0)['then'](_0x3c4bf3=>{var _0x63d647=_0x18344a;_0x11a741[_0x63d647(0x1fb)]('usuarios/historico',{'eventos':_0x3c4bf3,'busca':_0x4849fc['body'][_0x63d647(0x1da)],'skip':0x0,'pgi':0x1,'pgf':parseInt(_0x3869ac/qtdRegistros)+0x1});})['catch'](_0x3dc6aa=>{var _0x3542db=_0x18344a;_0x4849fc[_0x3542db(0x1d0)](_0x3542db(0x1f3),'Houve\x20um\x20erro\x20interno'),_0x11a741[_0x3542db(0x1ea)](_0x3542db(0x1cd)+_0x3dc6aa);});});else _0x11a741['render'](_0x201f8e(0x1dd),{'eventos':null,'busca':_0x4849fc['body'][_0x201f8e(0x1da)],'skip':0x0,'pgi':0x1,'pgf':0x1});}),router[_0x5f47ea(0x1a9)](_0x5f47ea(0x19d),(_0x190f06,_0x2f32c7)=>{var _0x4bb784=_0x5f47ea,_0x7f5d30=userLogged(_0x4bb784(0x1aa)),_0x528e1b=[];if(_0x7f5d30[_0x4bb784(0x1e7)])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x1});if(_0x7f5d30['gv2'])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x2});if(_0x7f5d30[_0x4bb784(0x1d6)])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x3});if(_0x7f5d30[_0x4bb784(0x197)])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x4});if(_0x7f5d30[_0x4bb784(0x19a)])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x5});if(_0x7f5d30['gv6'])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x6});if(_0x7f5d30[_0x4bb784(0x1d2)])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x7});if(_0x7f5d30[_0x4bb784(0x19f)])_0x528e1b[_0x4bb784(0x1e8)]({'gaveta':0x8});var _0xc6cdec={};if(_0x190f06[_0x4bb784(0x1c6)][_0x4bb784(0x1fa)]==_0x4bb784(0x1c7))reordenarUltimo==0x1?(reordenarUltimo=0x0,_0xc6cdec={'referencia':_0x4bb784(0x1c9)}):(reordenarUltimo=0x1,_0xc6cdec={'referencia':_0x4bb784(0x198)});else{if(_0x190f06[_0x4bb784(0x1c6)][_0x4bb784(0x1fa)]==_0x4bb784(0x1af))reordenarUltimo==0x2?(reordenarUltimo=0x0,_0xc6cdec={'descricao':_0x4bb784(0x1c9)}):(reordenarUltimo=0x2,_0xc6cdec={'descricao':_0x4bb784(0x198)});else{if(_0x190f06[_0x4bb784(0x1c6)]['reordenar']==_0x4bb784(0x1f7))reordenarUltimo==0x3?(reordenarUltimo=0x0,_0xc6cdec={'gaveta':_0x4bb784(0x1c9)}):(reordenarUltimo=0x3,_0xc6cdec={'gaveta':'asc'});else{if(_0x190f06['body']['reordenar']=='dataRetirada')reordenarUltimo==0x4?(reordenarUltimo=0x0,_0xc6cdec={'dataRetirada':_0x4bb784(0x1c9)}):(reordenarUltimo=0x4,_0xc6cdec={'dataRetirada':_0x4bb784(0x198)});else{if(_0x190f06[_0x4bb784(0x1c6)][_0x4bb784(0x1fa)]==_0x4bb784(0x1f1))reordenarUltimo==0x5?(reordenarUltimo=0x0,_0xc6cdec={'horaRetirada':_0x4bb784(0x1c9)}):(reordenarUltimo=0x5,_0xc6cdec={'horaRetirada':_0x4bb784(0x198)});else{if(_0x190f06[_0x4bb784(0x1c6)][_0x4bb784(0x1fa)]==_0x4bb784(0x1a8))reordenarUltimo==0x6?(reordenarUltimo=0x0,_0xc6cdec={'dataDevolucao':_0x4bb784(0x1c9)}):(reordenarUltimo=0x6,_0xc6cdec={'dataDevolucao':'asc'});else{if(_0x190f06[_0x4bb784(0x1c6)][_0x4bb784(0x1fa)]==_0x4bb784(0x1b3))reordenarUltimo==0x7?(reordenarUltimo=0x0,_0xc6cdec={'horaDevolucao':'desc'}):(reordenarUltimo=0x7,_0xc6cdec={'horaDevolucao':_0x4bb784(0x198)});else{if(_0x190f06['body'][_0x4bb784(0x1fa)]==_0x4bb784(0x199))reordenarUltimo==0x8?(reordenarUltimo=0x0,_0xc6cdec={'usuario':_0x4bb784(0x1c9)}):(reordenarUltimo=0x8,_0xc6cdec={'usuario':'asc'});else _0x190f06['body']['reordenar']==_0x4bb784(0x1be)&&(reordenarUltimo==0x9?(reordenarUltimo=0x0,_0xc6cdec={'setor':_0x4bb784(0x1c9)}):(reordenarUltimo=0x9,_0xc6cdec={'setor':_0x4bb784(0x198)}));}}}}}}}if(_0x528e1b[_0x4bb784(0x1cf)]>0x0)Evento[_0x4bb784(0x1bb)]({'$or':_0x528e1b,'descricao':new RegExp(_0x190f06['body'][_0x4bb784(0x1da)],'i')})[_0x4bb784(0x1b9)]({},function(_0x30b574,_0x9a2a6){var _0x3ca7bc=_0x4bb784;Evento['find']({'$or':_0x528e1b,'descricao':new RegExp(_0x190f06['body'][_0x3ca7bc(0x1da)],'i')})[_0x3ca7bc(0x1ae)]()[_0x3ca7bc(0x1ac)](_0x3ca7bc(0x19b))[_0x3ca7bc(0x19e)](_0xc6cdec)[_0x3ca7bc(0x1f6)](qtdRegistros)[_0x3ca7bc(0x1e3)](0x0)['then'](_0x3913a6=>{var _0x54cf70=_0x3ca7bc;_0x2f32c7['render']('usuarios/historico',{'eventos':_0x3913a6,'busca':_0x190f06[_0x54cf70(0x1c6)][_0x54cf70(0x1da)],'skip':0x0,'pgi':0x1,'pgf':parseInt(_0x9a2a6/qtdRegistros)+0x1});})[_0x3ca7bc(0x1b5)](_0x269c1e=>{var _0xf4041f=_0x3ca7bc;_0x190f06['flash'](_0xf4041f(0x1f3),'Houve\x20um\x20erro\x20interno'),_0x2f32c7[_0xf4041f(0x1ea)](_0xf4041f(0x1cd)+_0x269c1e);});});else _0x2f32c7[_0x4bb784(0x1fb)](_0x4bb784(0x1dd),{'eventos':null,'busca':_0x190f06[_0x4bb784(0x1c6)]['dataSearch'],'skip':0x0,'pgi':0x1,'pgf':0x1});}),router[_0x5f47ea(0x1e0)](_0x5f47ea(0x1db),(_0x332601,_0x15baf8)=>{var _0x340afa=_0x5f47ea,_0x2fd7b3=userLogged(_0x340afa(0x1aa)),_0x332771=[];if(_0x2fd7b3[_0x340afa(0x1e7)])_0x332771['push']({'gaveta':0x1});if(_0x2fd7b3['gv2'])_0x332771[_0x340afa(0x1e8)]({'gaveta':0x2});if(_0x2fd7b3[_0x340afa(0x1d6)])_0x332771[_0x340afa(0x1e8)]({'gaveta':0x3});if(_0x2fd7b3[_0x340afa(0x197)])_0x332771[_0x340afa(0x1e8)]({'gaveta':0x4});if(_0x2fd7b3[_0x340afa(0x19a)])_0x332771[_0x340afa(0x1e8)]({'gaveta':0x5});if(_0x2fd7b3[_0x340afa(0x1b6)])_0x332771[_0x340afa(0x1e8)]({'gaveta':0x6});if(_0x2fd7b3[_0x340afa(0x1d2)])_0x332771[_0x340afa(0x1e8)]({'gaveta':0x7});if(_0x2fd7b3[_0x340afa(0x19f)])_0x332771[_0x340afa(0x1e8)]({'gaveta':0x8});if(_0x332771['length']>0x0)Ferramenta[_0x340afa(0x1bb)]({'$or':_0x332771})[_0x340afa(0x1ae)]()[_0x340afa(0x1ac)](_0x340afa(0x1b4))[_0x340afa(0x19e)]({'_id':'asc'})['then'](_0x4b958e=>{var _0x27f93f=_0x340afa;_0x15baf8[_0x27f93f(0x1fb)](_0x27f93f(0x1c1),{'ferramentas':_0x4b958e,'busca':''});})['catch'](_0x1d160d=>{var _0x76e3d0=_0x340afa;_0x332601[_0x76e3d0(0x1d0)]('error_msg',_0x76e3d0(0x1d4)),_0x15baf8[_0x76e3d0(0x1ea)](_0x76e3d0(0x1cd)+_0x1d160d);});else _0x15baf8[_0x340afa(0x1fb)](_0x340afa(0x1c1),{'ferramentas':null,'busca':''});}),router[_0x5f47ea(0x1a9)](_0x5f47ea(0x1f2),(_0x235edb,_0x5be266)=>{var _0x4fd6a9=_0x5f47ea,_0x33bff7=userLogged('showUserdata'),_0x2cfc20=[];if(_0x33bff7['gv1'])_0x2cfc20['push']({'gaveta':0x1});if(_0x33bff7[_0x4fd6a9(0x1c0)])_0x2cfc20['push']({'gaveta':0x2});if(_0x33bff7[_0x4fd6a9(0x1d6)])_0x2cfc20['push']({'gaveta':0x3});if(_0x33bff7[_0x4fd6a9(0x197)])_0x2cfc20[_0x4fd6a9(0x1e8)]({'gaveta':0x4});if(_0x33bff7[_0x4fd6a9(0x19a)])_0x2cfc20[_0x4fd6a9(0x1e8)]({'gaveta':0x5});if(_0x33bff7[_0x4fd6a9(0x1b6)])_0x2cfc20[_0x4fd6a9(0x1e8)]({'gaveta':0x6});if(_0x33bff7[_0x4fd6a9(0x1d2)])_0x2cfc20[_0x4fd6a9(0x1e8)]({'gaveta':0x7});if(_0x33bff7[_0x4fd6a9(0x19f)])_0x2cfc20[_0x4fd6a9(0x1e8)]({'gaveta':0x8});if(_0x2cfc20['length']>0x0)Ferramenta['find']({'$or':_0x2cfc20,'descricao':new RegExp(_0x235edb[_0x4fd6a9(0x1c6)]['toolSearch'],'i')})['lean']()[_0x4fd6a9(0x1ac)](_0x4fd6a9(0x1b4))[_0x4fd6a9(0x19e)]({'_id':_0x4fd6a9(0x198)})[_0x4fd6a9(0x1b0)](_0x39009e=>{var _0x483025=_0x4fd6a9;_0x5be266['render'](_0x483025(0x1c1),{'ferramentas':_0x39009e,'busca':_0x235edb[_0x483025(0x1c6)]['toolSearch']});})['catch'](_0xdddb7=>{var _0x130805=_0x4fd6a9;_0x235edb[_0x130805(0x1d0)](_0x130805(0x1f3),_0x130805(0x1d4)),_0x5be266[_0x130805(0x1ea)](_0x130805(0x1cd)+_0xdddb7);});else _0x5be266['render'](_0x4fd6a9(0x1c1),{'ferramentas':null,'busca':_0x235edb[_0x4fd6a9(0x1c6)][_0x4fd6a9(0x1cc)]});}),router[_0x5f47ea(0x1e0)]('/retiradas:id',(_0x39605e,_0x158e7e)=>{var _0xb1cf6b=_0x5f47ea;Ferramenta[_0xb1cf6b(0x1bb)]({'gaveta':_0x39605e['params']['id'],'desconhecido':0x1})[_0xb1cf6b(0x1ae)]()[_0xb1cf6b(0x1ac)]('ferramentas')[_0xb1cf6b(0x19e)]({'_id':_0xb1cf6b(0x198)})[_0xb1cf6b(0x1b0)](_0x317da3=>{var _0x160f5c=_0xb1cf6b;if(_0x317da3[_0x160f5c(0x1cf)]>0x0)_0x158e7e[_0x160f5c(0x1fb)](_0x160f5c(0x196),{'ferramentas':null,'retiradas':'?'});else Ferramenta[_0x160f5c(0x1bb)]({'gaveta':_0x39605e[_0x160f5c(0x1eb)]['id'],'estado':0x0,'desconhecido':0x0})[_0x160f5c(0x1ae)]()[_0x160f5c(0x1ac)]('ferramentas')['sort']({'_id':'asc'})['then'](_0x1b35ef=>{_0x158e7e['render']('usuarios/retiradas',{'ferramentas':_0x1b35ef,'retiradas':-_0x1b35ef['length']});})[_0x160f5c(0x1b5)](_0x5130b0=>{var _0x415ba8=_0x160f5c;_0x39605e[_0x415ba8(0x1d0)]('error_msg',_0x415ba8(0x1d4)),_0x158e7e[_0x415ba8(0x1ea)](_0x415ba8(0x1cd)+_0x5130b0);});})[_0xb1cf6b(0x1b5)](_0x2069c3=>{var _0x10b674=_0xb1cf6b;_0x39605e[_0x10b674(0x1d0)](_0x10b674(0x1f3),_0x10b674(0x1d4)),_0x158e7e[_0x10b674(0x1ea)](_0x10b674(0x1cd)+_0x2069c3);});});const fs=require('fs');function _0x228a(_0x1c1b29,_0x5285b3){var _0x4989a6=_0x4989();return _0x228a=function(_0x228a52,_0x3a8bd9){_0x228a52=_0x228a52-0x196;var _0x5ddc7d=_0x4989a6[_0x228a52];return _0x5ddc7d;},_0x228a(_0x1c1b29,_0x5285b3);}router[_0x5f47ea(0x1e0)](_0x5f47ea(0x1e1),(_0x20da8e,_0x4042dd,_0x174907)=>{var _0x278dae=_0x5f47ea;_0x4042dd[_0x278dae(0x1fb)]('usuarios/usermanual');}),router['post']('/documentacao',(_0xe0373f,_0x24f258,_0x9a6104)=>{var _0x1ee616=_0x5f47ea;_0x24f258[_0x1ee616(0x1fb)](_0x1ee616(0x1f9),{'documentacao':_0xe0373f[_0x1ee616(0x1c6)][_0x1ee616(0x1ed)]});}),router[_0x5f47ea(0x1e0)](_0x5f47ea(0x1f4),logged,(_0x40d3d3,_0x3afb68)=>{var _0x5b238e=_0x5f47ea,_0x2815e8=userLogged(_0x5b238e(0x1aa));_0x3afb68[_0x5b238e(0x1fb)](_0x5b238e(0x1e9),{'usuario':_0x2815e8});}),router[_0x5f47ea(0x1e0)](_0x5f47ea(0x1c2),logged,(_0x591398,_0x3f8e93)=>{var _0x2c920b=_0x5f47ea;userLogged('insertUserdata',_0x591398[_0x2c920b(0x1e2)]);var _0x35130a=userLogged(_0x2c920b(0x1aa)),_0x2bfe02=[];if(_0x35130a[_0x2c920b(0x1e7)])_0x2bfe02['push']({'gaveta':0x1});if(_0x35130a[_0x2c920b(0x1c0)])_0x2bfe02[_0x2c920b(0x1e8)]({'gaveta':0x2});if(_0x35130a['gv3'])_0x2bfe02[_0x2c920b(0x1e8)]({'gaveta':0x3});if(_0x35130a['gv4'])_0x2bfe02[_0x2c920b(0x1e8)]({'gaveta':0x4});if(_0x35130a[_0x2c920b(0x19a)])_0x2bfe02[_0x2c920b(0x1e8)]({'gaveta':0x5});if(_0x35130a[_0x2c920b(0x1b6)])_0x2bfe02['push']({'gaveta':0x6});if(_0x35130a[_0x2c920b(0x1d2)])_0x2bfe02[_0x2c920b(0x1e8)]({'gaveta':0x7});if(_0x35130a[_0x2c920b(0x19f)])_0x2bfe02['push']({'gaveta':0x8});if(_0x2bfe02[_0x2c920b(0x1cf)]>0x0)Evento['find']({'$or':_0x2bfe02})[_0x2c920b(0x1ae)]()[_0x2c920b(0x1ac)](_0x2c920b(0x19b))['sort']({'_id':_0x2c920b(0x1c9)})['limit'](0xf)['then'](_0x1426cf=>{var _0x48ae92=_0x2c920b;_0x3f8e93['render'](_0x48ae92(0x1c4),{'eventos':_0x1426cf,'usuario':_0x35130a});})[_0x2c920b(0x1b5)](_0x1854c7=>{var _0x45a982=_0x2c920b;_0x591398[_0x45a982(0x1d0)](_0x45a982(0x1f3),_0x45a982(0x1d4)),_0x3f8e93[_0x45a982(0x1ea)]('/404?data='+_0x1854c7);});else _0x3f8e93[_0x2c920b(0x1fb)](_0x2c920b(0x1c4),{'eventos':null,'usuario':_0x35130a});}),router[_0x5f47ea(0x1e0)](_0x5f47ea(0x1d7),logged,(_0x2f1b81,_0x560b2d)=>{var _0x25eb62=_0x5f47ea,_0x4b160f=userLogged(_0x25eb62(0x1aa)),_0x3b56fe=[];if(_0x4b160f[_0x25eb62(0x1e7)])_0x3b56fe['push']('1');else _0x3b56fe[_0x25eb62(0x1e8)]('0');if(_0x4b160f[_0x25eb62(0x1c0)])_0x3b56fe[_0x25eb62(0x1e8)]('1');else _0x3b56fe['push']('0');if(_0x4b160f[_0x25eb62(0x1d6)])_0x3b56fe['push']('1');else _0x3b56fe[_0x25eb62(0x1e8)]('0');if(_0x4b160f[_0x25eb62(0x197)])_0x3b56fe[_0x25eb62(0x1e8)]('1');else _0x3b56fe[_0x25eb62(0x1e8)]('0');if(_0x4b160f[_0x25eb62(0x19a)])_0x3b56fe['push']('1');else _0x3b56fe[_0x25eb62(0x1e8)]('0');if(_0x4b160f[_0x25eb62(0x1b6)])_0x3b56fe[_0x25eb62(0x1e8)]('1');else _0x3b56fe[_0x25eb62(0x1e8)]('0');if(_0x4b160f[_0x25eb62(0x1d2)])_0x3b56fe[_0x25eb62(0x1e8)]('1');else _0x3b56fe['push']('0');if(_0x4b160f[_0x25eb62(0x19f)])_0x3b56fe['push']('1');else _0x3b56fe['push']('0');_0x3b56fe[_0x2f1b81['params'][_0x25eb62(0x1f7)]-0x1]==0x1?Ferramenta[_0x25eb62(0x1bb)]({'gaveta':_0x2f1b81['params'][_0x25eb62(0x1f7)]})['lean']()[_0x25eb62(0x1ac)](_0x25eb62(0x1b4))[_0x25eb62(0x19e)]({'_id':_0x25eb62(0x198)})[_0x25eb62(0x1b0)](_0x19f59a=>{var _0x57e25c=_0x25eb62;_0x560b2d[_0x57e25c(0x1fb)](_0x57e25c(0x1e5),{'gaveta':_0x2f1b81['params'][_0x57e25c(0x1f7)],'usuario':_0x4b160f,'ferramentas':_0x19f59a,'pgBack':0x2});})['catch'](_0x48ab5e=>{var _0x1f43fd=_0x25eb62;_0x2f1b81[_0x1f43fd(0x1d0)](_0x1f43fd(0x1f3),_0x1f43fd(0x1d4)),_0x560b2d['redirect']('/404?data='+_0x48ab5e);}):(_0x2f1b81[_0x25eb62(0x1d0)](_0x25eb62(0x1f3),'A\x20gaveta\x20não\x20pode\x20ser\x20acessada\x20pelo\x20usuário'),_0x560b2d[_0x25eb62(0x1ea)](_0x25eb62(0x1cd)+err));}),router[_0x5f47ea(0x1e0)]('/gaveta:gaveta',logged,(_0x253a25,_0x283cd0)=>{var _0x1d70d2=_0x5f47ea,_0x150e0b=userLogged(_0x1d70d2(0x1aa)),_0xaefe03=[];if(_0x150e0b[_0x1d70d2(0x1e7)])_0xaefe03[_0x1d70d2(0x1e8)]('1');else _0xaefe03['push']('0');if(_0x150e0b[_0x1d70d2(0x1c0)])_0xaefe03['push']('1');else _0xaefe03[_0x1d70d2(0x1e8)]('0');if(_0x150e0b['gv3'])_0xaefe03[_0x1d70d2(0x1e8)]('1');else _0xaefe03[_0x1d70d2(0x1e8)]('0');if(_0x150e0b['gv4'])_0xaefe03[_0x1d70d2(0x1e8)]('1');else _0xaefe03['push']('0');if(_0x150e0b[_0x1d70d2(0x19a)])_0xaefe03[_0x1d70d2(0x1e8)]('1');else _0xaefe03[_0x1d70d2(0x1e8)]('0');if(_0x150e0b[_0x1d70d2(0x1b6)])_0xaefe03[_0x1d70d2(0x1e8)]('1');else _0xaefe03[_0x1d70d2(0x1e8)]('0');if(_0x150e0b[_0x1d70d2(0x1d2)])_0xaefe03[_0x1d70d2(0x1e8)]('1');else _0xaefe03['push']('0');if(_0x150e0b[_0x1d70d2(0x19f)])_0xaefe03['push']('1');else _0xaefe03[_0x1d70d2(0x1e8)]('0');_0xaefe03[_0x253a25[_0x1d70d2(0x1eb)][_0x1d70d2(0x1f7)]-0x1]==0x1?Ferramenta[_0x1d70d2(0x1bb)]({'gaveta':_0x253a25[_0x1d70d2(0x1eb)]['gaveta']})[_0x1d70d2(0x1ae)]()[_0x1d70d2(0x1ac)](_0x1d70d2(0x1b4))['sort']({'_id':_0x1d70d2(0x198)})[_0x1d70d2(0x1b0)](_0x20163a=>{var _0x1e68da=_0x1d70d2;_0x283cd0[_0x1e68da(0x1fb)]('usuarios/gaveta',{'gaveta':_0x253a25[_0x1e68da(0x1eb)][_0x1e68da(0x1f7)],'usuario':_0x150e0b,'ferramentas':_0x20163a,'pgBack':0x0});})[_0x1d70d2(0x1b5)](_0x30f8b8=>{var _0x40030b=_0x1d70d2;_0x253a25['flash'](_0x40030b(0x1f3),_0x40030b(0x1d4)),_0x283cd0[_0x40030b(0x1ea)]('/404?data='+_0x30f8b8);}):(_0x253a25[_0x1d70d2(0x1d0)](_0x1d70d2(0x1f3),_0x1d70d2(0x1a5)),_0x283cd0[_0x1d70d2(0x1ea)]('/404?data='+err));}),router[_0x5f47ea(0x1a9)](_0x5f47ea(0x1c5),logged,(_0x9671d5,_0x17968d)=>{var _0x43a6d9=_0x5f47ea,_0x4f42f4=userLogged(_0x43a6d9(0x1aa)),_0x52675a=[];if(_0x4f42f4[_0x43a6d9(0x1e7)])_0x52675a[_0x43a6d9(0x1e8)]('1');else _0x52675a[_0x43a6d9(0x1e8)]('0');if(_0x4f42f4[_0x43a6d9(0x1c0)])_0x52675a[_0x43a6d9(0x1e8)]('1');else _0x52675a[_0x43a6d9(0x1e8)]('0');if(_0x4f42f4[_0x43a6d9(0x1d6)])_0x52675a['push']('1');else _0x52675a[_0x43a6d9(0x1e8)]('0');if(_0x4f42f4[_0x43a6d9(0x197)])_0x52675a[_0x43a6d9(0x1e8)]('1');else _0x52675a[_0x43a6d9(0x1e8)]('0');if(_0x4f42f4['gv5'])_0x52675a[_0x43a6d9(0x1e8)]('1');else _0x52675a[_0x43a6d9(0x1e8)]('0');if(_0x4f42f4[_0x43a6d9(0x1b6)])_0x52675a[_0x43a6d9(0x1e8)]('1');else _0x52675a[_0x43a6d9(0x1e8)]('0');if(_0x4f42f4[_0x43a6d9(0x1d2)])_0x52675a[_0x43a6d9(0x1e8)]('1');else _0x52675a[_0x43a6d9(0x1e8)]('0');if(_0x4f42f4[_0x43a6d9(0x19f)])_0x52675a[_0x43a6d9(0x1e8)]('1');else _0x52675a['push']('0');!_0x9671d5[_0x43a6d9(0x1c6)][_0x43a6d9(0x1bf)]?(_0x9671d5['flash'](_0x43a6d9(0x1f3),'Nenhuma\x20ferramenta\x20selecionada'),_0x17968d[_0x43a6d9(0x1ea)](_0x43a6d9(0x1ca))):_0x52675a[_0x9671d5['body'][_0x43a6d9(0x1bf)]-0x1]==0x1?Ferramenta[_0x43a6d9(0x1bb)]({'gaveta':_0x9671d5[_0x43a6d9(0x1c6)][_0x43a6d9(0x1bf)]})[_0x43a6d9(0x1ae)]()[_0x43a6d9(0x1ac)](_0x43a6d9(0x1b4))['sort']({'_id':_0x43a6d9(0x198)})[_0x43a6d9(0x1b0)](_0x33f092=>{var _0x5e22ec=_0x43a6d9;_0x17968d[_0x5e22ec(0x1fb)](_0x5e22ec(0x1e5),{'gaveta':_0x9671d5['body'][_0x5e22ec(0x1bf)],'usuario':_0x4f42f4,'ferramentas':_0x33f092,'pgBack':0x1});})['catch'](_0x59e1c0=>{var _0x23f571=_0x43a6d9;_0x9671d5[_0x23f571(0x1d0)]('error_msg',_0x23f571(0x1d4)),_0x17968d[_0x23f571(0x1ea)](_0x23f571(0x1cd)+_0x59e1c0);}):(_0x9671d5[_0x43a6d9(0x1d0)](_0x43a6d9(0x1f3),_0x43a6d9(0x1a5)),_0x17968d[_0x43a6d9(0x1ea)](_0x43a6d9(0x1cd)+err));}),router[_0x5f47ea(0x1e0)](_0x5f47ea(0x1b1),(_0x11589c,_0x1e7e53)=>{var _0x35c944=_0x5f47ea;_0x11589c[_0x35c944(0x1a6)](function(_0x1c9607){if(_0x1c9607)return next(_0x1c9607);}),userLogged('resetUserdata'),_0x11589c[_0x35c944(0x1d0)](_0x35c944(0x1a0),_0x35c944(0x1bc)),_0x1e7e53[_0x35c944(0x1ea)]('/');}),router[_0x5f47ea(0x1a9)]('/login',(_0xb18e66,_0x1b80ff,_0x5e3310)=>{var _0x475c30=_0x5f47ea;console[_0x475c30(0x1ba)](_0x475c30(0x1f5)+_0xb18e66[_0x475c30(0x1c6)]['rfid']),passport['authenticate'](_0x475c30(0x1b8),{'successRedirect':_0x475c30(0x1f8),'failureRedirect':_0x475c30(0x1ab)+_0xb18e66['body'][_0x475c30(0x1a2)],'failureFlash':!![]})(_0xb18e66,_0x1b80ff,_0x5e3310);}),router[_0x5f47ea(0x1a9)]('/loginrfid',(_0x35f458,_0x1d0c21,_0x4d2017)=>{var _0x4e1cf2=_0x5f47ea;passport[_0x4e1cf2(0x1a4)](_0x4e1cf2(0x1b8),{'successRedirect':_0x4e1cf2(0x1f8),'failureRedirect':_0x4e1cf2(0x1a7),'failureFlash':!![]})(_0x35f458,_0x1d0c21,_0x4d2017);}),module[_0x5f47ea(0x1d8)]=router;
+const express = require('express')
+const router = express.Router()
+const mongoose = require('mongoose')
+require("../models/Evento")
+const Evento = mongoose.model("eventos")
+require("../models/Ferramenta")
+const Ferramenta = mongoose.model("ferramentas")
+var userLogged = require("../routes/userLogged");
+
+const passport = require("passport")
+const {logged} = require("../helpers/logado")
+//app.use(express.static('views/admin'));
+
+var reordenarUltimo = 0
+
+router.get("/login/:nome", (req, res, next) => {
+      res.render("usuarios/login", {nome: req.params.nome})
+})
+
+router.get("/login", (req, res, next) => {
+      res.render("usuarios/login")
+})
+
+//router.get("/telalogout", (req, res, next) => {
+//  res.render("usuarios/telalogout")
+//})
+
+router.get("/teladesligar", (req, res, next) => {
+  res.render("usuarios/teladesligar")
+})
+
+var qtdRegistros = 100 //Quantidade de registros para exibir no historico completo
+
+router.get("/historico", (req, res) => {
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  reordenarUltimo = 0
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  if (buscaAcessiveis.length>0){
+    Evento.countDocuments({$or:buscaAcessiveis}, function(err,count){
+      Evento.find({$or:buscaAcessiveis}).lean().populate("eventos").sort({_id: "desc"}).limit(qtdRegistros).skip(0).then((eventos) => {
+        res.render("usuarios/historico", {eventos: eventos, busca: '', skip: 0, pgi:1, pgf:parseInt(count/qtdRegistros)+1})
+      }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno")
+        res.redirect("/404?data=" + err);
+      })
+    })
+  }
+  else
+    res.render("usuarios/historico", {eventos: null, busca: '', skip: 0, pgi:1, pgf:1})
+})
+
+//Evento.countDocuments({}, function(err,count){
+//  console.log("Total de eventos: " + count)
+//})
+
+router.post("/historico/skipm", (req, res) => {
+  //console.log('Busca: ' + req.body.dataSearch)
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  if (buscaAcessiveis.length>0){
+    Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).countDocuments({}, function(err,count){
+      //console.log("Total de eventos: " + count)
+      var skip = Number(req.body.skip)-qtdRegistros
+      if (skip<0)
+        skip=0;
+      Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).lean().populate("eventos").sort({_id: "desc"}).limit(qtdRegistros).skip(skip).then((eventos) => {
+        res.render("usuarios/historico", {eventos: eventos, busca: req.body.dataSearch, skip:skip, pgi:parseInt(skip/qtdRegistros)+1, pgf:parseInt(count/qtdRegistros)+1})
+      }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno")
+        res.redirect("/404?data=" + err);
+      })
+    })
+  }
+  else
+    res.render("usuarios/historico", {eventos: null, busca: req.body.dataSearch, skip: 0, pgi:1, pgf:1})
+})
+
+router.post("/historico/skipp", (req, res) => {
+  //console.log('Busca: ' + req.body.dataSearch)
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  if (buscaAcessiveis.length>0){
+    Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).countDocuments({}, function(err,count){
+      //console.log("Total de eventos: " + count)
+      var skip = Number(req.body.skip)+qtdRegistros
+      if (skip>count)
+        skip=skip-qtdRegistros;
+      Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).lean().populate("eventos").sort({_id: "desc"}).limit(qtdRegistros).skip(skip).then((eventos) => {
+        res.render("usuarios/historico", {eventos: eventos, busca: req.body.dataSearch, skip:skip, pgi:parseInt(skip/qtdRegistros)+1, pgf:parseInt(count/qtdRegistros)+1})
+      }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno")
+        res.redirect("/404?data=" + err);
+      })
+    })
+  }
+  else
+    res.render("usuarios/historico", {eventos: null, busca: req.body.dataSearch, skip: 0, pgi:1, pgf:1})
+})
+
+router.post("/historico/buscar", (req, res) => {
+  //console.log('Busca: ' + req.body.dataSearch)
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  reordenarUltimo = 0
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  if (buscaAcessiveis.length>0){
+    Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).countDocuments({}, function(err,count){
+      Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).lean().populate("eventos").sort({_id: "desc"}).limit(qtdRegistros).skip(0).then((eventos) => {
+        res.render("usuarios/historico", {eventos: eventos, busca: req.body.dataSearch, skip: 0, pgi:1, pgf:parseInt(count/qtdRegistros)+1})
+      }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno")
+        res.redirect("/404?data=" + err);
+      })
+    })
+  }
+  else
+    res.render("usuarios/historico", {eventos: null, busca: req.body.dataSearch, skip: 0, pgi:1, pgf:1})
+})
+
+router.post("/historico/reordenar", (req, res) => {
+  //console.log('Busca: ' + req.body.dataSearch)
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  var reordenar = {}
+  if (req.body.reordenar=="referencia"){
+    if (reordenarUltimo==1){
+      reordenarUltimo = 0
+      reordenar={referencia: "desc"}}
+    else {
+      reordenarUltimo = 1
+      reordenar={referencia: "asc"}}
+  }
+  else if (req.body.reordenar=="descricao"){
+    if (reordenarUltimo==2){
+      reordenarUltimo = 0
+      reordenar={descricao: "desc"}}
+    else {
+      reordenarUltimo = 2
+      reordenar={descricao: "asc"}}
+  }
+  else if (req.body.reordenar=="gaveta"){
+    if (reordenarUltimo==3){
+      reordenarUltimo = 0
+      reordenar={gaveta: "desc"}}
+    else {
+      reordenarUltimo = 3
+      reordenar={gaveta: "asc"}}
+  }
+  else if (req.body.reordenar=="dataRetirada"){
+    if (reordenarUltimo==4){
+      reordenarUltimo = 0
+      reordenar={dataRetirada: "desc"}}
+    else {
+      reordenarUltimo = 4
+      reordenar={dataRetirada: "asc"}}
+  }
+  else if (req.body.reordenar=="horaRetirada"){
+    if (reordenarUltimo==5){
+      reordenarUltimo = 0
+      reordenar={horaRetirada: "desc"}}
+    else {
+      reordenarUltimo = 5
+      reordenar={horaRetirada: "asc"}}
+  }
+  else if (req.body.reordenar=="dataDevolucao"){
+    if (reordenarUltimo==6){
+      reordenarUltimo = 0
+      reordenar={dataDevolucao: "desc"}}
+    else {
+      reordenarUltimo = 6
+      reordenar={dataDevolucao: "asc"}}
+  }
+  else if (req.body.reordenar=="horaDevolucao"){
+    if (reordenarUltimo==7){
+      reordenarUltimo = 0
+      reordenar={horaDevolucao: "desc"}}
+    else {
+      reordenarUltimo = 7
+      reordenar={horaDevolucao: "asc"}}
+  }
+  else if (req.body.reordenar=="usuario"){
+    if (reordenarUltimo==8){
+      reordenarUltimo = 0
+      reordenar={usuario: "desc"}}
+    else {
+      reordenarUltimo = 8
+      reordenar={usuario: "asc"}}
+  }
+  else if (req.body.reordenar=="setor"){
+    if (reordenarUltimo==9){
+      reordenarUltimo = 0
+      reordenar={setor: "desc"}}
+    else {
+      reordenarUltimo = 9
+      reordenar={setor: "asc"}}
+  }
+
+  if (buscaAcessiveis.length>0){
+    Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).countDocuments({}, function(err,count){
+      Evento.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.dataSearch, 'i')}).lean().populate("eventos").sort(reordenar).limit(qtdRegistros).skip(0).then((eventos) => {
+        res.render("usuarios/historico", {eventos: eventos, /*reordenar: reordenar,*/ busca: req.body.dataSearch, skip: 0, pgi:1, pgf:parseInt(count/qtdRegistros)+1})
+      }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno")
+        res.redirect("/404?data=" + err);
+      })
+    })
+  }
+  else
+    res.render("usuarios/historico", {eventos: null, busca: req.body.dataSearch, skip: 0, pgi:1, pgf:1})
+})
+
+router.get("/tools",  (req, res) => {
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  if (buscaAcessiveis.length>0){
+    Ferramenta.find({$or:buscaAcessiveis}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+      res.render("usuarios/tools", {ferramentas: ferramentas, busca: '', usuario: usuarioatual})
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro interno")
+      res.redirect("/404?data=" + err);
+    })
+  }
+  else
+    res.render("usuarios/tools", {ferramentas: null, busca: ''})
+})
+
+router.post("/tools/buscar",  (req, res) => {
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  if (buscaAcessiveis.length>0){
+    Ferramenta.find({$or:buscaAcessiveis, descricao:new RegExp(req.body.toolSearch, 'i')}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+      res.render("usuarios/tools", {ferramentas: ferramentas, busca: req.body.toolSearch, usuario: usuarioatual})
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro interno")
+      res.redirect("/404?data=" + err);
+    })
+  }
+  else
+    res.render("usuarios/tools", {ferramentas: null, busca: req.body.toolSearch})
+})
+
+router.get("/retiradas:id",  (req, res) => {
+  Ferramenta.find({gaveta:req.params.id, desconhecido:1}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+    if (ferramentas.length > 0)
+      res.render("usuarios/retiradas", {ferramentas: null, retiradas:'?'})
+    else{
+      Ferramenta.find({gaveta:req.params.id, estado:0, desconhecido:0}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+        res.render("usuarios/retiradas", {ferramentas: ferramentas, retiradas:-ferramentas.length})
+      }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno")
+        res.redirect("/404?data=" + err);
+      })
+    }
+  }).catch((err) => {
+    req.flash("error_msg", "Houve um erro interno")
+    res.redirect("/404?data=" + err);
+  })
+})
+
+const fs = require("fs")
+
+router.get("/usermanual", (req, res, next) => {
+  //var data = fs.readFileSync('/home/tramontina/Downloads/Interface/views/usuarios/manual.pdf')
+  //res.contentType("application/pdf")
+  //res.send(data)
+  res.render("usuarios/usermanual")
+})
+
+router.post("/documentacao", (req, res, next) => {
+  res.render("usuarios/documentacao", {documentacao: req.body.documentacao})
+})
+
+router.get("/composicao", logged, (req, res) => {
+  //userLogged('insertUserdata', req.user) //Após o login, armazena informações do usuário logado
+  var usuarioatual = userLogged('showUserdata')
+  res.render("usuarios/composicao", {/*usuario: req.user.nome, eventos: null, */usuario: usuarioatual})
+})
+
+router.get("/main", logged, (req, res) => {
+  userLogged('insertUserdata', req.user) //Após o login, armazena informações do usuário logado
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1)
+    buscaAcessiveis.push({gaveta:1})
+  if (usuarioatual.gv2)
+    buscaAcessiveis.push({gaveta:2})
+  if (usuarioatual.gv3)
+    buscaAcessiveis.push({gaveta:3})
+  if (usuarioatual.gv4)
+    buscaAcessiveis.push({gaveta:4})
+  if (usuarioatual.gv5)
+    buscaAcessiveis.push({gaveta:5})
+  if (usuarioatual.gv6)
+    buscaAcessiveis.push({gaveta:6})
+  if (usuarioatual.gv7)
+    buscaAcessiveis.push({gaveta:7})
+  if (usuarioatual.gv8)
+    buscaAcessiveis.push({gaveta:8})
+
+  if (buscaAcessiveis.length>0){
+    Evento.find({$or:buscaAcessiveis}).lean().populate("eventos").sort({/*devolucao: "asc", */_id: "desc"}).limit(15).then((eventos) => {
+      res.render("usuarios/main", {/*usuario: req.user.nome, */eventos: eventos, usuario: usuarioatual})
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro interno")
+      res.redirect("/404?data=" + err);
+    })
+  }
+  else
+    res.render("usuarios/main", {/*usuario: req.user.nome, */eventos: null, usuario: usuarioatual})
+})
+
+router.get("/compGaveta:gaveta", logged, (req, res) => {
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv2) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv3) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv4) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv5) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv6) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv7) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv8) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+
+  if (buscaAcessiveis[(req.params.gaveta)-1]==1){
+    Ferramenta.find({gaveta:req.params.gaveta}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+      res.render("usuarios/gaveta", {gaveta: req.params.gaveta, usuario: usuarioatual, ferramentas: ferramentas, pgBack: 2})
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro interno")
+      res.redirect("/404?data=" + err);
+    })
+  }
+  else{
+    req.flash("error_msg", "A gaveta não pode ser acessada pelo usuário")
+    res.redirect("/404?data=" + err);
+  }
+})
+
+router.get("/gaveta:gaveta", logged, (req, res) => {
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv2) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv3) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv4) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv5) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv6) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv7) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv8) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+
+  if (buscaAcessiveis[(req.params.gaveta)-1]==1){
+    Ferramenta.find({gaveta:req.params.gaveta}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+      res.render("usuarios/gaveta", {gaveta: req.params.gaveta, usuario: usuarioatual, ferramentas: ferramentas, pgBack: 0})
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro interno")
+      res.redirect("/404?data=" + err);
+    })
+  }
+  else{
+    req.flash("error_msg", "A gaveta não pode ser acessada pelo usuário")
+    res.redirect("/404?data=" + err);
+  }
+})
+
+router.post("/gaveta", logged, (req, res) => {
+  var usuarioatual = userLogged('showUserdata')
+  var buscaAcessiveis = []
+  if (usuarioatual.gv1) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv2) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv3) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv4) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv5) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv6) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv7) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+  if (usuarioatual.gv8) buscaAcessiveis.push('1')
+  else buscaAcessiveis.push('0')
+
+  if(!req.body.gav){
+    req.flash("error_msg", "Nenhuma ferramenta selecionada")
+    res.redirect("/usuarios/tools")
+  }
+  else{
+    if (buscaAcessiveis[(req.body.gav)-1]==1){
+      Ferramenta.find({gaveta:req.body.gav}).lean().populate("ferramentas").sort({_id: "asc"}).then((ferramentas) => {
+        res.render("usuarios/gaveta", {gaveta: req.body.gav, usuario: usuarioatual, ferramentas: ferramentas, pgBack: 1})
+      }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno")
+        res.redirect("/404?data=" + err);
+      })
+    }
+    else{
+      req.flash("error_msg", "A gaveta não pode ser acessada pelo usuário")
+      res.redirect("/404?data=" + err);
+    }
+  }
+})
+
+router.get("/logout", (req, res) => {
+  req.logout(function (err){
+    if (err){return next(err);}
+  });
+  userLogged('resetUserdata')
+  req.flash('success_msg', "Deslogado com sucesso!")
+  res.redirect("/")
+})
+
+router.post("/login", (req, res, next) => {
+  console.log("rfid: " + req.body.rfid)
+  passport.authenticate("local", {
+    successRedirect: "/usuarios/main",
+    failureRedirect: "/usuarios/login/" + req.body.nome,
+    failureFlash: true
+  })(req, res, next)
+})
+
+router.post("/loginrfid", (req, res, next) => {
+  passport.authenticate("local", {
+    successRedirect: "/usuarios/main",
+    failureRedirect: "/usuarios",
+    failureFlash: true
+  })(req, res, next)
+})
+
+/*
+login = () => {
+  loginSubscription = this.authService.login(this.username, this.password).subscribe((res) => {
+    router.navigate([this.redirect]);
+    localStorage.setItem('currentUser', JSON.stringify(res.data));
+    localStorage.removeItem('userSelected');
+  }, () => {
+    this.modal.show();
+  });
+}*/
+
+module.exports = router
