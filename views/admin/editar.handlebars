@@ -42,13 +42,13 @@
           <div class="row">
             <p>Senha</p>
             <div class="search-input small" style="margin-left:-110px">
-              <input class="use-numpad-input" type="password" name="senha"/>
+              <input class="use-numpad-input"  id="boxSenha" onclick='resetSenha()' type="password" name="senha"/>
             </div>
           </div>
           <div class="row">
             <p>Código do Cartão</p>
             <div class="search-input small" style="margin-left:-110px">
-              <input class="use-numpad-input" type="text" name="rfid" value="{{usuario.rfid}}"/>
+              <input class="use-numpad-input"  id="boxCartao" onclick='resetCartao()' type="text" name="rfid" value="{{usuario.rfid}}"/>
             </div>
           </div>
           <div id="selectGavetas" class="row">
@@ -136,6 +136,14 @@
           document.getElementById('checkGV'+data).className = "not-check";          
         }
       };
+	  
+	  function resetSenha(){
+        document.getElementById("boxSenha").value = '';
+      }
+	  
+	  function resetCartao(){
+        document.getElementById("boxCartao").value = '';
+      }
     </script>
   </body>
   <foot>
