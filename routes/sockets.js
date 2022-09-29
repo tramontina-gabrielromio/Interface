@@ -1,1 +1,1585 @@
-var _0x1969db=_0x29e1;(function(_0x5a1c98,_0x33f710){var _0x3af648=_0x29e1,_0x7be454=_0x5a1c98();while(!![]){try{var _0x428b0a=parseInt(_0x3af648(0x11d))/0x1+-parseInt(_0x3af648(0x173))/0x2+parseInt(_0x3af648(0x1ca))/0x3*(parseInt(_0x3af648(0x179))/0x4)+-parseInt(_0x3af648(0x170))/0x5+parseInt(_0x3af648(0x12d))/0x6*(-parseInt(_0x3af648(0x1a7))/0x7)+-parseInt(_0x3af648(0x1b7))/0x8+parseInt(_0x3af648(0x1cb))/0x9*(parseInt(_0x3af648(0x109))/0xa);if(_0x428b0a===_0x33f710)break;else _0x7be454['push'](_0x7be454['shift']());}catch(_0x3ff568){_0x7be454['push'](_0x7be454['shift']());}}}(_0x5e2f,0xe281b));const express=require(_0x1969db(0x11e)),router=express[_0x1969db(0x165)](),mongoose=require(_0x1969db(0x139)),passport=require('passport'),{logged}=require('../helpers/logado'),localStrategy=require('passport-local')['Strategy'],bcrypt=require(_0x1969db(0x10c)),session=require(_0x1969db(0x176)),path=require(_0x1969db(0x10e)),{execFile}=require(_0x1969db(0x150)),{spawn}=require(_0x1969db(0x150));require('../models/Ferramenta');const Ferramenta=mongoose[_0x1969db(0x143)](_0x1969db(0x171));require('../models/Evento');const Evento=mongoose['model'](_0x1969db(0x1bf));var userLogged=require(_0x1969db(0x17f));function _0x5e2f(){var _0x1f0690=['Gaveta:\x20','pid','/home/tramontina/Downloads/Interface/Gavetas','testeParadoTodasGVs','./sendgrid.env','email','tcp','usb','_id','FGV','testetodasgavetas','Falha\x20na\x20camera\x201...','findOne','/home/tramontina/Downloads/Interface/update.sh','result_GV','Kill\x20cam1\x20-\x20Erro\x20encontrado:\x20','then','base64','desconhecido','deleteMany','excluiRegistros','10csjKHw','stderr:\x20','Cam1\x20finalizada...','bcryptjs','posicao','path','readFileSync','testeFalhouGVEspecifica','AGV','\x0aNenhum\x20registro\x20novo.','alteraDataHora','nodemailer','deleteOne','dateformat','resultadoConexao','pausaTesteGVEspecifica','Iniciando\x20atualização\x20de\x20software...','Erro\x20ao\x20sobrescrever\x20configuracao:\x20','objects-to-csv','toDisk','1385876eLvrbx','express','kill','indexOf','sistemainteligente.pro@tramontina.com','Exclui\x20resgistros\x20com\x20ferramentas\x20devolvidas','catch','desligamento','getHours','Erro\x20ao\x20conectar\x20ao\x20ngrok:\x20','getDate','salvaConfiguracoes','Erro\x20ferramenta\x20não\x20encontrada','Eventos\x20atualizados','Conectando\x20à\x20rede...','Software\x20atualizado','108rdWLLf','./versao','mongodb','aux...','stdout:\x20','stopTesteGVEspecifica','HTTPConectado','descricao','Erro\x20ao\x20deletar\x20evento:\x20','fechaGaveta','yyyy-mm-dd\x20HH:MM:ss','send','mongoose','fechamento','connectWifi','Url\x20da\x20conexao:\x20','abreGaveta','node-schedule','\x20retirada','SenhaAtual','abreCalculadora','getFullYear','model','Nivel\x20bateria:\x20','GVT','Erro\x20evento\x20não\x20encontrado','Erro\x20ao\x20acessar\x20banco\x20de\x20dados:\x20','stdout','atualizaBateria','shutdown','Falha\x20na\x20camera\x202...','find','estado','Erro\x20ao\x20conectar:\x20','verificaVersaoSoftware','child_process','Repeticoes:\x20','error','Gerando\x20relatorio...','getMonth','usuario','nivelBateria','disconnect','Relatório\x20SmartManager4.0','auxAtualizaDispositivo','setApiKey','bloqueiaInteracaoUsuario','Kill\x20rede\x20neural\x20-\x20Erro\x20encontrado:\x20','20BAgjvFYCzY3LJwy9VMch2YkrT_7PqDGu6Cgikww4TZudh2u','Gaveta\x20aberta','testeFinalizadoGVEspecifica','usuarios','dataRetirada','updateMany','Uma\x20das\x20redes\x20neurais\x20parou\x20de\x20responder...','horaRetirada','Router','reboot','connect','Desconectado','exec','pausaTesteTodasGVs','emit','getMinutes','estadoGavetas','testeFalhouTodasGVs','updateOne','5015390XViLUV','ferramentas','./identificacao','2498822CUpcCd','statusRedesNeurais','toString','express-session','falhaConexao','gaveta','364GbfOzk','Conectando\x20ao\x20ngrok\x20HTTP...','Cont.\x20repeticoes:\x20','lean','join','000000000000000000000001','../routes/userLogged','FCAM1','./relatorio.csv','Houve\x20um\x20erro\x20ao\x20deletar\x20o\x20histórico:\x20','Encerrando\x20ngrok...','testegavetaespecifica','gnome-calculator','Wifi\x20não\x20conectado...\x20adiando\x20envio\x20de\x20e-mail','FCAM12','timedatectl\x20set-ntp\x20false','Parando\x20teste\x20','estadoTestesGVEspecifica','dotenv','ngrok','length','../models/Usuario','timedatectl\x20set-time\x20\x22','Erro\x20ao\x20carregar\x20as\x20configurações:\x20','scheduleJob','select','referencia','estadoTestesTodasGVs','setor','Salvando\x20configuração...','showGvTrancadaFechando','atualizaContadorTestesTodasGVs','save','cartao','hwclock\x20-w\x20--utc','removeKey','/home/tramontina/Downloads/Interface/RedesNeurais','carregada','versaoSoftware','Conectado','atualizaContadorTestesGVEspecifica','/home/tramontina/Downloads/Interface/GetImages_GV','Redes\x20neurais\x20carregadas\x20com\x20sucesso!','Pausando\x20teste\x20','testePausadoGVEspecifica','signal_level','597191fZHiFe','data','env','stderr','./senha','config','\x0aRepeticoes:\x20','Erro\x20ferramentas\x20não\x20encontradas','referencia\x20descricao\x20gaveta\x20dataRetirada\x20horaRetirada\x20dataDevolucao\x20horaDevolucao\x20usuario\x20setor\x20-_id','redesNeuraisCarregadas','error:\x20','application/csv','exit','Iniciando\x20teste\x20de\x20todas\x20as\x20gavetas...','Usuario\x20conectado','atualizaWifi','4740808uDExvF','populate','Kill\x20cam2\x20-\x20Erro\x20encontrado:\x20','testeFinalizadoTodasGVs','GAVETAS','Gaveta\x20trancada','insertKey','Erro\x20ao\x20acessar\x20as\x20configurações:\x20','eventos','Gaveta\x20fechada','passLength','carregando','Relatório\x20','gabriel.romio@tramontina.com','Histórico\x20deletado\x20com\x20sucesso!','log','Desconectando...','relatorio.csv','testeParadoGVEspecifica','55983OuLsoD','20020212zcSCCQ','node-wifi','dataRelatorio','estadoFerramentas','login','registros','now','SSHConectado','falhaComunicacaoCamera','gavetaTrancada','configuracoes','sort','dadosTestes','Falha\x20nas\x20cameras\x201\x20e\x202...','GvTrancadaAGV','GvTrancadaFGV','floor'];_0x5e2f=function(){return _0x1f0690;};return _0x5e2f();}require(_0x1969db(0x18e));const Usuario=mongoose[_0x1969db(0x143)](_0x1969db(0x160));require('../models/DadosTeste');const DadosTeste=mongoose[_0x1969db(0x143)](_0x1969db(0x1d7));require('../models/Configuracoes');const Configuracao=mongoose[_0x1969db(0x143)](_0x1969db(0x1d5)),wifi=require(_0x1969db(0x1cc));var nodemailer=require(_0x1969db(0x114));const ObjectsToCsv=require(_0x1969db(0x11b)),schedule=require(_0x1969db(0x13e)),usb=require(_0x1969db(0x1e3)),ngrok=require(_0x1969db(0x18c)),child_process_dateTime=require(_0x1969db(0x150)),dateFormat=require(_0x1969db(0x116)),sgMail=require('@sendgrid/mail'),fs=require('fs');require(_0x1969db(0x18b))[_0x1969db(0x1ac)]({'path':_0x1969db(0x1e0)});var redesNeuraisCarregadas=0x0,FuncSenha=require(_0x1969db(0x1ab)),senha='',abrindoGV=0x0,fechandoGV=0x0,bloqueiaAbertura=0x0,ItensErrados=[0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0],auxFGVSemRedeNeural=0x1,redeWifiOk=0x0,wifiLevel=0x0,emailTramontina=_0x1969db(0x1c4),cargaBateria=0x0,BateriaCarregando=0x0,BateriaCarregada=0x0,arrayBateria=[],identificacaoOrganizador=require(_0x1969db(0x172)),versaoSoftware=require(_0x1969db(0x12e)),childCam1,childCam2,childRedeNeural,childVerificacao,contRepeticoesGVEspecifica=0x0,contRepeticoesTodasGVs=0x0,numRepeticoesGVEspecifica=0x0,numRepeticoesTodasGVs=0x0,pausaTestesGavetas=0x0,paraTestesGavetas=0x0,testesGavetasAndamento=0x0,gavetaEmTeste=0x1,gavetaEmMovimento='',segDecorridoGVEspecifica='',segDecorridoTodasGVs='',ObjectId=require(_0x1969db(0x12f))['ObjectID'],childRedeNeural;inicializaRedesNeurais();function inicializaRedesNeurais(){var _0x35e081=_0x1969db;console[_0x35e081(0x1c6)]('Carregando\x20redes\x20neurais...'),childRedeNeural=spawn(_0x35e081(0x19d),[],{'detached':![]}),childRedeNeural['on']('exit',_0x5184f9=>{var _0x4d254c=_0x35e081;console[_0x4d254c(0x1c6)](_0x4d254c(0x163));}),childRedeNeural[_0x35e081(0x148)]['on'](_0x35e081(0x1a8),_0x44c18e=>{var _0x466561=_0x35e081;_0x44c18e[0x0]==0x31&&(redesNeuraisCarregadas=0x1,console['log'](_0x466561(0x1a3)));}),childRedeNeural['stderr']['on'](_0x35e081(0x1a8),_0x2d1813=>{var _0x5eb4eb=_0x35e081;console[_0x5eb4eb(0x1c6)](_0x5eb4eb(0x10a)+_0x2d1813);});}verificaGavetasInicial();function verificaGavetasInicial(){var _0x2ef4a0=_0x1969db;execFile(_0x2ef4a0(0x1de),[_0x2ef4a0(0x1bb)],(_0x48cace,_0x5b88cc,_0x556464)=>{var _0x42e1d7=_0x2ef4a0;if(_0x48cace){console[_0x42e1d7(0x152)](_0x42e1d7(0x1b1)+_0x48cace);return;}if(_0x556464){console[_0x42e1d7(0x152)](_0x42e1d7(0x10a)+_0x556464);return;}console[_0x42e1d7(0x1c6)](_0x42e1d7(0x131)+_0x5b88cc);});}function setDateTime(_0x353c75){var _0x2c281c=_0x1969db;child_process_dateTime[_0x2c281c(0x169)](_0x2c281c(0x188));try{child_process_dateTime['exec'](_0x2c281c(0x18f)+dateFormat(_0x353c75,_0x2c281c(0x137))+'\x22');}catch(_0x32ab81){console[_0x2c281c(0x1c6)]('Error:\x20'+_0x32ab81);}child_process_dateTime[_0x2c281c(0x169)](_0x2c281c(0x19b));}ngrok[_0x1969db(0x157)](),ngrok[_0x1969db(0x11f)]();var configuracaoAtual=new Array();Configuracao[_0x1969db(0x100)]({'_id':_0x1969db(0x17e)})[_0x1969db(0x17c)]()[_0x1969db(0x1b8)](_0x1969db(0x1d5))[_0x1969db(0x104)](_0x13015b=>{var _0x31fc23=_0x1969db;configuracaoAtual={'fechamento':_0x13015b[_0x31fc23(0x13a)],'cartao':_0x13015b[_0x31fc23(0x19a)],'desligamento':_0x13015b[_0x31fc23(0x124)],'email':_0x13015b[_0x31fc23(0x1e1)],'dataRelatorio':_0x13015b[_0x31fc23(0x1cd)]},dataAtual!=_0x13015b['dataRelatorio']&&geraRelatorio(_0x31fc23(0x1d0));})[_0x1969db(0x123)](_0xe742c9=>{var _0x87b367=_0x1969db;console[_0x87b367(0x1c6)](_0x87b367(0x190)+_0xe742c9),configuracaoAtual={'fechamento':0x0,'cartao':0x0,'desligamento':0x0,'email':'','dataRelatorio':''};});var today=new Date(),dataAtual=String(today[_0x1969db(0x127)]()+'-'+(today[_0x1969db(0x154)]()+0x1)+'-'+today[_0x1969db(0x142)]());schedule['scheduleJob']('0\x200\x20*\x20*\x20*',function(){var _0x363829=_0x1969db;geraRelatorio(_0x363829(0x1d0));});function geraRelatorio(_0x2a79d7){var _0x2b61a5=_0x1969db;redeWifiOk==0x1?Evento[_0x2b61a5(0x14c)]({'enviado':0x0})[_0x2b61a5(0x192)](_0x2b61a5(0x1af))[_0x2b61a5(0x17c)]()[_0x2b61a5(0x1b8)](_0x2b61a5(0x1bf))[_0x2b61a5(0x1d6)]({'_id':'asc'})[_0x2b61a5(0x104)](_0x4726a1=>{var _0x168b37=_0x2b61a5;if(_0x4726a1['length']>0x0){const _0x4a064d=new ObjectsToCsv(_0x4726a1);console[_0x168b37(0x1c6)](_0x168b37(0x153)),_0x4a064d[_0x168b37(0x11c)](_0x168b37(0x1c8))[_0x168b37(0x104)](function(){var _0x5e2d8=_0x168b37;console[_0x5e2d8(0x1c6)]('Iniciando\x20envio\x20de\x20e-mail...'),enviaEmail(_0x2a79d7,0x1);});}else enviaEmail(_0x2a79d7,0x0);})[_0x2b61a5(0x123)](_0x23ae9e=>{var _0x516a81=_0x2b61a5;console[_0x516a81(0x1c6)](_0x23ae9e);}):(console[_0x2b61a5(0x1c6)](_0x2b61a5(0x186)),adiaEnvioEmail());}sgMail[_0x1969db(0x15a)](process[_0x1969db(0x1a9)]['SENDGRID_API_KEY']);function enviaEmail(_0x72a948,_0x2605c3){var _0x353387=_0x1969db,_0x5e493d;_0x2605c3==0x1?(pathToAttachment=_0x353387(0x181),attachment=fs[_0x353387(0x10f)](pathToAttachment)[_0x353387(0x175)](_0x353387(0x105)),_0x5e493d={'to':configuracaoAtual[_0x353387(0x1e1)],'from':_0x353387(0x121),'bcc':emailTramontina,'subject':_0x353387(0x158),'text':'Relatório\x20'+String(identificacaoOrganizador),'attachments':[{'content':attachment,'filename':_0x72a948+'.csv','type':_0x353387(0x1b2),'disposition':'attachment'}]}):_0x5e493d={'to':configuracaoAtual['email'],'from':_0x353387(0x121),'bcc':emailTramontina,'subject':_0x353387(0x158),'text':_0x353387(0x1c3)+String(identificacaoOrganizador)+_0x353387(0x112)},sgMail[_0x353387(0x138)](_0x5e493d)[_0x353387(0x104)](()=>{var _0xc29daa=_0x353387;console[_0xc29daa(0x1c6)]('Email\x20enviado\x20com\x20sucesso'),setTimeout(()=>{var _0x7e7af7=_0xc29daa;schedule[_0x7e7af7(0x191)]('0\x200\x20*\x20*\x20*',function(){geraRelatorio('registros');});},0x15f90),Evento[_0xc29daa(0x162)]({'enviado':0x0},{'enviado':0x1})[_0xc29daa(0x104)](_0x197eca=>{var _0xf9cf07=_0xc29daa;console['log'](_0xf9cf07(0x12a));})['catch'](_0x3dcdfe=>{console['log'](_0x3dcdfe);});var _0x8e704f=new Date();Configuracao[_0xc29daa(0x16f)]({'_id':_0xc29daa(0x17e)},{'$set':{'dataRelatorio':String(_0x8e704f[_0xc29daa(0x127)]()+'-'+(_0x8e704f['getMonth']()+0x1)+'-'+_0x8e704f['getFullYear']())}})['then'](()=>{})['catch'](_0x4436e0=>{var _0x5294cd=_0xc29daa;console[_0x5294cd(0x1c6)]('Erro\x20ao\x20sobrescrever\x20configuracao:\x20'+_0x4436e0);});})[_0x353387(0x123)](_0xeaa641=>{var _0x24d424=_0x353387;console[_0x24d424(0x1c6)]('Erro\x20ao\x20enviar\x20email:\x20'+_0xeaa641),adiaEnvioEmail();});}function adiaEnvioEmail(){var _0x1e8829=_0x1969db;today=new Date();var _0x547517=today[_0x1e8829(0x16c)](),_0x2a3ba6=today[_0x1e8829(0x125)]();_0x547517=_0x547517+0x5,_0x547517>=0x3c&&(_0x2a3ba6=_0x2a3ba6+0x1,_0x547517=0x0,_0x2a3ba6>=0x18&&(_0x2a3ba6=0x0)),console['log']('Nova\x20tentativa\x20de\x20envio\x20de\x20relatorio:\x20'+String(_0x2a3ba6)+'h'+String(_0x547517)),schedule[_0x1e8829(0x191)](String(_0x547517)+'\x20'+String(_0x2a3ba6)+'\x20*\x20*\x20*',function(){geraRelatorio('registros');});}wifi['init']({'iface':null});function editaConfiguracao(_0x16b27b,_0x392479,_0x379575,_0x4902ca){var _0x174b5e=_0x1969db;Configuracao[_0x174b5e(0x100)]({'_id':_0x174b5e(0x17e)})['then'](_0x232e90=>{var _0x31937e=_0x174b5e;if(!_0x232e90){const _0x247af7={'_id':ObjectId(_0x31937e(0x17e)),'fechamento':_0x16b27b,'cartao':_0x392479,'desligamento':_0x379575,'email':_0x4902ca,'dataRelatorio':'0'};new Configuracao(_0x247af7)[_0x31937e(0x199)](),configuracaoAtual={'fechamento':_0x16b27b,'cartao':_0x392479,'desligamento':_0x379575,'email':_0x4902ca,'dataRelatorio':'0'};}else Configuracao['updateOne']({'_id':_0x31937e(0x17e)},{'$set':{'fechamento':_0x16b27b,'cartao':_0x392479,'desligamento':_0x379575,'email':_0x4902ca}})[_0x31937e(0x104)](()=>{configuracaoAtual={'fechamento':_0x16b27b,'cartao':_0x392479,'desligamento':_0x379575,'email':_0x4902ca};})[_0x31937e(0x123)](_0x2baaa1=>{var _0x20e1d7=_0x31937e;console[_0x20e1d7(0x1c6)](_0x20e1d7(0x11a)+_0x2baaa1);});})[_0x174b5e(0x123)](_0x5b67c4=>{var _0x385172=_0x174b5e;console[_0x385172(0x1c6)](_0x385172(0x1be)+_0x5b67c4);});}verificaFerramentasRemovidas();function verificaFerramentasRemovidas(){var _0x1462f6=_0x1969db;let _0x5e1c8b=[0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8];for(const _0x153875 of _0x5e1c8b){Ferramenta[_0x1462f6(0x14c)]({'gaveta':_0x153875,'estado':0x0,'desconhecido':0x0})[_0x1462f6(0x17c)]()[_0x1462f6(0x1b8)](_0x1462f6(0x171))[_0x1462f6(0x104)](_0x1f313b=>{var _0x2d288b=_0x1462f6;!_0x1f313b?console['log'](_0x2d288b(0x146)):ItensErrados[_0x153875-0x1]=_0x1f313b['length'];})[_0x1462f6(0x123)](_0x170464=>{var _0x2d0739=_0x1462f6;console[_0x2d0739(0x1c6)]('Erro\x20ao\x20acessar\x20banco\x20de\x20dados:\x20'+_0x170464);}),Ferramenta[_0x1462f6(0x14c)]({'gaveta':_0x153875,'desconhecido':0x1})[_0x1462f6(0x17c)]()[_0x1462f6(0x1b8)](_0x1462f6(0x171))[_0x1462f6(0x104)](_0xc5b969=>{var _0x43bbab=_0x1462f6;if(!_0xc5b969)console[_0x43bbab(0x1c6)](_0x43bbab(0x146));else _0xc5b969[_0x43bbab(0x18d)]>0x0&&(ItensErrados[_0x153875-0x1]=0x194);})['catch'](_0x5d4780=>{var _0xdd2162=_0x1462f6;console[_0xdd2162(0x1c6)]('Erro\x20ao\x20acessar\x20banco\x20de\x20dados:\x20'+_0x5d4780);});}}function abreCalculadora(){var _0x24aaa6=_0x1969db;execFile(path[_0x24aaa6(0x17d)](_0x24aaa6(0x185)),(_0xe88459,_0x1918af,_0x45a98a)=>{var _0x2e58ce=_0x24aaa6;if(_0xe88459){console[_0x2e58ce(0x152)](_0x2e58ce(0x1b1)+_0xe88459);return;}});}function shutdownPC(){var _0x2bead2=_0x1969db;const _0x22141c=spawn(_0x2bead2(0x14a),['-h',_0x2bead2(0x1d1)]);}function rebootPC(){var _0x3b86e8=_0x1969db;const _0x55543b=spawn(_0x3b86e8(0x166));}function _0x29e1(_0x20f696,_0x37fe99){var _0x5e2f4d=_0x5e2f();return _0x29e1=function(_0x29e19d,_0x50fbe8){_0x29e19d=_0x29e19d-0xff;var _0x3c344e=_0x5e2f4d[_0x29e19d];return _0x3c344e;},_0x29e1(_0x20f696,_0x37fe99);}function auxDesligamentoBateriaBaixa(){var _0x142fd4=_0x1969db;BateriaCarregando==0x0&&(console[_0x142fd4(0x1c6)]('Desligando\x20o\x20sistema\x20por\x20bateria\x20baixa'),shutdownPC());}function novoEvento(_0x100d77){var _0x25e9b4=_0x1969db,_0x15d286=getHorario(),_0x495c3e=getData(),_0x49dd50=userLogged('showUserdata');const _0x2f94fb={'referencia':_0x100d77[_0x25e9b4(0x193)],'descricao':_0x100d77[_0x25e9b4(0x134)],'gaveta':_0x100d77['gaveta'],'posicao':_0x100d77[_0x25e9b4(0x10d)],'dataRetirada':_0x495c3e,'horaRetirada':_0x15d286,'dataDevolucao':'-','horaDevolucao':'-','usuario':_0x49dd50[_0x25e9b4(0x1cf)],'setor':_0x49dd50[_0x25e9b4(0x195)],'devolucao':0x0,'enviado':0x0};new Evento(_0x2f94fb)[_0x25e9b4(0x199)]();}function eventoDevolucao(_0x1e7ea4){var _0x2aa31a=_0x1969db,_0x107990=getHorario(),_0x4d8ecb=getData();Evento['findOne']({'gaveta':_0x1e7ea4[_0x2aa31a(0x178)],'posicao':_0x1e7ea4[_0x2aa31a(0x10d)],'devolucao':0x0},null,{'sort':{'_id':-0x1}})[_0x2aa31a(0x104)](_0x5a4ca1=>{var _0x59ff37=_0x2aa31a;if(!_0x5a4ca1)console[_0x59ff37(0x1c6)](_0x59ff37(0x146));else{const _0x180dde={'referencia':_0x5a4ca1['referencia'],'descricao':_0x5a4ca1[_0x59ff37(0x134)],'gaveta':_0x5a4ca1[_0x59ff37(0x178)],'posicao':_0x5a4ca1[_0x59ff37(0x10d)],'dataRetirada':_0x5a4ca1[_0x59ff37(0x161)],'horaRetirada':_0x5a4ca1[_0x59ff37(0x164)],'dataDevolucao':_0x4d8ecb,'horaDevolucao':_0x107990,'usuario':_0x5a4ca1[_0x59ff37(0x155)],'setor':_0x5a4ca1['setor'],'devolucao':0x1,'enviado':0x0};Evento[_0x59ff37(0x115)]({'_id':_0x5a4ca1[_0x59ff37(0x1e4)]})['then'](()=>{})[_0x59ff37(0x123)](_0x3803b6=>{var _0x570878=_0x59ff37;console[_0x570878(0x1c6)](_0x570878(0x135)+_0x3803b6);}),new Evento(_0x180dde)[_0x59ff37(0x199)]();}})[_0x2aa31a(0x123)](_0x405f02=>{var _0x393dd4=_0x2aa31a;console[_0x393dd4(0x1c6)]('Erro\x20ao\x20acessar\x20banco\x20de\x20dados:\x20'+_0x405f02);});}function getHorario(){var _0x4de1d6=_0x1969db,_0x4dec6c=new Date(),_0x4e5bfa=_0x4dec6c['getHours'](),_0x2a21a4=_0x4dec6c[_0x4de1d6(0x16c)]();if(_0x2a21a4<0xa)_0x2a21a4='0'+_0x2a21a4;return _0x4e5bfa+':'+_0x2a21a4;}function getData(){var _0x97f9d8=_0x1969db,_0x12ed17=new Date(),_0xed2a32=_0x12ed17[_0x97f9d8(0x127)]();if(_0xed2a32<0xa)_0xed2a32='0'+_0xed2a32;var _0x79c68d=_0x12ed17[_0x97f9d8(0x154)]()+0x1;if(_0x79c68d<0xa)_0x79c68d='0'+_0x79c68d;var _0x10aa50=_0x12ed17[_0x97f9d8(0x142)]();return _0xed2a32+'/'+_0x79c68d+'/'+_0x10aa50;}function convTempo(_0x187761){var _0x24751d=_0x1969db,_0xbda19e,_0x1ae9c4;return _0x1ae9c4=Math[_0x24751d(0x1db)](_0x187761/0xe10),_0xbda19e=Math[_0x24751d(0x1db)](_0x187761%0xe10/0x3c),_0xbda19e<0xa&&(_0xbda19e='0'+_0xbda19e),_0x1ae9c4=_0x1ae9c4+':'+_0xbda19e,_0xbda19e=Math[_0x24751d(0x1db)](_0x187761%0xe10%0x3c),_0xbda19e<0xa&&(_0xbda19e='0'+_0xbda19e),_0x1ae9c4=_0x1ae9c4+':'+_0xbda19e,_0x1ae9c4;}function AtualizaDispositivo(){var _0x50576b=_0x1969db;console[_0x50576b(0x1c6)](_0x50576b(0x119)),childAtualizaSoftware=spawn(_0x50576b(0x101),[],{'detached':!![]}),childAtualizaSoftware['on'](_0x50576b(0x1b3),_0x2b6ff3=>{var _0x251151=_0x50576b;console['log'](_0x251151(0x12c)),rebootPC();}),childAtualizaSoftware[_0x50576b(0x148)]['on'](_0x50576b(0x1a8),_0x3679b1=>{var _0x1ff269=_0x50576b;console[_0x1ff269(0x1c6)](_0x3679b1);}),childAtualizaSoftware['stderr']['on'](_0x50576b(0x1a8),_0x1e3914=>{var _0x245c7b=_0x50576b;console[_0x245c7b(0x1c6)]('stderr:\x20'+_0x1e3914);});}const method=function(_0x38fcf4){var _0x6adcdd=_0x1969db,_0x387e5d=_0x38fcf4['on']('connection',function(_0x189deb){var _0x949a3c=_0x29e1;console[_0x949a3c(0x1c6)](_0x949a3c(0x1b5)),FuncSenha('resetPass',0x0),_0x189deb['on'](_0x949a3c(0x174),function(){var _0x5c0648=_0x949a3c;_0x189deb[_0x5c0648(0x16b)](_0x5c0648(0x1b0),redesNeuraisCarregadas);}),_0xde0686(),_0x189deb['on'](_0x949a3c(0x156),function(){if(abrindoGV==0x0&&fechandoGV==0x0)_0xde0686();});function _0xde0686(){execFile('/home/tramontina/Downloads/Interface/Bateria',(_0x43ef0a,_0x2819ff,_0x241cfd)=>{var _0x44b919=_0x29e1;if(_0x43ef0a){console[_0x44b919(0x152)](_0x44b919(0x1b1)+_0x43ef0a);return;}if(_0x241cfd){console[_0x44b919(0x152)](_0x44b919(0x10a)+_0x241cfd);return;}if(_0x2819ff){if(_0x2819ff[0x1]=='0'&&_0x2819ff[0x2]=='0'){BateriaCarregada=0x0,BateriaCarregando=0x0;if(arrayBateria[_0x44b919(0x18d)]==0x0)cargaBateria=_0x2819ff[0x0],arrayBateria[0x0]=cargaBateria,arrayBateria[0x1]=cargaBateria,arrayBateria[0x2]=cargaBateria,arrayBateria[0x3]=cargaBateria,arrayBateria[0x4]=cargaBateria;else{arrayBateria[0x4]=arrayBateria[0x3],arrayBateria[0x3]=arrayBateria[0x2],arrayBateria[0x2]=arrayBateria[0x1],arrayBateria[0x1]=arrayBateria[0x0],arrayBateria[0x0]=_0x2819ff[0x0];if(arrayBateria[0x0]==arrayBateria[0x1]&&arrayBateria[0x1]==arrayBateria[0x2]&&arrayBateria[0x2]==arrayBateria[0x3]&&arrayBateria[0x3]==arrayBateria[0x4]&&cargaBateria>=arrayBateria[0x0])cargaBateria=arrayBateria[0x0];if(cargaBateria>0x5)cargaBateria=0x5;}_0x189deb[_0x44b919(0x16b)](_0x44b919(0x149),cargaBateria*0x14+'%'),console[_0x44b919(0x1c6)](_0x44b919(0x144)+(cargaBateria*0x14+'%')),cargaBateria==0x0&&(console['log']('Inicia\x20timer\x20de\x205\x20minutos\x20para\x20desligar\x20o\x20sistema\x20por\x20bateria\x20baixa'),setTimeout(()=>{auxDesligamentoBateriaBaixa();},0x493e0));}else{if(_0x2819ff[0x1]=='1')BateriaCarregada=0x1,BateriaCarregando=0x0,arrayBateria=[],_0x189deb['emit']('atualizaBateria',_0x44b919(0x19e));else _0x2819ff[0x2]=='1'&&(BateriaCarregada=0x0,BateriaCarregando=0x1,arrayBateria=[],_0x189deb[_0x44b919(0x16b)](_0x44b919(0x149),_0x44b919(0x1c2)));}}});}_0x189deb[_0x949a3c(0x16b)](_0x949a3c(0x1b6),redeWifiOk,wifiLevel),_0x189deb['on']('statusWifi',function(){_0x403b6b();});function _0x403b6b(){wifi['getCurrentConnections']((_0x279b29,_0x42c2a6)=>{var _0x4a6465=_0x29e1;_0x279b29?console[_0x4a6465(0x1c6)](_0x279b29):_0x42c2a6[_0x4a6465(0x18d)]>0x0?(redeWifiOk=0x1,wifiLevel=_0x42c2a6[0x0][_0x4a6465(0x1a6)],_0x189deb['emit'](_0x4a6465(0x1b6),0x1,_0x42c2a6[0x0][_0x4a6465(0x1a6)])):(redeWifiOk=0x0,wifiLevel=0x0,_0x189deb[_0x4a6465(0x16b)](_0x4a6465(0x1b6),0x0,0x0));});}_0x189deb['on'](_0x949a3c(0x1bd),function(_0x5b26c7){var _0x4e57b7=_0x949a3c;senha=FuncSenha('insertKey',_0x5b26c7),_0x189deb[_0x4e57b7(0x16b)](_0x4e57b7(0x140),senha);}),_0x189deb['on']('removeKey',function(_0x486844){var _0x1c5906=_0x949a3c;senha=FuncSenha(_0x1c5906(0x19c),_0x486844),_0x189deb[_0x1c5906(0x16b)](_0x1c5906(0x140),senha);}),_0x189deb['on'](_0x949a3c(0x16d),function(){_0x4407d1();}),_0x189deb['on'](_0x949a3c(0x1ce),function(){var _0x4ba847=_0x949a3c;_0x189deb[_0x4ba847(0x16b)](_0x4ba847(0x1ce),ItensErrados);}),_0x189deb['on'](_0x949a3c(0x13d),function(_0x2ce869){var _0x1150cb=_0x949a3c;if(abrindoGV==0x0&&fechandoGV==0x0&&bloqueiaAbertura==0x0){auxFGVSemRedeNeural=0x0,abrindoGV=0x1,bloqueiaAbertura=0x1,gavetaEmMovimento=_0x2ce869,_0x189deb[_0x1150cb(0x16b)](_0x1150cb(0x15b)),_0x5ab991(_0x2ce869);try{process[_0x1150cb(0x11f)](childCam1[_0x1150cb(0x1dd)]);}catch(_0x490d78){console[_0x1150cb(0x1c6)](_0x1150cb(0x103)+_0x490d78);}try{process[_0x1150cb(0x11f)](childCam2['pid']);}catch(_0x49133e){console[_0x1150cb(0x1c6)](_0x1150cb(0x1b9)+_0x49133e);}_0x1802fc(_0x2ce869),_0x163835(_0x2ce869);}}),_0x189deb['on'](_0x949a3c(0x136),function(_0x3bad38){var _0x1ce31a=_0x949a3c;abrindoGV==0x0&&fechandoGV==0x0&&(fechandoGV=0x1,gavetaEmMovimento=_0x3bad38,_0x189deb[_0x1ce31a(0x16b)](_0x1ce31a(0x15b)),_0x210efb(_0x3bad38));}),_0x189deb['on'](_0x949a3c(0x141),function(){abreCalculadora();}),_0x189deb['on'](_0x949a3c(0x14a),function(){shutdownPC();}),_0x189deb['on'](_0x949a3c(0x166),function(){rebootPC();}),_0x189deb['on'](_0x949a3c(0x13b),function(_0x1c8792,_0xde97dc){_0x4d2dae(_0x1c8792,_0xde97dc);}),_0x189deb['on']('disconnectWifi',function(){_0x271448();});function _0x4d2dae(_0x227118,_0x37d77c){var _0x5e4c11=_0x949a3c;console[_0x5e4c11(0x1c6)](_0x5e4c11(0x12b)),wifi[_0x5e4c11(0x167)]({'ssid':_0x227118,'password':_0x37d77c},_0x56b8a5=>{var _0x1222e0=_0x5e4c11,_0x2fa915=String(_0x56b8a5);if(!_0x56b8a5)console['log'](_0x1222e0(0x1a0)),_0x189deb[_0x1222e0(0x16b)](_0x1222e0(0x117),0x1,0x0);else _0x2fa915[_0x1222e0(0x120)]('Error:\x20Connection\x20activation\x20failed')>-0x1?(console[_0x1222e0(0x1c6)](_0x1222e0(0x14e)+_0x56b8a5),_0x189deb[_0x1222e0(0x16b)](_0x1222e0(0x117),0x0,0x0),_0x271448()):(console[_0x1222e0(0x1c6)](_0x1222e0(0x14e)+_0x56b8a5),_0x189deb[_0x1222e0(0x16b)]('resultadoConexao',0x0,0x1),_0x271448());_0x403b6b();});}function _0x271448(){var _0x1b978b=_0x949a3c;console[_0x1b978b(0x1c6)](_0x1b978b(0x1c7)),wifi[_0x1b978b(0x157)](_0x33f227=>{var _0xe1efc6=_0x1b978b;_0x33f227?console[_0xe1efc6(0x1c6)](_0x33f227):(console[_0xe1efc6(0x1c6)](_0xe1efc6(0x168)),setTimeout(()=>{var _0x26e355=_0xe1efc6;_0x189deb[_0x26e355(0x16b)](_0x26e355(0x168));},0x1f4));});}_0x189deb['on'](_0x949a3c(0x1d9),function(){var _0x3b3ffe=_0x949a3c;if(fechandoGV==0x0)_0x5ab991(gavetaEmMovimento);else{fechandoGV=0x0,abrindoGV=0x1,bloqueiaAbertura=0x1;try{process[_0x3b3ffe(0x11f)](childCam1[_0x3b3ffe(0x1dd)]);}catch(_0x25f076){console['log'](_0x3b3ffe(0x103)+_0x25f076);}try{process['kill'](childCam2['pid']);}catch(_0x351c80){console['log']('Kill\x20cam2\x20-\x20Erro\x20encontrado:\x20'+_0x351c80);}_0x1802fc(gavetaEmMovimento),_0x163835(gavetaEmMovimento),_0x5ab991(gavetaEmMovimento);}}),_0x189deb['on'](_0x949a3c(0x1da),function(){var _0x514a9f=_0x949a3c;auxFGVSemRedeNeural=0x1;try{process[_0x514a9f(0x11f)](childCam1[_0x514a9f(0x1dd)]);}catch(_0x22b346){console[_0x514a9f(0x1c6)](_0x514a9f(0x103)+_0x22b346);}try{process[_0x514a9f(0x11f)](childCam2[_0x514a9f(0x1dd)]);}catch(_0x26a731){console['log']('Kill\x20cam2\x20-\x20Erro\x20encontrado:\x20'+_0x26a731);}try{process[_0x514a9f(0x11f)](childVerificacao[_0x514a9f(0x1dd)]);}catch(_0x3da4fe){console['log'](_0x514a9f(0x15c)+_0x3da4fe);}_0x189deb['emit'](_0x514a9f(0x197),gavetaEmMovimento),ItensErrados[gavetaEmMovimento-0x1]=0x194,Ferramenta[_0x514a9f(0x14c)]({'gaveta':gavetaEmMovimento})[_0x514a9f(0x104)](_0x1bfe3f=>{var _0x400831=_0x514a9f;if(!_0x1bfe3f)console[_0x400831(0x1c6)](_0x400831(0x1ae));else for(var _0x5508b7=0x0;_0x5508b7<_0x1bfe3f[_0x400831(0x18d)];_0x5508b7++){_0x1bfe3f[_0x5508b7][_0x400831(0x106)]=0x1,_0x1bfe3f[_0x5508b7][_0x400831(0x199)]();}})[_0x514a9f(0x123)](_0x2ffb63=>{var _0x7d18e6=_0x514a9f;console[_0x7d18e6(0x1c6)]('Erro\x20ao\x20acessar\x20banco\x20de\x20dados:\x20'+_0x2ffb63);}),fechandoGV=0x1,_0x210efb(gavetaEmMovimento);});function _0x1802fc(_0x594e9f){var _0x338946=_0x949a3c;childCam1=spawn(_0x338946(0x1a2)+_0x594e9f+'_c1',[],{'detached':![]}),childCam1['on'](_0x338946(0x1b3),_0x6735ea=>{var _0x27df03=_0x338946;console[_0x27df03(0x1c6)](_0x27df03(0x10b));}),childCam1[_0x338946(0x148)]['on'](_0x338946(0x1a8),_0x45e0da=>{}),childCam1['stderr']['on'](_0x338946(0x1a8),_0x44f00d=>{});}function _0x163835(_0x207a0b){var _0x18f700=_0x949a3c;childCam2=spawn(_0x18f700(0x1a2)+_0x207a0b+'_c2',[],{'detached':![]}),childCam2['on'](_0x18f700(0x1b3),_0x24fb60=>{var _0x1fac0b=_0x18f700;console[_0x1fac0b(0x1c6)]('Cam2\x20finalizada...');}),childCam2[_0x18f700(0x148)]['on'](_0x18f700(0x1a8),_0x171155=>{}),childCam2['stderr']['on']('data',_0x5a74a0=>{});}function _0x4eea83(_0x2f8b3a){var _0x4e179c=_0x949a3c,_0xbd98ef=0x0;childVerificacao=spawn('/home/tramontina/Downloads/Interface/Verificacao',['GV'+_0x2f8b3a],{'detached':![]}),childVerificacao['on'](_0x4e179c(0x1b3),_0x1ce103=>{var _0x81f6b5=_0x4e179c;auxFGVSemRedeNeural==0x0&&_0xbd98ef==0x0&&_0x189deb[_0x81f6b5(0x16b)]('result_GV',ItensErrados[_0x2f8b3a-0x1]),bloqueiaAbertura=0x0;}),childVerificacao[_0x4e179c(0x148)]['on'](_0x4e179c(0x1a8),_0xe21de6=>{var _0x8d8c1f=_0x4e179c;console[_0x8d8c1f(0x1c6)]('Resultado\x20da\x20rede:\x20'+_0xe21de6);if(_0xe21de6==_0x8d8c1f(0x180))_0xbd98ef=0x1,_0x189deb[_0x8d8c1f(0x16b)](_0x8d8c1f(0x1d3),0x1),console[_0x8d8c1f(0x1c6)](_0x8d8c1f(0xff));else{if(_0xe21de6=='FCAM2')_0xbd98ef=0x1,_0x189deb[_0x8d8c1f(0x16b)](_0x8d8c1f(0x1d3),0x2),console[_0x8d8c1f(0x1c6)](_0x8d8c1f(0x14b));else{if(_0xe21de6==_0x8d8c1f(0x187))_0xbd98ef=0x1,_0x189deb[_0x8d8c1f(0x16b)](_0x8d8c1f(0x1d3),0xc),console['log'](_0x8d8c1f(0x1d8));else{ItensErrados[_0x2f8b3a-0x1]=0x0;for(var _0x37fd18=0x0;_0x37fd18<_0xe21de6['length'];_0x37fd18++){Ferramenta['findOne']({'gaveta':_0x2f8b3a,'posicao':_0x37fd18+0x1})['then'](_0x4e4240=>{var _0xf2d951=_0x8d8c1f;if(!_0x4e4240)console[_0xf2d951(0x1c6)](_0xf2d951(0x129));else{_0x4e4240['desconhecido']=0x0;if(_0xe21de6[_0x4e4240[_0xf2d951(0x10d)]-0x1]==0x31&&_0x4e4240[_0xf2d951(0x14d)]==0x0)console[_0xf2d951(0x1c6)](''+_0x4e4240['descricao']+'\x20devolvida'),_0x4e4240[_0xf2d951(0x14d)]=0x1,eventoDevolucao(_0x4e4240);else{if(_0xe21de6[_0x4e4240[_0xf2d951(0x10d)]-0x1]==0x30&&_0x4e4240[_0xf2d951(0x14d)]==0x1)ItensErrados[_0x2f8b3a-0x1]=ItensErrados[_0x2f8b3a-0x1]+0x1,console[_0xf2d951(0x1c6)](''+_0x4e4240['descricao']+_0xf2d951(0x13f)),_0x4e4240[_0xf2d951(0x14d)]=0x0,novoEvento(_0x4e4240);else _0xe21de6[_0x4e4240['posicao']-0x1]==0x30&&(ItensErrados[_0x2f8b3a-0x1]=ItensErrados[_0x2f8b3a-0x1]+0x1);}}_0x4e4240['save']();})[_0x8d8c1f(0x123)](_0x4467cd=>{console['log']('Erro\x20ao\x20acessar\x20banco\x20de\x20dados\x20ferramenta:\x20'+_0x4467cd);});}}}}}),childVerificacao[_0x4e179c(0x1aa)]['on'](_0x4e179c(0x1a8),_0x41c9e8=>{});}function _0x5ab991(_0x164d53){var _0x40d7a6=_0x949a3c;ItensErrados[_0x164d53-0x1]=0x194,Ferramenta[_0x40d7a6(0x14c)]({'gaveta':_0x164d53})['then'](_0x168839=>{var _0x21582e=_0x40d7a6;if(!_0x168839)console[_0x21582e(0x1c6)]('Erro\x20ferramentas\x20não\x20encontradas');else for(var _0x590529=0x0;_0x590529<_0x168839[_0x21582e(0x18d)];_0x590529++){_0x168839[_0x590529][_0x21582e(0x106)]=0x1,_0x168839[_0x590529][_0x21582e(0x199)]();}})[_0x40d7a6(0x123)](_0xfdf32a=>{var _0x54cbba=_0x40d7a6;console[_0x54cbba(0x1c6)](_0x54cbba(0x147)+_0xfdf32a);}),execFile(_0x40d7a6(0x1de),[_0x40d7a6(0x111)+_0x164d53],(_0x294b32,_0x13f4ee,_0x3ce4be)=>{var _0x130327=_0x40d7a6;if(_0x294b32){console[_0x130327(0x152)](_0x130327(0x1b1)+_0x294b32);return;}if(_0x3ce4be){console['error']('stderr:\x20'+_0x3ce4be);return;}console[_0x130327(0x1c6)](_0x130327(0x131)+_0x13f4ee);if(_0x13f4ee[0x2]=='A')abrindoGV=0x0,console[_0x130327(0x1c6)]('Gaveta\x20aberta'),_0x189deb[_0x130327(0x16b)]('gavetaAberta',_0x164d53);else _0x13f4ee==_0x130327(0x145)&&(console[_0x130327(0x1c6)](_0x130327(0x1bc)),_0x189deb[_0x130327(0x16b)](_0x130327(0x1d4),_0x164d53));});}function _0x210efb(_0x1778d8){var _0x150468=_0x949a3c;abrindoGV=0x0,execFile('/home/tramontina/Downloads/Interface/Gavetas',[_0x150468(0x1e5)+_0x1778d8],(_0x1ac753,_0x2e02bd,_0x38dfeb)=>{var _0x11606b=_0x150468;if(_0x1ac753){console[_0x11606b(0x152)](_0x11606b(0x1b1)+_0x1ac753);return;}if(_0x38dfeb){console[_0x11606b(0x152)]('stderr:\x20'+_0x38dfeb);return;}console[_0x11606b(0x1c6)]('stdout:\x20'+_0x2e02bd);if(_0x2e02bd[0x2]=='F'){fechandoGV=0x0,console[_0x11606b(0x1c6)]('Gaveta\x20fechada'),_0x189deb[_0x11606b(0x16b)]('gavetaFechada',_0x1778d8);if(auxFGVSemRedeNeural==0x0){try{process[_0x11606b(0x11f)](childVerificacao[_0x11606b(0x1dd)]);}catch(_0x101ae0){console[_0x11606b(0x1c6)](_0x11606b(0x15c)+_0x101ae0);}_0x4eea83(_0x1778d8);}else bloqueiaAbertura=0x0,ItensErrados[_0x1778d8-0x1]=0x194,_0x189deb[_0x11606b(0x16b)](_0x11606b(0x102),ItensErrados[_0x1778d8-0x1]),Ferramenta[_0x11606b(0x14c)]({'gaveta':gavetaEmMovimento})['then'](_0x35fb06=>{var _0x44fbbe=_0x11606b;if(!_0x35fb06)console[_0x44fbbe(0x1c6)]('Erro\x20ferramentas\x20não\x20encontradas');else for(var _0x30d6f6=0x0;_0x30d6f6<_0x35fb06['length'];_0x30d6f6++){_0x35fb06[_0x30d6f6][_0x44fbbe(0x106)]=0x1,console[_0x44fbbe(0x1c6)]('Ferramenta\x20'+_0x30d6f6+':\x20'+_0x35fb06[_0x30d6f6][_0x44fbbe(0x134)]),_0x35fb06[_0x30d6f6]['save']();}})[_0x11606b(0x123)](_0x481f7e=>{var _0x3cbd12=_0x11606b;console[_0x3cbd12(0x1c6)]('Erro\x20ao\x20acessar\x20banco\x20de\x20dados:\x20'+_0x481f7e);}),auxFGVSemRedeNeural=0x0;}else{if(_0x2e02bd==_0x11606b(0x145)){auxFGVSemRedeNeural=0x1;try{process[_0x11606b(0x11f)](childCam1[_0x11606b(0x1dd)]);}catch(_0x29a65b){console[_0x11606b(0x1c6)](_0x11606b(0x103)+_0x29a65b);}try{process[_0x11606b(0x11f)](childCam2[_0x11606b(0x1dd)]);}catch(_0x2f646c){console[_0x11606b(0x1c6)](_0x11606b(0x1b9)+_0x2f646c);}try{process[_0x11606b(0x11f)](childVerificacao[_0x11606b(0x1dd)]);}catch(_0x3363b2){console[_0x11606b(0x1c6)](_0x11606b(0x15c)+_0x3363b2);}console['log'](_0x11606b(0x1bc)),_0x189deb[_0x11606b(0x16b)](_0x11606b(0x1d4),_0x1778d8);}}});}function _0x4407d1(){var _0x464c53=_0x949a3c;execFile(_0x464c53(0x1de),[_0x464c53(0x1bb)],(_0x33316a,_0x21c7db,_0x781117)=>{var _0x3a8e84=_0x464c53;if(_0x33316a){console[_0x3a8e84(0x152)](_0x3a8e84(0x1b1)+_0x33316a);return;}if(_0x781117){console[_0x3a8e84(0x152)](_0x3a8e84(0x10a)+_0x781117);return;}console[_0x3a8e84(0x1c6)](_0x3a8e84(0x131)+_0x21c7db),_0x189deb[_0x3a8e84(0x16b)](_0x3a8e84(0x16d),_0x21c7db);});}function _0x5f50bb(_0x1ff019){var _0x383371=_0x949a3c;_0x189deb[_0x383371(0x16b)](_0x383371(0x16d),_0x1ff019);}_0x189deb['on'](_0x949a3c(0x184),function(_0x49ab3d,_0x17d0e5){var _0x3f06f1=_0x949a3c;console[_0x3f06f1(0x1c6)](_0x3f06f1(0x1dc)+_0x49ab3d+_0x3f06f1(0x1ad)+_0x17d0e5),numRepeticoesGVEspecifica=_0x17d0e5,pausaTestesGavetas=0x0,paraTestesGavetas=0x0,_0x888b39(_0x49ab3d),console[_0x3f06f1(0x1c6)]('Iniciando\x20teste');}),_0x189deb['on'](_0x949a3c(0x118),function(){var _0x2d9530=_0x949a3c;pausaTestesGavetas=0x1,console[_0x2d9530(0x1c6)](_0x2d9530(0x1a4)+pausaTestesGavetas);}),_0x189deb['on'](_0x949a3c(0x132),function(){var _0x204647=_0x949a3c;paraTestesGavetas=0x1,contRepeticoesGVEspecifica=0x0,testesGavetasAndamento==0x0&&(contRepeticoesGVEspecifica=0x0,numRepeticoesGVEspecifica=0x0,pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,_0x189deb['emit'](_0x204647(0x1c9))),console[_0x204647(0x1c6)](_0x204647(0x189)+pausaTestesGavetas);}),_0x189deb['on'](_0x949a3c(0x18a),function(){var _0x479d45=_0x949a3c;_0x189deb[_0x479d45(0x16b)](_0x479d45(0x18a),testesGavetasAndamento,contRepeticoesGVEspecifica);});function _0x888b39(_0x4c758d){var _0x5413fd=_0x949a3c;testesGavetasAndamento=0x1,console[_0x5413fd(0x1c6)](_0x5413fd(0x17b)+contRepeticoesGVEspecifica),_0x189deb[_0x5413fd(0x16b)](_0x5413fd(0x1a1),contRepeticoesGVEspecifica);if(contRepeticoesGVEspecifica>=numRepeticoesGVEspecifica){var _0x543a58=getData(),_0x3aacd1=convTempo(segDecorridoGVEspecifica);if(contRepeticoesGVEspecifica>0x0){const _0x30bb8a={'data':_0x543a58,'gaveta':_0x4c758d,'tempo':_0x3aacd1,'contagemCiclos':contRepeticoesGVEspecifica,'tipo':0x0,'finalizado':0x1};new DadosTeste(_0x30bb8a)[_0x5413fd(0x199)]();}contRepeticoesGVEspecifica=0x0,numRepeticoesGVEspecifica=0x0,pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,_0x189deb[_0x5413fd(0x16b)](_0x5413fd(0x15f));}else{if(pausaTestesGavetas==0x0&&paraTestesGavetas==0x0)_0x9bfeb9(_0x4c758d);else{if(paraTestesGavetas==0x1)testesGavetasAndamento=0x0,pausaTestesGavetas=0x0,paraTestesGavetas=0x0,_0x189deb[_0x5413fd(0x16b)]('testeParadoGVEspecifica');else pausaTestesGavetas==0x1&&(testesGavetasAndamento=0x0,pausaTestesGavetas=0x0,_0x189deb['emit'](_0x5413fd(0x1a5)));}}}function _0x9bfeb9(_0x3082ec){var _0x2d8675=_0x949a3c;execFile('/home/tramontina/Downloads/Interface/Gavetas',[_0x2d8675(0x111)+_0x3082ec],(_0x35cb93,_0xe4ff40,_0x3c3d62)=>{var _0x368ea0=_0x2d8675;_0x35cb93&&console['error'](_0x368ea0(0x1b1)+_0x35cb93);_0x3c3d62&&console[_0x368ea0(0x152)](_0x368ea0(0x10a)+_0x3c3d62);console[_0x368ea0(0x1c6)](_0x368ea0(0x131)+_0xe4ff40);if(_0xe4ff40[0x2]=='A')console[_0x368ea0(0x1c6)]('Gaveta\x20aberta'),_0xaae09b(_0x3082ec);else{if(_0xe4ff40=='GVT'){var _0xef1eed=getData(),_0x353dfc=convTempo(segDecorridoGVEspecifica);const _0x57b15b={'data':_0xef1eed,'gaveta':_0x3082ec,'tempo':_0x353dfc,'contagemCiclos':contRepeticoesGVEspecifica,'tipo':0x0,'finalizado':0x0};new DadosTeste(_0x57b15b)[_0x368ea0(0x199)](),pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,_0x189deb['emit'](_0x368ea0(0x110)),console['log'](_0x368ea0(0x1bc));}}});}function _0xaae09b(_0x21a93c){var _0x466597=_0x949a3c;execFile(_0x466597(0x1de),[_0x466597(0x1e5)+_0x21a93c],(_0xd4a916,_0x484d6a,_0x22bc0f)=>{var _0x406001=_0x466597;_0xd4a916&&console[_0x406001(0x152)](_0x406001(0x1b1)+_0xd4a916);_0x22bc0f&&console[_0x406001(0x152)](_0x406001(0x10a)+_0x22bc0f);console[_0x406001(0x1c6)](_0x406001(0x131)+_0x484d6a);if(_0x484d6a[0x2]=='F')console[_0x406001(0x1c6)]('Gaveta\x20fechada'),contRepeticoesGVEspecifica=contRepeticoesGVEspecifica+0x1,_0x888b39(_0x21a93c);else{if(_0x484d6a==_0x406001(0x145)){var _0x595f08=getData(),_0x175603=convTempo(segDecorridoGVEspecifica);const _0x273ce5={'data':_0x595f08,'gaveta':_0x21a93c,'tempo':_0x175603,'contagemCiclos':contRepeticoesGVEspecifica,'tipo':0x0,'finalizado':0x0};new DadosTeste(_0x273ce5)[_0x406001(0x199)](),pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,_0x189deb[_0x406001(0x16b)](_0x406001(0x110)),console[_0x406001(0x1c6)]('Gaveta\x20trancada');}}});}_0x189deb['on'](_0x949a3c(0x1e6),function(_0x129305){var _0x491af4=_0x949a3c;console['log'](_0x491af4(0x151)+_0x129305),numRepeticoesTodasGVs=_0x129305,pausaTestesGavetas=0x0,paraTestesGavetas=0x0,_0x4abb42(),console[_0x491af4(0x1c6)](_0x491af4(0x1b4));}),_0x189deb['on'](_0x949a3c(0x16a),function(){pausaTestesGavetas=0x1,console['log']('Pausando\x20teste\x20'+pausaTestesGavetas);}),_0x189deb['on']('stopTesteTodasGVs',function(){var _0x3cc2db=_0x949a3c;paraTestesGavetas=0x1,contRepeticoesTodasGVs=0x0,testesGavetasAndamento==0x0&&(contRepeticoesTodasGVs=0x0,numRepeticoesTodasGVs=0x0,pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,gavetaEmTeste=0x1,_0x189deb[_0x3cc2db(0x16b)](_0x3cc2db(0x1df))),console[_0x3cc2db(0x1c6)](_0x3cc2db(0x189)+pausaTestesGavetas);}),_0x189deb['on'](_0x949a3c(0x194),function(){var _0x30d981=_0x949a3c;_0x189deb[_0x30d981(0x16b)](_0x30d981(0x194),testesGavetasAndamento,contRepeticoesTodasGVs);});function _0x4abb42(){var _0x357a26=_0x949a3c;console[_0x357a26(0x1c6)](_0x357a26(0x130)),testesGavetasAndamento=0x1,console[_0x357a26(0x1c6)]('Cont.\x20repeticoes:\x20'+contRepeticoesTodasGVs),_0x189deb[_0x357a26(0x16b)](_0x357a26(0x198),contRepeticoesTodasGVs);if(contRepeticoesTodasGVs>=numRepeticoesTodasGVs){var _0x2bd0df=getData(),_0x2698f5=convTempo(segDecorridoTodasGVs);if(contRepeticoesTodasGVs>0x0){const _0x4504f4={'data':_0x2bd0df,'gaveta':0x0,'tempo':_0x2698f5,'contagemCiclos':contRepeticoesTodasGVs,'tipo':0x1,'finalizado':0x1};new DadosTeste(_0x4504f4)[_0x357a26(0x199)]();}contRepeticoesTodasGVs=0x0,numRepeticoesTodasGVs=0x0,gavetaEmTeste=0x1,pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,_0x189deb[_0x357a26(0x16b)](_0x357a26(0x1ba));}else{if(pausaTestesGavetas==0x0&&paraTestesGavetas==0x0)_0x46b851();else{if(paraTestesGavetas==0x1)testesGavetasAndamento=0x0,pausaTestesGavetas=0x0,paraTestesGavetas=0x0,gavetaEmTeste=0x1,_0x189deb[_0x357a26(0x16b)](_0x357a26(0x1df));else pausaTestesGavetas==0x1&&(testesGavetasAndamento=0x0,pausaTestesGavetas=0x0,_0x189deb[_0x357a26(0x16b)]('testePausadoTodasGVs'));}}}function _0x46b851(){var _0x4bb8e8=_0x949a3c;execFile(_0x4bb8e8(0x1de),[_0x4bb8e8(0x111)+gavetaEmTeste],(_0x3c85bc,_0x2071c1,_0x4311c0)=>{var _0x4081a5=_0x4bb8e8;_0x3c85bc&&console[_0x4081a5(0x152)](_0x4081a5(0x1b1)+_0x3c85bc);_0x4311c0&&console[_0x4081a5(0x152)](_0x4081a5(0x10a)+_0x4311c0);console[_0x4081a5(0x1c6)]('stdout:\x20'+_0x2071c1);if(_0x2071c1[0x2]=='A')console[_0x4081a5(0x1c6)](_0x4081a5(0x15e)),_0x4e9e02();else{if(_0x2071c1==_0x4081a5(0x145)){var _0x5999ae=getData(),_0xa3ea0b=convTempo(segDecorridoTodasGVs);const _0x49ab10={'data':_0x5999ae,'gaveta':0x0,'tempo':_0xa3ea0b,'contagemCiclos':contRepeticoesTodasGVs,'tipo':0x1,'finalizado':0x0};new DadosTeste(_0x49ab10)[_0x4081a5(0x199)](),pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,gavetaEmTeste=0x1,_0x189deb[_0x4081a5(0x16b)](_0x4081a5(0x16e)),console[_0x4081a5(0x1c6)](_0x4081a5(0x1bc));}}});}function _0x4e9e02(){var _0x184f3e=_0x949a3c;execFile(_0x184f3e(0x1de),[_0x184f3e(0x1e5)+gavetaEmTeste],(_0x1d1ef1,_0x531ad7,_0x108861)=>{var _0x18bb63=_0x184f3e;_0x1d1ef1&&console[_0x18bb63(0x152)](_0x18bb63(0x1b1)+_0x1d1ef1);_0x108861&&console[_0x18bb63(0x152)](_0x18bb63(0x10a)+_0x108861);console[_0x18bb63(0x1c6)](_0x18bb63(0x131)+_0x531ad7);if(_0x531ad7[0x2]=='F')console[_0x18bb63(0x1c6)](_0x18bb63(0x1c0)),gavetaEmTeste<0x8?gavetaEmTeste=gavetaEmTeste+0x1:(contRepeticoesTodasGVs=contRepeticoesTodasGVs+0x1,gavetaEmTeste=0x1),_0x4abb42();else{if(_0x531ad7==_0x18bb63(0x145)){var _0x3ef58a=getData(),_0x5a755b=convTempo(segDecorridoTodasGVs);const _0x20b7bb={'data':_0x3ef58a,'gaveta':0x0,'tempo':_0x5a755b,'contagemCiclos':contRepeticoesTodasGVs,'tipo':0x1,'finalizado':0x0};new DadosTeste(_0x20b7bb)['save'](),pausaTestesGavetas=0x0,testesGavetasAndamento=0x0,paraTestesGavetas=0x0,gavetaEmTeste=0x1,_0x189deb[_0x18bb63(0x16b)](_0x18bb63(0x16e)),console['log']('Gaveta\x20trancada');}}});}_0x189deb['on'](_0x949a3c(0x159),function(){AtualizaDispositivo();}),_0x189deb['on']('atualizaTempTestesGVEspecifica',function(_0x329350){segDecorridoGVEspecifica=_0x329350;}),_0x189deb['on']('atualizaTempTestesTodasGVs',function(_0x1c1dd2){segDecorridoTodasGVs=_0x1c1dd2;}),_0x189deb['on'](_0x949a3c(0x128),function(_0x1eae1f,_0x50e299,_0x45a92e,_0x478be4){var _0x519a9f=_0x949a3c;console[_0x519a9f(0x1c6)](_0x519a9f(0x196)),editaConfiguracao(_0x1eae1f,_0x50e299,_0x45a92e,_0x478be4);}),_0x189deb['on'](_0x949a3c(0x108),function(_0x419446){var _0x36658a=_0x949a3c;if(_0x419446==0x0)console[_0x36658a(0x1c6)](_0x36658a(0x122)),Evento[_0x36658a(0x107)]({'devolucao':0x1})['then'](()=>{var _0x39cac9=_0x36658a;console[_0x39cac9(0x1c6)](_0x39cac9(0x1c5));})[_0x36658a(0x123)](_0x4982c4=>{console['log']('Houve\x20um\x20erro\x20ao\x20deletar\x20o\x20histórico:\x20'+_0x4982c4);});else _0x419446==0x1&&(console['log']('Exclui\x20todos\x20os\x20resgistros'),Evento['deleteMany']()[_0x36658a(0x104)](()=>{var _0x4538b0=_0x36658a;console['log'](_0x4538b0(0x1c5));})[_0x36658a(0x123)](_0x185b35=>{var _0x5eaca5=_0x36658a;console[_0x5eaca5(0x1c6)](_0x5eaca5(0x182)+_0x185b35);}));}),_0x189deb['on'](_0x949a3c(0x14f),function(){var _0x462f84=_0x949a3c;_0x189deb[_0x462f84(0x16b)](_0x462f84(0x19f),versaoSoftware);}),_0x189deb['on']('iniciaNgrokHTTP',function(){var _0x1947f0=_0x949a3c;if(redeWifiOk==0x1)_0x4f7266();else _0x189deb[_0x1947f0(0x16b)](_0x1947f0(0x177));}),_0x189deb['on']('iniciaNgrokSSH',function(){var _0x5e28c7=_0x949a3c;if(redeWifiOk==0x1)_0xad7a60();else _0x189deb[_0x5e28c7(0x16b)]('falhaConexao');}),_0x189deb['on']('encerraNgrok',function(){_0x34b4c9();});function _0x4f7266(){var _0x32e46a=_0x949a3c;console['log'](_0x32e46a(0x17a)),ngrok['connect']({'region':'sa','proto':'http','addr':0x1f91,'authtoken':_0x32e46a(0x15d)})[_0x32e46a(0x104)](_0x2bf689=>{var _0x321775=_0x32e46a;console[_0x321775(0x1c6)](_0x321775(0x13c)+_0x2bf689),_0x189deb[_0x321775(0x16b)](_0x321775(0x133),_0x2bf689);})['catch'](_0x468391=>{var _0x5d86f2=_0x32e46a;console[_0x5d86f2(0x1c6)](_0x5d86f2(0x126)+_0x468391),_0x189deb[_0x5d86f2(0x16b)](_0x5d86f2(0x177)),ngrok[_0x5d86f2(0x11f)]();});}function _0xad7a60(){var _0x27ea68=_0x949a3c;console[_0x27ea68(0x1c6)]('Conectando\x20ao\x20ngrok\x20SSH...'),ngrok[_0x27ea68(0x167)]({'region':'sa','proto':_0x27ea68(0x1e2),'addr':0x16,'authtoken':_0x27ea68(0x15d)})[_0x27ea68(0x104)](_0x22c0fd=>{var _0x696fed=_0x27ea68;console[_0x696fed(0x1c6)](_0x696fed(0x13c)+_0x22c0fd),_0x189deb[_0x696fed(0x16b)](_0x696fed(0x1d2),_0x22c0fd);})['catch'](_0x3476e6=>{var _0x4fd4a6=_0x27ea68;console[_0x4fd4a6(0x1c6)](_0x4fd4a6(0x126)+_0x3476e6),_0x189deb[_0x4fd4a6(0x16b)]('falhaConexao'),ngrok[_0x4fd4a6(0x11f)]();});}function _0x34b4c9(){var _0x46a2be=_0x949a3c;console[_0x46a2be(0x1c6)](_0x46a2be(0x183)),ngrok[_0x46a2be(0x157)]();}_0x189deb['on'](_0x949a3c(0x113),function(_0x475b1f){console['log'](_0x475b1f),setDateTime(_0x475b1f);}),_0x189deb[_0x949a3c(0x16b)](_0x949a3c(0x1c1),senha);});return console[_0x6adcdd(0x1c6)](_0x387e5d),router;};module['exports']=method;
+const express = require('express')
+const router = express.Router()
+const mongoose = require('mongoose')
+const passport = require("passport")
+const {logged} = require("../helpers/logado")
+const localStrategy = require("passport-local").Strategy
+const bcrypt = require("bcryptjs")
+const session = require('express-session');
+const path = require("path")
+const { execFile } = require('child_process');
+const {spawn} = require('child_process');
+require("../models/Ferramenta")
+const Ferramenta = mongoose.model("ferramentas")
+require("../models/Evento")
+const Evento = mongoose.model("eventos")
+var userLogged = require("../routes/userLogged");
+require("../models/Usuario")
+const Usuario = mongoose.model("usuarios")
+require("../models/DadosTeste")
+const DadosTeste = mongoose.model("dadosTestes")
+require("../models/Configuracoes")
+const Configuracao = mongoose.model("configuracoes")
+const wifi = require('node-wifi')
+var nodemailer = require('nodemailer')
+const ObjectsToCsv = require('objects-to-csv')
+const schedule = require('node-schedule')
+const usb = require('usb')
+const ngrok = require('ngrok')
+const child_process_dateTime = require("child_process");
+const dateFormat = require("dateformat");
+const sgMail = require('@sendgrid/mail')
+const fs = require("fs")
+require('dotenv').config({path:'./sendgrid.env'});
+
+var redesNeuraisCarregadas = 0
+var FuncSenha = require("./senha");
+var senha = ""
+var abrindoGV = 0
+var fechandoGV = 0
+var bloqueiaAbertura = 0
+var ItensErrados = [0, 0, 0, 0, 0, 0, 0, 0] //404 indica estado desconhecido
+var auxFGVSemRedeNeural = 1
+var redeWifiOk = 0
+var wifiLevel = 0
+var emailTramontina = 'gabriel.romio@tramontina.com' //Configura e-mail interno de usuario Tramontina para envio de registros
+var cargaBateria = 0
+var BateriaCarregando = 0
+var BateriaCarregada = 0
+var arrayBateria = []
+
+var identificacaoOrganizador = require("./identificacao");
+var versaoSoftware = require("./versao");
+
+//Variáveis referentes à childprocess
+var childCam1
+var childCam2
+var childRedeNeural
+var childVerificacao
+
+//Variáveis auxiliares para testes das gavetas
+var contRepeticoesGVEspecifica = 0
+var contRepeticoesTodasGVs = 0
+var numRepeticoesGVEspecifica = 0
+var numRepeticoesTodasGVs = 0
+var pausaTestesGavetas = 0
+var paraTestesGavetas = 0
+var testesGavetasAndamento = 0
+var gavetaEmTeste = 1
+var gavetaEmMovimento = ''
+var segDecorridoGVEspecifica = ''
+var segDecorridoTodasGVs = ''
+var ObjectId = require('mongodb').ObjectID
+
+//Temporizadores
+/*function Timer(callback, delay) {
+  var timerId;
+  var start;
+  var remaining = delay;
+
+  this.pause = function () {
+    window.clearTimeout(timerId);
+    remaining -= new Date() - start;
+  };
+
+  var resume = function () {
+    start = new Date();
+	timerId = window.setTimeout(function () {
+      remaining = delay;
+      resume();
+      callback();
+    }, remaining);
+  }
+  this.resume = resume;
+
+  this.reset = function () {
+    remaining = delay;
+  };
+}
+
+var timer = new Timer(function () {
+  console.log("Chamou a função!");
+}, 3000);
+timer.resume();*/
+
+//Carrega redes neurais durante a inicialização
+var childRedeNeural
+inicializaRedesNeurais()
+function inicializaRedesNeurais() {
+  console.log('Carregando redes neurais...')
+  childRedeNeural = spawn('/home/tramontina/Downloads/Interface/RedesNeurais', [], {detached: false});
+  childRedeNeural.on('exit', (code) => {
+      console.log('Uma das redes neurais parou de responder...')
+  });
+  childRedeNeural.stdout.on('data', (data) => {
+      if (data[0]==49){
+        redesNeuraisCarregadas = 1
+        console.log("Redes neurais carregadas com sucesso!")
+        //ExecuteChromium(); //Abre o navegador quando a inicialização das redes neurais for concluida
+      }
+  });
+  childRedeNeural.stderr.on('data', (data) => {
+      console.log('stderr: ' + data);
+  });
+}
+
+verificaGavetasInicial() //Verifica gavetas ao ligar o organizador, evitando possíveis falhas
+function verificaGavetasInicial(){
+	execFile('/home/tramontina/Downloads/Interface/Gavetas', ['GAVETAS'], (error, stdout, stderr) => {
+	  if (error) {
+		console.error('error: ' + error);
+		return;
+		}
+	  if (stderr) {
+		console.error('stderr: ' + stderr);
+		return;
+	  }
+	  console.log('stdout: ' + stdout);
+	});
+}
+
+//Altera data e hora do sistema
+//setDateTime('3/31/2022 14:10:00') //mm/dd/yyyy HH:MM:ss
+function setDateTime(dateTime) {
+  //let sudo = 'sudo ';
+  child_process_dateTime.exec(`timedatectl set-ntp false`);
+  try{
+    child_process_dateTime.exec(`timedatectl set-time "${dateFormat(dateTime, 'yyyy-mm-dd HH:MM:ss')}"`);
+  }catch (error){
+    console.log('Error: ' + error)
+  }
+  child_process_dateTime.exec(`hwclock -w --utc`);
+}
+
+//Configura leitura de pendrive
+//const drivelist = require('drivelist')
+//console.log("Drives encontrados: " + drivelist.list()) 
+
+//Configura acesso remoto
+//ngrokConnect()
+ngrok.disconnect(); //Inicia ngrok desconectado de todas as portas
+ngrok.kill(); //Mata todos os processos do ngrok ao iniciar
+
+//Carrega configurações salvas
+var configuracaoAtual = new Array
+Configuracao.findOne({_id:'000000000000000000000001'}).lean().populate("configuracoes").then((configuracoes) => {
+  configuracaoAtual = {
+    fechamento: configuracoes.fechamento,
+    cartao: configuracoes.cartao,
+    desligamento: configuracoes.desligamento,
+    email: configuracoes.email,
+    dataRelatorio: configuracoes.dataRelatorio
+  }
+  if (dataAtual!=configuracoes.dataRelatorio){
+    geraRelatorio('registros')
+  }
+  else{
+	console.log('Definindo envio de e-mail para as 0h00')
+	schedule.scheduleJob('0 0 * * *', function(){
+	  geraRelatorio('registros')
+	})
+  }
+}).catch((err) => {
+  console.log('Erro ao carregar as configurações: ' + err)
+  schedule.scheduleJob('0 0 * * *', function(){
+	geraRelatorio('registros')
+  })
+  configuracaoAtual = {
+    fechamento: 0,
+    cartao: 0,
+    desligamento: 0,
+    email: '',
+    dataRelatorio: ''
+  }
+})
+
+//Configuração para envio de relatório através de e-mail
+var today=new Date();
+var dataAtual = String(today.getDate() + '-' + (today.getMonth()+1) + '-' + today.getFullYear())
+//console.log(dataAtual)
+//var min = today.getMinutes()
+//var hora = today.getHours()
+
+/*var remetente = nodemailer.createTransport({
+  host:'smtp.office365.com',
+  service:'smtp.office365.com',
+  port:587,
+  secure:false,
+  auth:{
+    user:'smart_manager4.0@outlook.com',
+    pass:''
+  }
+})*/
+/*
+var remetente = nodemailer.createTransport({
+  host:'smtp.gmail.com',
+  service:'smtp.gmail.com',
+  port:587,
+  secure:false,
+  auth:{
+    user:'gabriel.romio@tramontina.com',
+    pass:''
+  }
+})*/
+
+//geraRelatorio('relatorio')
+/*Evento.updateMany({enviado:0}, {enviado:1}).then((eventos) => { //Atualiza multiplos eventos
+  console.log("Eventos atualizados")
+}).catch((err) => {
+  console.log(err)
+})*/
+
+function geraRelatorio(data){
+  if (redeWifiOk==1){
+    Evento.find({enviado:0}/*{$or:[{dataRetirada:data}, {dataDevolucao:data}]}*/)
+    .select('referencia descricao gaveta dataRetirada horaRetirada dataDevolucao horaDevolucao usuario setor -_id')
+    .lean().populate("eventos").sort({_id: "asc"}).then((eventos) => {
+      if(eventos.length>0){
+        const csv = new ObjectsToCsv(eventos);
+        console.log('Gerando relatorio...')
+        csv.toDisk('relatorio.csv').then(function(){
+          console.log('Iniciando envio de e-mail...')
+          enviaEmail(data, 1)
+        })
+      }
+      else{
+        enviaEmail(data, 0)
+      }
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+  else{
+    console.log('Wifi não conectado... adiando envio de e-mail')
+    adiaEnvioEmail()
+  }
+}
+
+//enviaEmail('27/05/2022', 1)
+/*
+function enviaEmail(data, novosRegistros){
+  if(novosRegistros==1){
+    var email={
+      from:'smart_manager4.0@outlook.com',
+      to: configuracaoAtual.email,
+      bcc: emailTramontina,
+      subject:'Relatório SmartManager4.0',
+      text: 'Relatório ' + String(identificacaoOrganizador),
+      attachments: [
+        {
+          filename: data + '.csv',
+          path:'./relatorio.csv'
+        }
+      ]
+    }
+  }
+  else{
+    var email={
+      from:'smart_manager4.0@outlook.com',
+      to: configuracaoAtual.email,
+      bcc: emailTramontina,
+      subject:'Relatório SmartManager4.0',
+      text: 'Relatório ' + String(identificacaoOrganizador) + '\nNenhum registro novo.'
+    }
+  }
+  remetente.sendMail(email, function(error){
+      //if(error){
+      //  console.log('Erro ao enviar email: ' + error);
+        //Ao ocorrer um erro, tenta enviar e-mail novamente alguns instantes depois
+      //  adiaEnvioEmail()
+      //}else{
+        console.log('Email enviado com sucesso')
+        Evento.updateMany({enviado:0}, {enviado:1}).then((eventos) => { //Atualiza multiplos eventos, indicando que já foram transmitidos
+          console.log("Eventos atualizados")
+        }).catch((err) => {
+          console.log(err)
+        })
+        var date=new Date();
+        Configuracao.updateOne({_id:'000000000000000000000001'}, {$set: {dataRelatorio: String(date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear())}}).then(() => {
+        }).catch((err) => {
+          console.log("Erro ao sobrescrever configuracao: " + err)
+        })
+      //}
+  })
+}*/
+
+/*
+sendMailSendGrid()
+function sendMailSendGrid() {
+  pathToAttachment = `./relatorio.csv`;
+  attachment = fs.readFileSync(pathToAttachment).toString("base64");
+  const msg = {
+    to: 'gabrielbromio@hotmail.com', // Change to your recipientz
+    from: 'smart_manager4.0@outlook.com', // Change to your verified sender
+    bcc: emailTramontina,
+    subject:'Relatório SmartManager4.0',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    attachments: [
+      {
+        content: attachment,
+        filename: data + '.csv',
+        type: 'application/csv',
+        disposition: 'attachment'
+      },
+    ],
+  }
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email enviado com sucesso')
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+}*/
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+function enviaEmail(data, novosRegistros){
+  var email
+  if(novosRegistros==1){
+    pathToAttachment = `./relatorio.csv`;
+    attachment = fs.readFileSync(pathToAttachment).toString("base64");
+    email = {
+      to: configuracaoAtual.email, // Change to your recipientz
+      from: 'sistemainteligente.pro@tramontina.com', // Change to your verified sender
+      bcc: emailTramontina,
+      subject:'Relatório SmartManager4.0',
+      text: 'Relatório ' + String(identificacaoOrganizador),
+      attachments: [
+        {
+          content: attachment,
+          filename: data + '.csv',
+          type: 'application/csv',
+          disposition: 'attachment'
+        },
+      ],
+    }
+  }
+  else{
+    email = {
+      to: configuracaoAtual.email, // Change to your recipientz
+      from: 'sistemainteligente.pro@tramontina.com', // Change to your verified sender
+      bcc: emailTramontina,
+      subject:'Relatório SmartManager4.0',
+      text: 'Relatório ' + String(identificacaoOrganizador) + '\nNenhum registro novo.'
+    }
+  }
+  sgMail
+    .send(email)
+    .then(() => {
+      console.log('Email enviado com sucesso')
+      schedule.scheduleJob('0 0 * * *', function(){
+        geraRelatorio('registros')
+      });
+      Evento.updateMany({enviado:0}, {enviado:1}).then((eventos) => { //Atualiza multiplos eventos, indicando que já foram transmitidos
+        console.log("Eventos atualizados")
+      }).catch((err) => {
+        console.log(err)
+      })
+      var date=new Date();
+      Configuracao.updateOne({_id:'000000000000000000000001'}, {$set: {dataRelatorio: String(date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear())}}).then(() => {
+      }).catch((err) => {
+        console.log("Erro ao sobrescrever configuracao: " + err)
+      })
+    })
+    .catch((error) => {
+      console.log('Erro ao enviar email: ' + error);
+      //Ao ocorrer um erro, tenta enviar e-mail novamente alguns instantes depois
+      adiaEnvioEmail()
+    })
+}
+
+function adiaEnvioEmail(){
+  today=new Date();
+  var min = today.getMinutes()
+  var hora = today.getHours()
+  min = min+5
+  if (min >= 60){
+    hora = hora+1
+    min = 0
+    if (hora >= 24){
+      hora = 0
+    }
+  }
+  console.log("Nova tentativa de envio de relatorio: " + String(hora) + "h" + String(min))
+  schedule.scheduleJob(String(min) + ' ' + String(hora) + ' * * *', function(){
+    geraRelatorio('registros')
+  })
+}
+
+wifi.init({
+  iface: null // network interface, choose a random wifi interface if set to null
+});
+
+//editaConfiguracao(0,0,0,'email@email.com') //Carrega dados de configuração com valores iniciais
+
+function editaConfiguracao(fechamento, cartao, desligamento, email){
+  Configuracao.findOne({_id:'000000000000000000000001'}).then((configuracao) => {
+    if(!configuracao){
+      const novaConfiguracao = {
+        _id: ObjectId('000000000000000000000001'),
+        fechamento: fechamento,
+        cartao: cartao,
+        desligamento: desligamento,
+        email: email,
+        dataRelatorio: '0'}
+      new Configuracao(novaConfiguracao).save();
+      configuracaoAtual = {
+        fechamento: fechamento,
+        cartao: cartao,
+        desligamento: desligamento,
+        email: email,
+        dataRelatorio: '0'}
+    }
+    else{
+      Configuracao.updateOne({_id:'000000000000000000000001'}, {$set: {fechamento:fechamento, cartao:cartao, desligamento: desligamento, email: email}}).then(() => {
+        configuracaoAtual = {
+        fechamento: fechamento,
+        cartao: cartao,
+        desligamento: desligamento,
+        email: email}
+      }).catch((err) => {
+        console.log("Erro ao sobrescrever configuracao: " + err)
+      })
+    }
+  }).catch((err) => {
+    console.log('Erro ao acessar as configurações: ' + err)
+  })
+}
+
+verificaFerramentasRemovidas(); //Verifica quantidade de ferramentas removidas ao inicializar o sistema
+
+function verificaFerramentasRemovidas() {
+  let iterable = [1,2,3,4,5,6,7,8]
+  for(const value of iterable){ //Para executar ordenadamente, o laço for deve ser assim
+    Ferramenta.find({gaveta:value, estado:0, desconhecido:0}).lean().populate("ferramentas").then((ferramentas) => { //Ferramentas removidas
+      if(!ferramentas){
+        console.log('Erro evento não encontrado')
+      }
+      else{
+        ItensErrados[value-1] = ferramentas.length;
+      }
+    }).catch((err) => {
+      console.log('Erro ao acessar banco de dados: ' + err)
+    })
+    Ferramenta.find({gaveta:value, desconhecido:1}).lean().populate("ferramentas").then((ferramentas) => { //Ferramentas estado desconhecido
+      if(!ferramentas){
+        console.log('Erro evento não encontrado')
+      }
+      else if (ferramentas.length > 0){ //Verifica se há alguma ferramenta com estado desconhecido
+        ItensErrados[value-1] = 404;
+      }
+    }).catch((err) => {
+      console.log('Erro ao acessar banco de dados: ' + err)
+    })
+  }
+}
+
+function abreCalculadora() {
+  execFile(path.join('gnome-calculator'), (error, stdout, stderr) => {
+  if (error) {
+    console.error('error: ' + error);
+    return;
+  }
+  })
+}
+
+/*function abreCalendario() {
+  execFile(path.join('gnome-calendar'), (error, stdout, stderr) => {
+  if (error) {
+    console.error('error: ' + error);
+    return;
+  }
+  })
+}*/
+
+function shutdownPC() {
+  const child = spawn('shutdown', ['-h', 'now']);
+}
+
+function rebootPC() {
+  const child = spawn('reboot');
+}
+
+function auxDesligamentoBateriaBaixa() {
+  if (BateriaCarregando==0){
+    console.log('Desligando o sistema por bateria baixa')
+    shutdownPC()
+  }
+}
+
+function novoEvento(ferramenta){
+  var horario = getHorario();
+  var data = getData();
+  var usuarioatual = userLogged('showUserdata')
+  const novoEvento = {
+    referencia: ferramenta.referencia,
+    descricao: ferramenta.descricao,
+    gaveta: ferramenta.gaveta,
+    posicao: ferramenta.posicao,
+    dataRetirada: data,
+    horaRetirada: horario,
+    dataDevolucao: '-',
+    horaDevolucao: '-',
+    usuario: usuarioatual.login,
+    setor: usuarioatual.setor,
+    devolucao: 0,
+    enviado: 0}
+  new Evento(novoEvento).save();
+}
+
+function eventoDevolucao(ferramenta){
+  var horario = getHorario();
+  var data = getData();
+  Evento.findOne({gaveta:ferramenta.gaveta, posicao:ferramenta.posicao, devolucao: 0}, null, {"sort": {"_id":-1}}).then((evento) => {
+    if(!evento){
+      console.log('Erro evento não encontrado')
+    }
+    else{
+      const novoEvento = {
+        referencia: evento.referencia,
+        descricao: evento.descricao,
+        gaveta: evento.gaveta,
+        posicao: evento.posicao,
+        dataRetirada: evento.dataRetirada,
+        horaRetirada: evento.horaRetirada,
+        dataDevolucao: data,
+        horaDevolucao: horario,
+        usuario: evento.usuario,
+        setor: evento.setor,
+        devolucao: 1,
+        enviado: 0}
+      Evento.deleteOne({_id:evento._id}).then(() => {
+      }).catch((err) => {
+        console.log("Erro ao deletar evento: " + err)
+      })
+      new Evento(novoEvento).save();
+    }
+  }).catch((err) => {
+    console.log('Erro ao acessar banco de dados: ' + err)
+  })
+}
+
+function getHorario(){
+  var today=new Date();
+  var h=today.getHours();
+  var m=today.getMinutes();
+  if (m<10) m="0" + m;
+  return(h+':'+m);
+}
+
+function getData(){
+  var today=new Date();
+  var d=today.getDate();
+  if (d<10) d="0"+d;
+  var m=today.getMonth() + 1; //Mes inicia em 0
+  if (m<10) m="0"+m;
+  var y=today.getFullYear();
+  return(d+'/'+m+'/'+y);
+}
+
+function convTempo(data){
+  var auxString;
+  var stringTempoDecorrido;
+  stringTempoDecorrido = Math.floor(data/3600);
+  auxString = Math.floor((data%3600)/60);
+  if (auxString < 10){
+    auxString = '0' + auxString;}
+  stringTempoDecorrido = stringTempoDecorrido + ':' + auxString;
+  auxString = Math.floor((data%3600)%60)
+  if (auxString < 10){
+    auxString = '0' + auxString;}
+  stringTempoDecorrido = stringTempoDecorrido + ':' + auxString;
+  return stringTempoDecorrido;
+}
+/*
+function AtualizaDispositivo(){
+  console.log("Iniciando atualização de software...")
+  execFile('/home/tramontina/Downloads/update.sh', (error, stdout, stderr) => {
+    if (error) {
+      console.error('error: ' + error);
+      return;
+    }
+    if (stderr) {
+      console.error('stderr: ' + stderr);
+      return;
+    }
+    if (stdout) {
+      console.log("Software atualizado")
+    }
+  });
+}*/
+
+function AtualizaDispositivo(){
+  console.log("Iniciando atualização de software...")
+  childAtualizaSoftware = spawn('/home/tramontina/Downloads/Interface/update.sh', [], {detached: true});
+  childAtualizaSoftware.on('exit', (code) => {
+      console.log('Software atualizado')
+      rebootPC()
+  });
+  childAtualizaSoftware.stdout.on('data', (data) => {
+        console.log(data)
+  });
+  childAtualizaSoftware.stderr.on('data', (data) => {
+      console.log('stderr: ' + data);
+  });
+}
+
+/*process.on('uncaughtException', (error, origin) => {
+  console.log('---- Uncaught exception ----')
+  console.log(error)
+  console.log('---- Exception origin ----')
+  console.log(origin)
+})
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.log('---- Unhandled Rejection at ----')
+  console.log(promise)
+  console.log('---- Reason ----')
+  console.log(reason)
+})*/
+
+//Funcções sockets
+const method = function (io) {
+    //Socket.IO
+    
+    var teste = io.on('connection', function (socket) {
+        console.log('Usuario conectado');
+        FuncSenha('resetPass', 0)
+
+        socket.on('statusRedesNeurais', function() {
+          socket.emit('redesNeuraisCarregadas', redesNeuraisCarregadas)
+        })
+
+        //Nível da bateria
+        //socket.emit('atualizaBateria', ((cargaBateria-2)*20+'%'))
+        verificaBateria()
+        socket.on('nivelBateria', function() {
+          if (abrindoGV==0 && fechandoGV==0)
+            verificaBateria();
+        })
+        function verificaBateria() {
+          execFile('/home/tramontina/Downloads/Interface/Bateria', (error, stdout, stderr) => {
+            if (error) {
+              console.error('error: ' + error);
+              return;
+            }
+            if (stderr) {
+              console.error('stderr: ' + stderr);
+              return;
+            }
+            if (stdout) {
+              //console.log('Retorno bateria: ' + stdout)
+              if(stdout[1]=='0' && stdout[2]=='0'){ //Bateria com o carregador desconectado
+                BateriaCarregada = 0
+                BateriaCarregando = 0
+                if (arrayBateria.length==0){
+                  cargaBateria = stdout[0]
+                  arrayBateria[0] = cargaBateria
+                  arrayBateria[1] = cargaBateria
+                  arrayBateria[2] = cargaBateria
+                  arrayBateria[3] = cargaBateria
+                  arrayBateria[4] = cargaBateria
+                }
+                else{
+                  arrayBateria[4] = arrayBateria[3]
+                  arrayBateria[3] = arrayBateria[2]
+                  arrayBateria[2] = arrayBateria[1]
+                  arrayBateria[1] = arrayBateria[0]
+                  arrayBateria[0] = stdout[0]
+                  if(arrayBateria[0] == arrayBateria[1] && arrayBateria[1] == arrayBateria[2] && arrayBateria[2] == arrayBateria[3] 
+                  && arrayBateria[3] == arrayBateria[4] && cargaBateria >= arrayBateria[0])
+                    cargaBateria = arrayBateria[0];
+                    if (cargaBateria>5) cargaBateria=5;
+                }
+                //console.log('Array bateria: ' + arrayBateria)
+                //console.log('Carga bateria: ' + cargaBateria)
+                //console.log('Nivel bateria: ' + ((cargaBateria-2)*20+'%'));
+                socket.emit('atualizaBateria', ((cargaBateria)*20+'%'))
+                console.log('Nivel bateria: ' + ((cargaBateria)*20+'%'))
+
+                if (cargaBateria==0){ //Nivel de bateria minimo, desliga pc após temporizacao
+                                      //1 é o nivel minimo, 0 indica que a placa está desconectada
+                  console.log('Inicia timer de 5 minutos para desligar o sistema por bateria baixa')
+                  setTimeout(() => {  //Desliga sistema após 5 minutos
+                    //shutdownPC()
+                    auxDesligamentoBateriaBaixa()
+                  }, 300000);
+                }
+              }
+              else if (stdout[1]=='1'){ //Bateria carregada
+                BateriaCarregada = 1
+                BateriaCarregando = 0
+                arrayBateria = []
+                socket.emit('atualizaBateria', 'carregada')
+              }
+              else if (stdout[2]=='1'){ //Bateria carregando
+                BateriaCarregada = 0
+                BateriaCarregando = 1
+                arrayBateria = []
+                socket.emit('atualizaBateria', 'carregando')
+              }
+            }
+          });
+        }
+
+        //Status Wifi
+        socket.emit('atualizaWifi', redeWifiOk, wifiLevel)
+        socket.on('statusWifi', function() {
+          verificaConexaoWifi();
+        })
+        function verificaConexaoWifi(){
+          wifi.getCurrentConnections((error, network) => {
+            if (error) {
+              console.log(error);
+            } else {
+              if (network.length > 0){
+                //console.log("Conectado à rede: " + network[0].ssid + " " + network[0].signal_level);
+                redeWifiOk = 1
+                wifiLevel = network[0].signal_level
+                socket.emit('atualizaWifi', 1, network[0].signal_level)
+              }
+              else{
+                //console.log("Wifi não conectado");
+                redeWifiOk = 0
+                wifiLevel = 0
+                socket.emit('atualizaWifi', 0, 0)
+              }
+            }
+            //socket.emit('atualizaWifi')
+          });
+        }
+     
+        //Tela login
+        socket.on('insertKey', function(data) {
+           senha=FuncSenha('insertKey', data)
+           socket.emit('SenhaAtual', senha)
+        });
+        socket.on('removeKey', function(data) {
+        	 senha=FuncSenha('removeKey', data)
+           socket.emit('SenhaAtual', senha)
+        });
+
+        //Tela main
+        socket.on('estadoGavetas', function() {
+          estadoGavetas()
+        });
+        socket.on('estadoFerramentas', function() {
+          //console.log('Itens errados: ' + ItensErrados)
+          socket.emit('estadoFerramentas', ItensErrados);
+        });
+        socket.on('abreGaveta', function(data) {
+          if (abrindoGV==0 && fechandoGV==0 && bloqueiaAbertura==0){
+            auxFGVSemRedeNeural = 0
+            abrindoGV = 1
+            bloqueiaAbertura = 1
+            gavetaEmMovimento = data
+            socket.emit('bloqueiaInteracaoUsuario')
+            abreGaveta(data)
+            //carregaRedeNeural(data)
+            //iniciaCameras(data)
+            //console.log("PID: " + childCam1.pid)
+            //console.log("PID: " + childCam2.pid)
+            try {
+              process.kill(childCam1.pid)
+            } catch (error){
+              console.log('Kill cam1 - Erro encontrado: ' + error)
+            }
+            try {
+              process.kill(childCam2.pid)
+            } catch (error){
+              console.log('Kill cam2 - Erro encontrado: ' + error)
+            }
+            iniciaCam1(data)
+            iniciaCam2(data)
+          }
+        });
+        socket.on('fechaGaveta', function(data) {
+          if (abrindoGV==0 && fechandoGV==0){
+            //auxFGVSemRedeNeural = 0
+            fechandoGV = 1
+            gavetaEmMovimento = data
+            socket.emit('bloqueiaInteracaoUsuario')
+            fechaGaveta(data)
+          }
+        });
+        socket.on('abreCalculadora', function() {
+           abreCalculadora()
+        });
+        /*socket.on('abreCalendario', function() {
+          abreCalendario()
+        });*/
+        socket.on('shutdown', function() {
+           shutdownPC()
+        });
+        socket.on('reboot', function() {
+           rebootPC()
+        });
+        socket.on('connectWifi', function(ssid, password) {
+          connectWifi(ssid, password)
+        });
+        socket.on('disconnectWifi', function() {
+          disconnectWifi()
+        });
+
+        function connectWifi(ssid, password) {
+          console.log("Conectando à rede...")
+          wifi.connect({ ssid: ssid, password: password }, error => {
+            var strError = String(error)
+            if (!error){
+              console.log('Conectado');
+              socket.emit('resultadoConexao', 1, 0)
+            }
+            else if (strError.indexOf("Error: Connection activation failed")>-1){ //Verifica se o erro contém string que indica credenciais inválidas
+              console.log("Erro ao conectar: " + error)
+              socket.emit('resultadoConexao', 0, 0) //0->Senha inválida / 1->Outros erros
+              disconnectWifi()
+            }
+            else{
+              console.log("Erro ao conectar: " + error)
+              socket.emit('resultadoConexao', 0, 1) //0->Senha inválida / 1->Outros erros
+              disconnectWifi()
+            }
+            verificaConexaoWifi();
+          });
+        }
+        
+        function disconnectWifi(){
+          console.log('Desconectando...')
+          wifi.disconnect(error => {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Desconectado');
+              setTimeout(() => {socket.emit('Desconectado'); }, 500)
+            }
+          });
+        }
+        
+        socket.on('GvTrancadaAGV', function() {
+          if (fechandoGV==0){
+            abreGaveta(gavetaEmMovimento)
+          }
+          else{
+            fechandoGV = 0
+            abrindoGV = 1
+            bloqueiaAbertura = 1
+            //carregaRedeNeural(gavetaEmMovimento)
+            try {
+              process.kill(childCam1.pid)
+            } catch (error){
+              console.log('Kill cam1 - Erro encontrado: ' + error)
+            }
+            try {
+              process.kill(childCam2.pid)
+            } catch (error){
+              console.log('Kill cam2 - Erro encontrado: ' + error)
+            }
+            iniciaCam1(gavetaEmMovimento)
+            iniciaCam2(gavetaEmMovimento)            
+            abreGaveta(gavetaEmMovimento)
+          }
+        });
+        socket.on('GvTrancadaFGV', function() {
+          auxFGVSemRedeNeural = 1
+          try {
+            process.kill(childCam1.pid)
+          } catch (error){
+            console.log('Kill cam1 - Erro encontrado: ' + error)
+          }
+          try {
+            process.kill(childCam2.pid)
+          } catch (error){
+            console.log('Kill cam2 - Erro encontrado: ' + error)
+          }
+          try {
+            process.kill(childVerificacao.pid)
+          } catch (error){
+            console.log('Kill rede neural - Erro encontrado: ' + error)
+          }
+          socket.emit('showGvTrancadaFechando', gavetaEmMovimento)
+          ItensErrados[gavetaEmMovimento-1] = 404
+          Ferramenta.find({gaveta:gavetaEmMovimento}).then((ferramentas) => {
+            if(!ferramentas){
+              console.log('Erro ferramentas não encontradas')
+            }
+            else{
+              for(var i=0; i<(ferramentas.length); i++){
+                ferramentas[i].desconhecido=1;
+                ferramentas[i].save(); //Armazena dados atualizados no banco
+              }
+            }
+          }).catch((err) => {
+            console.log('Erro ao acessar banco de dados: ' + err)
+          })
+          fechandoGV = 1
+          fechaGaveta(gavetaEmMovimento)
+        });
+
+        function iniciaCam1(data){
+          //console.log('iniciando camera da gaveta ' + data)
+          childCam1 = spawn('/home/tramontina/Downloads/Interface/GetImages_GV' + data + '_c1', [], {detached: false});
+          //console.log('PID inicial: ' + childCam1.pid)
+          childCam1.on('exit', (code) => {
+            console.log("Cam1 finalizada...")
+          });
+
+          childCam1.stdout.on('data', (data) => {
+              //console.log('std: '+data);
+          });
+
+          childCam1.stderr.on('data', (data) => {
+              //console.log('stderr: ' + data);
+          });
+        }
+
+        function iniciaCam2(data){
+          //console.log('iniciando camera da gaveta ' + data)
+          childCam2 = spawn('/home/tramontina/Downloads/Interface/GetImages_GV' + data + '_c2', [], {detached: false});
+          
+          childCam2.on('exit', (code) => {
+            console.log("Cam2 finalizada...")
+          });
+
+          childCam2.stdout.on('data', (data) => {
+              //console.log('std: '+data);
+          });
+
+          childCam2.stderr.on('data', (data) => {
+              //console.log('stderr: ' + data);
+          });
+        }
+
+        /*function carregaRedeNeural(gaveta) {
+          //console.log('Carregando rede neural da gaveta ' + gaveta)
+          childRedeNeural = spawn('/home/tramontina/Downloads/Gavetas/RedeNeural_GV' + gaveta, [], {detached: false});
+          
+          childRedeNeural.on('exit', (code) => {
+              //impedeFGV1 = 0;
+              //socket.emit('show_view', 1);
+              //console.log('Child process exited with code ' + code);
+              //var resultado = ItensErrados[gaveta-1];
+              if (auxFGVSemRedeNeural==0){
+                socket.emit('result_GV', ItensErrados[gaveta-1]);}
+              bloqueiaAbertura = 0;
+              //for (var i=0; i<(data.length-1); i++){
+              //  console.log(i + ': ' + data[i])
+              //}
+              //enviaResultadoRedeNeural(ItensErrados[gaveta-1]);
+          });
+          childRedeNeural.stdout.on('data', (data) => {
+              ItensErrados[gaveta-1] = 0;
+              //console.log('Resultado da rede: ' + data)
+              for(var i=0; i<(data.length-1); i++){
+                Ferramenta.findOne({gaveta:gaveta, posicao:i+1}).then((ferramenta) => {
+                  if(!ferramenta){
+                    console.log('Erro ferramenta não encontrada')
+                  }
+                  else{
+                    //Verifica quais item estão incorretos
+                    //48=0(errado), 49=1(correto), conforme tabela ASCII
+                    if (data[ferramenta.posicao-1]==49 && ferramenta.estado!=1) { //Ferramenta devolvida
+                      console.log('' + ferramenta.descricao + ' devolvida');
+                      ferramenta.estado=1;
+                      eventoDevolucao(ferramenta);
+                    }
+                    else if (data[ferramenta.posicao-1]==48 && ferramenta.estado!=0) { //Ferramenta retirada
+                      ItensErrados[gaveta-1] = ItensErrados[gaveta-1]+1;
+                      console.log('' + ferramenta.descricao + ' retirada');
+                      ferramenta.estado=0;
+                      novoEvento(ferramenta);
+                      //Grava histórico de retirada da ferramenta
+                    }
+                    else if (data[ferramenta.posicao-1]==48){
+                      ItensErrados[gaveta-1] = ItensErrados[gaveta-1]+1;
+                    }
+                  }
+                  ferramenta.save(); //Armazena dados atualizados no banco
+                }).catch((err) => {
+                  console.log('Erro ao acessar banco de dados ferramenta: ' + err)
+                })
+              }
+          });
+          childRedeNeural.stderr.on('data', (data) => {
+              //console.log('stderr: ' + data);
+          });
+        }*/
+
+        function carregaRedeNeural(gaveta) {
+          //console.log('Carregando rede neural da gaveta ' + gaveta)
+          var falhaCameras = 0;
+          childVerificacao = spawn('/home/tramontina/Downloads/Interface/Verificacao', ['GV'+gaveta], {detached: false});
+          
+          childVerificacao.on('exit', (code) => {
+              //impedeFGV1 = 0;
+              //socket.emit('show_view', 1);
+              //console.log('Child process exited with code ' + code);
+              //var resultado = ItensErrados[gaveta-1];
+              if (auxFGVSemRedeNeural==0 && falhaCameras==0){
+                socket.emit('result_GV', ItensErrados[gaveta-1]);}
+              bloqueiaAbertura = 0;
+              //for (var i=0; i<(data.length-1); i++){
+              //  console.log(i + ': ' + data[i])
+              //}
+              //enviaResultadoRedeNeural(ItensErrados[gaveta-1]);
+          });
+          childVerificacao.stdout.on('data', (data) => {
+              console.log('Resultado da rede: ' + data)
+              if(data=='FCAM1'){ 
+                falhaCameras = 1;
+                socket.emit('falhaComunicacaoCamera', 1)
+                console.log('Falha na camera 1...')}
+              else if(data=='FCAM2'){
+                falhaCameras = 1;
+                socket.emit('falhaComunicacaoCamera', 2)
+                console.log('Falha na camera 2...')}
+              else if(data=='FCAM12'){
+                falhaCameras = 1;
+                socket.emit('falhaComunicacaoCamera', 12) 
+                console.log('Falha nas cameras 1 e 2...')}
+              else{
+                ItensErrados[gaveta-1] = 0;
+                for(var i=0; i<(data.length); i++){
+                  Ferramenta.findOne({gaveta:gaveta, posicao:i+1}).then((ferramenta) => {
+                    if(!ferramenta){
+                      console.log('Erro ferramenta não encontrada')
+                    }
+                    else{
+                      //Verifica quais item estão incorretos
+                      //48=0(errado), 49=1(correto), conforme tabela ASCII
+                      ferramenta.desconhecido=0;
+                      if (data[ferramenta.posicao-1]==49 && ferramenta.estado==0) { //Ferramenta devolvida
+                        console.log('' + ferramenta.descricao + ' devolvida');
+                        ferramenta.estado=1;
+                        eventoDevolucao(ferramenta);
+                      }
+                      else if (data[ferramenta.posicao-1]==48 && ferramenta.estado==1) { //Ferramenta retirada
+                        ItensErrados[gaveta-1] = ItensErrados[gaveta-1]+1;
+                        console.log('' + ferramenta.descricao + ' retirada');
+                        ferramenta.estado=0;
+                        novoEvento(ferramenta);
+                        //Grava histórico de retirada da ferramenta
+                      }
+                      else if (data[ferramenta.posicao-1]==48){
+                        ItensErrados[gaveta-1] = ItensErrados[gaveta-1]+1;
+                      }
+                    }
+                    ferramenta.save(); //Armazena dados atualizados no banco
+                  }).catch((err) => {
+                    console.log('Erro ao acessar banco de dados ferramenta: ' + err)
+                  })
+                }
+              }
+          });
+          childVerificacao.stderr.on('data', (data) => {
+              //console.log('stderr: ' + data);
+          });
+        }
+
+        //Funções auxiliares
+        function abreGaveta(data) {
+            //if(data==1 && impedeFGV1==0){
+            //  socket.emit('show_view', 0);
+            //  impedeFGV1 = 1;
+            //  carregaRedeNeural();
+            //}
+            //Inicia abertura insere dado de localização das ferramentas desconhecida
+            ItensErrados[data-1] = 404
+            Ferramenta.find({gaveta:data}).then((ferramentas) => {
+              if(!ferramentas){
+                console.log('Erro ferramentas não encontradas')
+              }
+              else{
+                for(var i=0; i<(ferramentas.length); i++){
+                  ferramentas[i].desconhecido=1;
+                  ferramentas[i].save(); //Armazena dados atualizados no banco
+                }
+              }
+            }).catch((err) => {
+              console.log('Erro ao acessar banco de dados: ' + err)
+            })
+            //
+            execFile('/home/tramontina/Downloads/Interface/Gavetas', ['AGV'+data], (error, stdout, stderr) => {
+              if (error) {
+                console.error('error: ' + error);
+                return;
+              }
+              if (stderr) {
+                console.error('stderr: ' + stderr);
+                return;
+              }
+              console.log('stdout: ' + stdout);
+              if (stdout[2]=='A'){
+                abrindoGV = 0
+                console.log("Gaveta aberta")
+                socket.emit('gavetaAberta', data);
+              }
+              else if (stdout=='GVT'){
+                //abrindoGV = 0
+                //bloqueiaAbertura = 0
+                console.log("Gaveta trancada")
+                socket.emit('gavetaTrancada', data);}
+            });
+        }
+
+        function fechaGaveta(data) {
+            abrindoGV = 0
+            //bloqueiaAbertura = 0
+            execFile('/home/tramontina/Downloads/Interface/Gavetas', ['FGV'+data], (error, stdout, stderr) => {
+              if (error) {
+                console.error('error: ' + error);
+                return;
+              }
+              if (stderr) {
+                console.error('stderr: ' + stderr);
+                return;
+              }
+              console.log('stdout: ' + stdout);
+              if (stdout[2]=='F'){
+                fechandoGV = 0
+                console.log("Gaveta fechada")
+                socket.emit('gavetaFechada', data);
+                if (auxFGVSemRedeNeural==0){
+                  try {
+                    process.kill(childVerificacao.pid)
+                  } catch (error){
+                    console.log('Kill rede neural - Erro encontrado: ' + error)
+                  }
+                  carregaRedeNeural(data)
+                }
+                else{
+                  bloqueiaAbertura = 0
+                  ItensErrados[data-1] = 404
+                  socket.emit('result_GV', ItensErrados[data-1])
+                  Ferramenta.find({gaveta:gavetaEmMovimento}).then((ferramentas) => {
+                    if(!ferramentas){
+                      console.log('Erro ferramentas não encontradas')
+                    }
+                    else{
+                      for(var i=0; i<(ferramentas.length); i++){
+                        ferramentas[i].desconhecido=1;
+                        console.log("Ferramenta " + i + ": " + ferramentas[i].descricao)
+                        ferramentas[i].save(); //Armazena dados atualizados no banco
+                      }
+                    }
+                  }).catch((err) => {
+                    console.log('Erro ao acessar banco de dados: ' + err)
+                  })
+                  auxFGVSemRedeNeural = 0
+                }
+              }
+              else if (stdout=='GVT'){
+                //fechandoGV = 0
+                auxFGVSemRedeNeural = 1
+                try {
+                  process.kill(childCam1.pid)
+                } catch (error){
+                  console.log('Kill cam1 - Erro encontrado: ' + error)
+                }
+                try {
+                  process.kill(childCam2.pid)
+                } catch (error){
+                  console.log('Kill cam2 - Erro encontrado: ' + error)
+                }
+                try {
+                  process.kill(childVerificacao.pid)
+                } catch (error){
+                  console.log('Kill rede neural - Erro encontrado: ' + error)
+                }
+                console.log("Gaveta trancada")
+                socket.emit('gavetaTrancada', data);}
+            })
+        }
+
+        function estadoGavetas() {
+          execFile('/home/tramontina/Downloads/Interface/Gavetas', ['GAVETAS'], (error, stdout, stderr) => {
+            if (error) {
+              console.error('error: ' + error);
+              return;
+            }
+            if (stderr) {
+              console.error('stderr: ' + stderr);
+              return;
+            }
+            console.log('stdout: ' + stdout);
+            socket.emit('estadoGavetas', stdout);
+          });
+        }
+
+        function enviaEstadoGavetas(status) {
+          socket.emit('estadoGavetas', status);
+        }
+        
+        //Testes gaveta específica
+        socket.on('testegavetaespecifica', function(gaveta, repeticoes) {
+          console.log('Gaveta: ' + gaveta + '\nRepeticoes: ' + repeticoes);
+          numRepeticoesGVEspecifica = repeticoes;
+          pausaTestesGavetas = 0;
+          paraTestesGavetas = 0;
+          testaGavetaEspecifica(gaveta);
+          console.log('Iniciando teste')
+        });
+
+        socket.on('pausaTesteGVEspecifica', function() {
+          pausaTestesGavetas = 1;
+          console.log('Pausando teste ' + pausaTestesGavetas)
+        });
+
+        socket.on('stopTesteGVEspecifica', function() {
+          paraTestesGavetas = 1;
+          contRepeticoesGVEspecifica = 0;
+          if (testesGavetasAndamento==0){
+            contRepeticoesGVEspecifica = 0;
+            numRepeticoesGVEspecifica = 0;
+            pausaTestesGavetas = 0;
+            testesGavetasAndamento = 0;
+            paraTestesGavetas = 0;
+            socket.emit('testeParadoGVEspecifica')
+          }
+          console.log('Parando teste ' + pausaTestesGavetas)
+        });
+
+        socket.on('estadoTestesGVEspecifica', function() {
+          socket.emit('estadoTestesGVEspecifica', testesGavetasAndamento, contRepeticoesGVEspecifica);
+        });
+
+        function testaGavetaEspecifica(gaveta){
+          testesGavetasAndamento = 1;
+          console.log('Cont. repeticoes: ' + contRepeticoesGVEspecifica)
+          socket.emit('atualizaContadorTestesGVEspecifica', contRepeticoesGVEspecifica)
+          if (contRepeticoesGVEspecifica >= numRepeticoesGVEspecifica){
+            var data = getData();
+            var stringTempGVEspecifica = convTempo(segDecorridoGVEspecifica);
+            if (contRepeticoesGVEspecifica > 0){
+              const novoTeste = {
+                data: data,
+                gaveta: gaveta,
+                tempo: stringTempGVEspecifica,
+                contagemCiclos: contRepeticoesGVEspecifica,
+                tipo: 0,
+                finalizado: 1}
+              new DadosTeste(novoTeste).save();
+            }
+            contRepeticoesGVEspecifica = 0;
+            numRepeticoesGVEspecifica = 0;
+            pausaTestesGavetas = 0;
+            testesGavetasAndamento = 0;
+            paraTestesGavetas = 0;
+            socket.emit('testeFinalizadoGVEspecifica')}
+          else if (pausaTestesGavetas == 0 && paraTestesGavetas == 0){
+            AGVTestesEspecifico(gaveta)}
+          else if (paraTestesGavetas == 1){
+            testesGavetasAndamento = 0;
+            pausaTestesGavetas = 0;
+            paraTestesGavetas = 0;
+            socket.emit('testeParadoGVEspecifica')}
+          else if (pausaTestesGavetas == 1){
+            testesGavetasAndamento = 0;
+            pausaTestesGavetas = 0;
+            socket.emit('testePausadoGVEspecifica')}
+        }
+
+        function AGVTestesEspecifico(gaveta){
+          execFile('/home/tramontina/Downloads/Interface/Gavetas', ['AGV'+gaveta], (error, stdout, stderr) => {
+            if (error) {
+              console.error('error: ' + error);}
+            if (stderr) {
+              console.error('stderr: ' + stderr);}
+            console.log('stdout: ' + stdout);
+            if (stdout[2]=='A'){
+              console.log("Gaveta aberta")
+              FGVTestesEspecifico(gaveta)}
+            else if (stdout=='GVT'){
+              var data = getData();
+              var stringTempGVEspecifica = convTempo(segDecorridoGVEspecifica);
+              const novoTeste = {
+                data: data,
+                gaveta: gaveta,
+                tempo: stringTempGVEspecifica,
+                contagemCiclos: contRepeticoesGVEspecifica,
+                tipo: 0,
+                finalizado: 0}
+              new DadosTeste(novoTeste).save();
+              pausaTestesGavetas = 0;
+              testesGavetasAndamento = 0;
+              paraTestesGavetas = 0;
+              socket.emit('testeFalhouGVEspecifica')
+              console.log("Gaveta trancada")}
+          })
+        }
+
+        function FGVTestesEspecifico(gaveta){
+          execFile('/home/tramontina/Downloads/Interface/Gavetas', ['FGV'+gaveta], (error, stdout, stderr) => {
+            if (error) {
+              console.error('error: ' + error);}
+            if (stderr) {
+              console.error('stderr: ' + stderr);}
+            console.log('stdout: ' + stdout);
+            if (stdout[2]=='F'){
+              console.log("Gaveta fechada")
+              contRepeticoesGVEspecifica = contRepeticoesGVEspecifica + 1
+              testaGavetaEspecifica(gaveta)}
+            else if (stdout=='GVT'){
+              var data = getData();
+              var stringTempGVEspecifica = convTempo(segDecorridoGVEspecifica);
+              const novoTeste = {
+                data: data,
+                gaveta: gaveta,
+                tempo: stringTempGVEspecifica,
+                contagemCiclos: contRepeticoesGVEspecifica,
+                tipo: 0,
+                finalizado: 0}
+              new DadosTeste(novoTeste).save();
+              pausaTestesGavetas = 0;
+              testesGavetasAndamento = 0;
+              paraTestesGavetas = 0;
+              socket.emit('testeFalhouGVEspecifica')
+              console.log("Gaveta trancada")}
+          })
+        }
+
+        //Testes todas as gavetas
+        socket.on('testetodasgavetas', function(repeticoes) {
+          console.log('Repeticoes: ' + repeticoes);
+          numRepeticoesTodasGVs = repeticoes;
+          pausaTestesGavetas = 0;
+          paraTestesGavetas = 0;
+          testaTodasGavetas();
+          console.log('Iniciando teste de todas as gavetas...')
+        });
+
+        socket.on('pausaTesteTodasGVs', function() {
+          pausaTestesGavetas = 1;
+          console.log('Pausando teste ' + pausaTestesGavetas)
+        });
+
+        socket.on('stopTesteTodasGVs', function() {
+          paraTestesGavetas = 1;
+          contRepeticoesTodasGVs = 0;
+          if (testesGavetasAndamento==0){
+            contRepeticoesTodasGVs = 0;
+            numRepeticoesTodasGVs = 0;
+            pausaTestesGavetas = 0;
+            testesGavetasAndamento = 0;
+            paraTestesGavetas = 0;
+            gavetaEmTeste = 1;
+            socket.emit('testeParadoTodasGVs')
+          }
+          console.log('Parando teste ' + pausaTestesGavetas)
+        });
+
+        socket.on('estadoTestesTodasGVs', function() {
+          socket.emit('estadoTestesTodasGVs', testesGavetasAndamento, contRepeticoesTodasGVs);
+        });
+
+        function testaTodasGavetas(){
+          console.log("aux...")
+          testesGavetasAndamento = 1;
+          console.log('Cont. repeticoes: ' + contRepeticoesTodasGVs)
+          socket.emit('atualizaContadorTestesTodasGVs', contRepeticoesTodasGVs)
+          if (contRepeticoesTodasGVs >= numRepeticoesTodasGVs){
+            var data = getData();
+            var stringTempTodasGVs = convTempo(segDecorridoTodasGVs);
+            if (contRepeticoesTodasGVs > 0){
+              const novoTeste = {
+                data: data,
+                gaveta: 0,
+                tempo: stringTempTodasGVs,
+                contagemCiclos: contRepeticoesTodasGVs,
+                tipo: 1,
+                finalizado: 1}
+              new DadosTeste(novoTeste).save();
+            }
+            contRepeticoesTodasGVs = 0;
+            numRepeticoesTodasGVs = 0;
+            gavetaEmTeste = 1;
+            pausaTestesGavetas = 0;
+            testesGavetasAndamento = 0;
+            paraTestesGavetas = 0;
+            socket.emit('testeFinalizadoTodasGVs')}
+          else if (pausaTestesGavetas == 0 && paraTestesGavetas == 0){
+            AGVTestesTodasGavetas()}
+          else if (paraTestesGavetas == 1){
+            testesGavetasAndamento = 0;
+            pausaTestesGavetas = 0;
+            paraTestesGavetas = 0;
+            gavetaEmTeste = 1;
+            socket.emit('testeParadoTodasGVs')}
+          else if (pausaTestesGavetas == 1){
+            testesGavetasAndamento = 0;
+            pausaTestesGavetas = 0;
+            socket.emit('testePausadoTodasGVs')}
+        }
+
+        function AGVTestesTodasGavetas(){
+          execFile('/home/tramontina/Downloads/Interface/Gavetas', ['AGV'+gavetaEmTeste], (error, stdout, stderr) => {
+            if (error) {
+              console.error('error: ' + error);}
+            if (stderr) {
+              console.error('stderr: ' + stderr);}
+            console.log('stdout: ' + stdout);
+            if (stdout[2]=='A'){
+              console.log("Gaveta aberta")
+              FGVTestesTodasGavetas()}
+            else if (stdout=='GVT'){
+              var data = getData();
+              var stringTempTodasGVs = convTempo(segDecorridoTodasGVs);
+              const novoTeste = {
+                data: data,
+                gaveta: 0,
+                tempo: stringTempTodasGVs,
+                contagemCiclos: contRepeticoesTodasGVs,
+                tipo: 1,
+                finalizado: 0}
+              new DadosTeste(novoTeste).save();
+              pausaTestesGavetas = 0;
+              testesGavetasAndamento = 0;
+              paraTestesGavetas = 0;
+              gavetaEmTeste = 1;
+              socket.emit('testeFalhouTodasGVs')
+              console.log("Gaveta trancada")}
+          })
+        }
+
+        function FGVTestesTodasGavetas(){
+          execFile('/home/tramontina/Downloads/Interface/Gavetas', ['FGV'+gavetaEmTeste], (error, stdout, stderr) => {
+            if (error) {
+              console.error('error: ' + error);}
+            if (stderr) {
+              console.error('stderr: ' + stderr);}
+            console.log('stdout: ' + stdout);
+            if (stdout[2]=='F'){
+              console.log("Gaveta fechada")
+              if (gavetaEmTeste < 8){
+                gavetaEmTeste = gavetaEmTeste + 1
+              }
+              else{
+                contRepeticoesTodasGVs = contRepeticoesTodasGVs + 1
+                gavetaEmTeste = 1
+              }
+              testaTodasGavetas()}
+            else if (stdout=='GVT'){
+              var data = getData();
+              var stringTempTodasGVs = convTempo(segDecorridoTodasGVs);
+              const novoTeste = {
+                data: data,
+                gaveta: 0,
+                tempo: stringTempTodasGVs,
+                contagemCiclos: contRepeticoesTodasGVs,
+                tipo: 1,
+                finalizado: 0}
+              new DadosTeste(novoTeste).save();
+              pausaTestesGavetas = 0;
+              testesGavetasAndamento = 0;
+              paraTestesGavetas = 0;
+              gavetaEmTeste = 1;
+              socket.emit('testeFalhouTodasGVs')
+              console.log("Gaveta trancada")}
+          })
+        }
+
+        socket.on('auxAtualizaDispositivo', function() {
+          AtualizaDispositivo();
+        })
+
+        socket.on('atualizaTempTestesGVEspecifica', function(data) {
+          segDecorridoGVEspecifica = data;
+        })
+
+        socket.on('atualizaTempTestesTodasGVs', function(data) {
+          segDecorridoTodasGVs = data;
+        })
+
+        socket.on('salvaConfiguracoes', function(confFechamento, confCartao, confDesligamento, confEmail){
+          console.log('Salvando configuração...')
+          editaConfiguracao(confFechamento, confCartao, confDesligamento, confEmail)
+        })
+
+        socket.on('excluiRegistros', function(data) {
+          if (data==0){
+            console.log("Exclui resgistros com ferramentas devolvidas")
+            Evento.deleteMany({devolucao:1}).then(() => { //body.id porque esse parâmetro virá do formulário oculto com o id criado no categorias.handlebars
+              console.log("Histórico deletado com sucesso!")
+            }).catch((err) => {
+              console.log("Houve um erro ao deletar o histórico: " + err)
+            })
+          }
+          else if (data==1){
+            console.log("Exclui todos os resgistros")
+            Evento.deleteMany().then(() => { //body.id porque esse parâmetro virá do formulário oculto com o id criado no categorias.handlebars
+              console.log("Histórico deletado com sucesso!")
+            }).catch((err) => {
+              console.log("Houve um erro ao deletar o histórico: " + err)
+            })
+          }
+        })
+
+        //Retorna versão atual do software
+        socket.on('verificaVersaoSoftware', function(){ //Executa ngrok para acesso de interface gráfica
+          socket.emit('versaoSoftware', versaoSoftware)
+        })
+
+        //Configura acesso remoto
+        socket.on('iniciaNgrokHTTP', function(){ //Executa ngrok para acesso de interface gráfica
+          if (redeWifiOk==1)
+            ngrokHTTPConnect()
+          else
+            socket.emit('falhaConexao')
+        })
+
+        socket.on('iniciaNgrokSSH', function(){ //Executa ngrok para acesso pro SSH
+          if (redeWifiOk==1)
+            ngrokSSHConnect()
+          else
+            socket.emit('falhaConexao')
+        })
+
+        socket.on('encerraNgrok', function(){ //Executa ngrok para acesso pro SSH
+          encerraNgrok()
+        })
+
+        function ngrokHTTPConnect(){
+          console.log("Conectando ao ngrok HTTP...")
+          ngrok.connect({region:'sa', proto: 'http', addr:8081, authtoken:'20BAgjvFYCzY3LJwy9VMch2YkrT_7PqDGu6Cgikww4TZudh2u'}).then(url =>{
+            console.log('Url da conexao: ' + url)
+            socket.emit('HTTPConectado', url)
+          }).catch(err =>{
+            console.log("Erro ao conectar ao ngrok: " + err)
+            socket.emit('falhaConexao')
+            ngrok.kill();
+          })
+        }
+
+        function ngrokSSHConnect(){
+          console.log("Conectando ao ngrok SSH...")
+          ngrok.connect({region:'sa', proto: 'tcp', addr:22, authtoken:'20BAgjvFYCzY3LJwy9VMch2YkrT_7PqDGu6Cgikww4TZudh2u'}).then(url =>{
+            console.log('Url da conexao: ' + url)
+            socket.emit('SSHConectado', url)
+          }).catch(err =>{
+            console.log("Erro ao conectar ao ngrok: " + err)
+            socket.emit('falhaConexao')
+            ngrok.kill();
+          })
+        }
+
+        function encerraNgrok(){
+          console.log("Encerrando ngrok...")
+          ngrok.disconnect();
+        }
+
+        socket.on('alteraDataHora', function(data){
+          console.log(data)
+          setDateTime(data)
+        })
+
+        //End ON Events
+        //send a message to ALL connected clients
+        socket.emit('passLength', senha);
+    });
+    console.log(teste)
+    return router;
+};
+
+module.exports = method
