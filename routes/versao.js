@@ -1,3 +1,3 @@
-var versao="0.501"
+var versao="0.51"
 
 module.exports = versao;

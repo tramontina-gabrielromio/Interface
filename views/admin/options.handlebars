@@ -113,13 +113,21 @@
           <div id='Tab3' style="display:none">
             <div class='enterData'>
               <div style="align: center">
-                <div style="margin-top: 165px">
-                  <p>E-mail:</p>
+                <div style="margin-top: 30px">
+                  <p>E-mail 1:</p>
                   <div class="search-input medium" autocomplete="off">
                     <input autocomplete="off" id="boxEmail" value="{{configuracoes.email}}" onclick='resetEmail()' class="use-keyboard-input-null" type="email" style="text-align: center; font-size: 20px;"></input>
                   </div>
+                  <p>E-mail 2:</p>
+                  <div class="search-input medium" autocomplete="off">
+                    <input autocomplete="off" id="boxEmail2" value="{{configuracoes.email2}}" onclick='resetEmail2()' class="use-keyboard-input-null" type="email" style="text-align: center; font-size: 20px;"></input>
+                  </div>
+                  <p>E-mail 3:</p>
+                  <div class="search-input medium" autocomplete="off">
+                    <input autocomplete="off" id="boxEmail3" value="{{configuracoes.email3}}" onclick='resetEmail3()' class="use-keyboard-input-null" type="email" style="text-align: center; font-size: 20px;"></input>
+                  </div>
                 </div>
-                <div style="margin-top:40px; margin-left: 138px">
+                <div style="margin-top:30px; margin-left: 138px">
                   <button type="submit" class="btns" onclick="setEmail()">
                     <p>Confirmar</p>
                   </button>
@@ -222,7 +230,9 @@
       var strFechamento = ['5 min', '10 min', '20 min', '30 min', 'Nunca']
       var confCartao = {{configuracoes.cartao}};
       var confDesligamento = {{configuracoes.desligamento}};
-      var emailAtual = document.getElementById("boxEmail").value
+      var emailAtual = document.getElementById("boxEmail").value;
+      var emailAtual2 = document.getElementById("boxEmail2").value;
+      var emailAtual3 = document.getElementById("boxEmail3").value;
       var strDesligamento = ['15 min', '30 min', '1 hora', '2 horas', 'Nunca']
       //var mail = document.getElementById("email").innerHTML;
       //confEmail = document.getElementById("email").innerHTML;
@@ -332,9 +342,19 @@
         document.getElementById("boxEmail").value = '';
       }
 
+      function resetEmail2(){
+        document.getElementById("boxEmail2").value = '';
+      }
+
+      function resetEmail3(){
+        document.getElementById("boxEmail3").value = '';
+      }
+
       function editEmail(){
         //document.getElementById("boxEmail").value = '';
         document.getElementById("boxEmail").value = emailAtual;
+        document.getElementById("boxEmail2").value = emailAtual2;
+        document.getElementById("boxEmail3").value = emailAtual3;
         document.getElementById("SelectOptions").style = "visibility:visible";
         document.getElementById("Tab1").style = "display:none";
         document.getElementById("line-1").style = "display:none";
@@ -396,8 +416,12 @@
 
       function salvaConfig(){
         var confEmail = document.getElementById("boxEmail").value
+        var confEmail2 = document.getElementById("boxEmail2").value
+        var confEmail3 = document.getElementById("boxEmail3").value
         emailAtual = confEmail
-        socket.emit('salvaConfiguracoes', confFechamento, confCartao, confDesligamento, confEmail)
+        emailAtual2 = confEmail2
+        emailAtual3 = confEmail3
+        socket.emit('salvaConfiguracoes', confFechamento, confCartao, confDesligamento, confEmail, confEmail2, confEmail3)
       }
 
       function excluirRegistros(data){

@@ -705,6 +705,45 @@
     opacity: 0.5;
 }
 
+.page-user .apps .btn_relatorio {
+  background: url('../img/button-opacity-default-281.svg') no-repeat;
+  width: 260px;
+  height: 60px;
+  justify-content: space-between;
+  border: none;
+  display: flex;
+}
+
+.page-user .apps .btn_relatorio:active {
+  background: url('../img/button-opacity-default-281.svg') no-repeat;
+  width: 260px;
+  height: 60px;
+  opacity: 0.5;
+}
+
+.page-user .apps .btn_relatorio p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: #FAEFC0;
+  margin-top: 40px;
+  font-size: 25px;
+  margin-left: 0;
+  width: 260px;
+  height: 60px;
+  text-align: center;
+}
+
+.page-user .apps .relatorio_loader {
+  animation: is-rotating 1.5s linear infinite;
+  border: 6px solid #FAEFC0;
+  border-radius: 50%;
+  border-top-color: #F37021;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-left: 110px;
+  height: 40px;
+  width: 40px;
+}
+
 /* ========== Tela Composição ========== */
 .page-composicao {
   flex-direction: row;
@@ -1048,6 +1087,12 @@
   width: 96px;
   height: 96px;
   background-image: url('../img/error msg 96x96.svg');
+}
+
+.janela-gavetaTrancada .contents .certo {
+  width: 96px;
+  height: 96px;
+  background-image: url('../img/certo.svg');
 }
 
 .janela-gavetaTrancada .contents .btns {
