@@ -16,28 +16,28 @@
           <div class="options">
             <div style="display:none">
               <button onclick='editFechamento()' class="line">
-                <div class="line-l"><p>Fechamento Automático</p></div>
+                <div class="line-l"><p>Fechamento automático</p></div>
                 <div class="line-r"><p id="fechamento"></p></div>
                 <div class="line-r"><div id="line-1" class="select"></div></div>
               </button>
             </div>
             <div style="display:none">
               <button onclick='editDesligamento()' class="line">
-                <div class="line-l"><p>Desligamento Automático</p></div>
+                <div class="line-l"><p>Desligamento automático</p></div>
                 <div class="line-r"><p id="desligamento"></p></div>
                 <div class="line-r"><div id="line-2" class="select"></div></div>
               </button>
             </div>
             <div>
               <button onclick='editEmail()' class="line">
-                <div class="line-l"><p>E-mail para Envio de Relatórios</p></div>
+                <div class="line-l"><p>E-mail para envio de relatórios</p></div>
                 <div class="line-r"></div>
                 <div class="line-r"><div id="line-3" class="select"></div></div>
               </button>
             </div>
             <div>
               <button onclick='editDataHora()' class="line">
-                <div class="line-l"><p>Data e Hora</p></div>
+                <div class="line-l"><p>Data e hora</p></div>
                 <div class="line-r"></div>
                 <div class="line-r"><div id="line-4" class="select"></div></div>
               </button>
@@ -57,8 +57,16 @@
               </button>
             </div>
             <div>
+              <button onclick='telaEncerrarSessao()' class="line">
+                <div class="line-l"><p>Encerrar sessão automaticamente</p></div>
+                <div class="line-r"><p id="encerrarSessao"></p></div>
+                <input style="display:none" id="auxValueEncerrarSessao" value="{{configuracoes.encerrarSessao}}"></input>
+                <div class="line-r"><div id="line-7" class="select"></div></div>
+              </button>
+            </div>
+            <div>
               <button onclick='editCartao()' class="line">
-                <div class="line-l"><p>Acesso via Cartão</p></div>
+                <div class="line-l"><p>Acesso via cartão</p></div>
                 <div class="line-r" style="width: 20%"><div class='switch-on' id="switch-cartao"></div></div>
               </button>
             </div>
@@ -217,6 +225,30 @@
               </div>
             </div>
           </div>
+
+          <div id='Tab7' style="display:none">
+            <button onclick='setEncerrarSessao(0)' class="line">
+              <div class="line-l" style="width: 88%"><p>1 min</p></div>
+              <div class="line-r"><div id="encer[0]" class="check" style="display:none"></div></div>
+            </button>
+            <button onclick='setEncerrarSessao(1)' class="line">
+              <div class="line-l" style="width: 88%"><p>3 min</p></div>
+              <div class="line-r"><div id="encer[1]" class="check" style="display:none"></div></div>
+            </button>
+            <button onclick='setEncerrarSessao(2)' class="line">
+              <div class="line-l" style="width: 88%"><p>5 min</p></div>
+              <div class="line-r"><div id="encer[2]" class="check" style="display:none"></div></div>
+            </button>
+            <button onclick='setEncerrarSessao(3)' class="line">
+              <div class="line-l" style="width: 88%"><p>10 min</p></div>
+              <div class="line-r"><div id="encer[3]" class="check" style="display:none"></div></div>
+            </button>
+            <button onclick='setEncerrarSessao(4)' class="line">
+              <div class="line-l" style="width: 88%"><p>Nunca</p></div>
+              <div class="line-r"><div id="encer[4]" class="check" style="display:none"></div></div>
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
@@ -230,15 +262,20 @@
       var strFechamento = ['5 min', '10 min', '20 min', '30 min', 'Nunca']
       var confCartao = {{configuracoes.cartao}};
       var confDesligamento = {{configuracoes.desligamento}};
+      var confEncerrarSessao = document.getElementById("auxValueEncerrarSessao").value;//= {{configuracoes.encerrarSessao}};
       var emailAtual = document.getElementById("boxEmail").value;
       var emailAtual2 = document.getElementById("boxEmail2").value;
       var emailAtual3 = document.getElementById("boxEmail3").value;
       var strDesligamento = ['15 min', '30 min', '1 hora', '2 horas', 'Nunca']
+      var strEncerrarSessao = ['1 min', '3 min', '5 min', '10 min', 'Nunca']
       //var mail = document.getElementById("email").innerHTML;
       //confEmail = document.getElementById("email").innerHTML;
       
+      editCheckEncerrarSessao(confEncerrarSessao)
+
       document.getElementById("fechamento").innerHTML = strFechamento[confFechamento];
       document.getElementById("desligamento").innerHTML = strDesligamento[confDesligamento];
+      document.getElementById("encerrarSessao").innerHTML = strEncerrarSessao[confEncerrarSessao];
       //document.getElementById("email").innerHTML = confEmail;
       document.getElementById("fech["+confFechamento+"]").style = "display:visible";
       document.getElementById("desl["+confDesligamento+"]").style = "display:visible";
@@ -267,6 +304,8 @@
         document.getElementById("line-5").style = "display:none";
         document.getElementById("Tab6").style = "display:none";
         document.getElementById("line-6").style = "display:none";
+        document.getElementById("Tab7").style = "display:none";
+        document.getElementById("line-7").style = "display:none";
       }
 
       function setFechamento(data){
@@ -316,6 +355,8 @@
         document.getElementById("line-5").style = "display:none";
         document.getElementById("Tab6").style = "display:none";
         document.getElementById("line-6").style = "display:none";
+        document.getElementById("Tab7").style = "display:none";
+        document.getElementById("line-7").style = "display:none";
       }
 
       function setDesligamento(data){
@@ -324,7 +365,7 @@
           document.getElementById("SelectOptions").style = "visibility:hidden"
           document.getElementById("Tab2").style = "display:none"
           document.getElementById("line-2").style = "display:none";}, 100)
-        document.getElementById("desligamento").innerHTML = strDesligamento[confDesligamento];
+        document.getElementById("desligamento").innerHTML = strEncerrarSessao[confDesligamento];
         editCheckDesligamento(confDesligamento);
         salvaConfig();
       }
@@ -368,6 +409,8 @@
         document.getElementById("line-5").style = "display:none";
         document.getElementById("Tab6").style = "display:none";
         document.getElementById("line-6").style = "display:none";
+        document.getElementById("Tab7").style = "display:none";
+        document.getElementById("line-7").style = "display:none";
       }
 
       function deletarRegistros(){
@@ -385,6 +428,8 @@
         document.getElementById("line-5").style = "display:visible";
         document.getElementById("Tab6").style = "display:none";
         document.getElementById("line-6").style = "display:none";
+        document.getElementById("Tab7").style = "display:none";
+        document.getElementById("line-7").style = "display:none";
       }
 
       function telaAtualizacao(){
@@ -402,6 +447,8 @@
         document.getElementById("line-5").style = "display:none";
         document.getElementById("Tab6").style = "display:visible";
         document.getElementById("line-6").style = "display:visible";
+        document.getElementById("Tab7").style = "display:none";
+        document.getElementById("line-7").style = "display:none";
       }
 
       function setEmail(){
@@ -421,7 +468,7 @@
         emailAtual = confEmail
         emailAtual2 = confEmail2
         emailAtual3 = confEmail3
-        socket.emit('salvaConfiguracoes', confFechamento, confCartao, confDesligamento, confEmail, confEmail2, confEmail3)
+        socket.emit('salvaConfiguracoes', confFechamento, confCartao, confDesligamento, confEmail, confEmail2, confEmail3, confEncerrarSessao)
       }
 
       function excluirRegistros(data){
@@ -437,6 +484,44 @@
           document.getElementById("line-5").style = "display:none";}, 100)
       }
 
+      function telaEncerrarSessao(){
+        document.getElementById("SelectOptions").style = "visibility:visible";
+        document.getElementById("Tab1").style = "display:none";
+        document.getElementById("line-1").style = "display:none";
+        document.getElementById("Tab2").style = "display:none"; 
+        document.getElementById("line-2").style = "display:none";
+        document.getElementById("Tab3").style = "display:none";
+        document.getElementById("line-3").style = "display:none";
+        document.getElementById("Tab4").style = "display:none";
+        document.getElementById("line-4").style = "display:none";
+        document.getElementById("Tab5").style = "display:none";
+        document.getElementById("line-5").style = "display:none";
+        document.getElementById("Tab6").style = "display:none";
+        document.getElementById("line-6").style = "display:none";
+        document.getElementById("Tab7").style = "display:visible";
+        document.getElementById("line-7").style = "display:visible";
+      }
+
+      function setEncerrarSessao(data){
+        confEncerrarSessao = data;
+        setTimeout(function(){
+          document.getElementById("SelectOptions").style = "visibility:hidden"
+          document.getElementById("Tab2").style = "display:none"
+          document.getElementById("line-2").style = "display:none";}, 100)
+        document.getElementById("encerrarSessao").innerHTML = strEncerrarSessao[confEncerrarSessao];
+        editCheckEncerrarSessao(confEncerrarSessao);
+        salvaConfig();
+      }
+
+      function editCheckEncerrarSessao(data){
+        document.getElementById("encer[0]").style = "display:none";
+        document.getElementById("encer[1]").style = "display:none";
+        document.getElementById("encer[2]").style = "display:none";
+        document.getElementById("encer[3]").style = "display:none";
+        document.getElementById("encer[4]").style = "display:none";
+        document.getElementById("encer["+data+"]").style = "display:visible";
+      }
+
       //function atualizarDispositivo(){
       //  socket.emit('auxAtualizaDispositivo')
       //}
@@ -447,6 +532,7 @@
       document.getElementById("line-4").style = "display:none";
       document.getElementById("line-5").style = "display:none";
       document.getElementById("line-6").style = "display:none";
+      document.getElementById("line-7").style = "display:none";
 
 
       // ===== Configurações de data e hora =====
@@ -485,6 +571,8 @@
         document.getElementById("line-5").style = "display:none";
         document.getElementById("Tab6").style = "display:none";
         document.getElementById("line-6").style = "display:none";
+        document.getElementById("Tab7").style = "display:none";
+        document.getElementById("line-7").style = "display:none";
       }
 
       function up_dia(){
