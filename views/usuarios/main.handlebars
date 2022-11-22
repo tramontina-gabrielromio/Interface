@@ -20,56 +20,56 @@
           <button onclick="abreGaveta(1)" id="botgav1" class="button_abregaveta">
             <p>1</p>
           </button>
-          <a href="/usuarios/retiradas1" style="margin-left: 85px" id="resultgav1" class="button_resultgaveta_hidden"><p id="textgav1"></p></a>
+          <button onclick="exibeRetiradas(1)" style="margin-left: 85px" id="resultgav1" class="button_resultgaveta_hidden"><p id="textgav1"></p></button>
         </div>
         <div id="gav2" class="gaveta_button">
           <a href="/usuarios/gaveta2" id="viewgav2" class="button_viewgaveta_hidden" type="button"></a>
           <button onclick="abreGaveta(2)" id="botgav2" class="button_abregaveta">
             <p>2</p>
           </button>
-          <a href="/usuarios/retiradas2" style="margin-left: 85px" id="resultgav2" class="button_resultgaveta_hidden"><p id="textgav2"></p></a>
+          <button onclick="exibeRetiradas(2)" sstyle="margin-left: 85px" id="resultgav2" class="button_resultgaveta_hidden"><p id="textgav2"></p></button>
         </div>
         <div id="gav3" class="gaveta_button">
           <a href="/usuarios/gaveta3" id="viewgav3" class="button_viewgaveta_hidden" type="button"></a>
           <button onclick="abreGaveta(3)" id="botgav3" class="button_abregaveta">
             <p>3</p>
           </button>
-          <a href="/usuarios/retiradas3" style="margin-left: 85px" id="resultgav3" class="button_resultgaveta_hidden"><p id="textgav3"></p></a>
+          <button onclick="exibeRetiradas(3)" style="margin-left: 85px" id="resultgav3" class="button_resultgaveta_hidden"><p id="textgav3"></p></button>
         </div>
         <div id="gav4" class="gaveta_button">
           <a href="/usuarios/gaveta4" id="viewgav4" class="button_viewgaveta_hidden" type="button"></a>
           <button onclick="abreGaveta(4)" id="botgav4" class="button_abregaveta">
             <p>4</p>
           </button>
-          <a href="/usuarios/retiradas4" style="margin-left: 85px" id="resultgav4" class="button_resultgaveta_hidden"><p id="textgav4"></p></a>
+          <button onclick="exibeRetiradas(4)" style="margin-left: 85px" id="resultgav4" class="button_resultgaveta_hidden"><p id="textgav4"></p></button>
         </div>
         <div id="gav5" class="gaveta_button">
           <a href="/usuarios/gaveta5" id="viewgav5" class="button_viewgaveta_hidden" type="button"></a>
           <button onclick="abreGaveta(5)" id="botgav5" class="button_abregaveta">
             <p>5</p>
           </button>
-          <a href="/usuarios/retiradas5" style="margin-left: 85px" id="resultgav5" class="button_resultgaveta_hidden"><p id="textgav5"></p></a>
+          <button onclick="exibeRetiradas(5)" style="margin-left: 85px" id="resultgav5" class="button_resultgaveta_hidden"><p id="textgav5"></p></button>
         </div>
         <div id="gav6" class="gaveta_button">
           <a href="/usuarios/gaveta6" id="viewgav6" class="button_viewgaveta_hidden" type="button"></a>
           <button onclick="abreGaveta(6)" id="botgav6" class="button_abregaveta">
             <p>6</p>
           </button>
-          <a href="/usuarios/retiradas6" style="margin-left: 85px" id="resultgav6" class="button_resultgaveta_hidden"><p id="textgav6"></p></a>
+          <button onclick="exibeRetiradas(6)" style="margin-left: 85px" id="resultgav6" class="button_resultgaveta_hidden"><p id="textgav6"></p></button>
         </div>
         <div id="gav7" class="gaveta_button">
           <a href="/usuarios/gaveta7" id="viewgav7" class="button_viewgaveta_hidden" type="button"></a>
           <button onclick="abreGaveta(7)" id="botgav7" class="button_abregaveta">
             <p>7</p>
           </button>
-          <a href="/usuarios/retiradas7" style="margin-left: 85px" id="resultgav7" class="button_resultgaveta_hidden"><p id="textgav7"></p></a>
+          <button onclick="exibeRetiradas(7)" style="margin-left: 85px" id="resultgav7" class="button_resultgaveta_hidden"><p id="textgav7"></p></button>
         </div>
         <div id="gav8" class="gaveta_button">
             <a href="/usuarios/gaveta8" id="viewgav8" class="button_viewgaveta_hidden" type="button"></a>
             <button onclick="abreGaveta(8)" id="botgav8" class="button_abregaveta">
             <p>8</p>
             </button>
-          <a href="/usuarios/retiradas8" style="margin-left: 85px" id="resultgav8" class="button_resultgaveta_hidden"><p id="textgav8"></p></a>
+          <button onclick="exibeRetiradas(8)" style="margin-left: 85px" id="resultgav8" class="button_resultgaveta_hidden"><p id="textgav8"></p></button>
         </div>
       </div>
       </div>
@@ -257,16 +257,35 @@
     </form>
   </dialog>
 
+  <dialog id="dialogFalhaCapturaImagem" style="background: none; border: transparent">
+    <form method="dialog" >
+      <div class="janela-gavetaTrancada">
+        <div class="contents" style="margin-top: 40px; margin-left: 40px">
+          <div class="alerta" style="margin-top: 20px"></div>
+          <p style="width: 520px">Falha ao gerar a imagem devido a gaveta ter trancado.
+            Abra a gaveta e a feche novamente.</p>
+        </div>
+        <div class="contents" style="margin-top: 30px; margin-left: 424px">
+          <button class="btns" onclick="falhaCapturaImagemOk()">
+            <p>OK</p>
+          </button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
   <script  src="/socket.io/socket.io.js"></script>
   <script>
     var socket = io.connect();
     var estadoGV=['F', 'F', 'F', 'F', 'F', 'F', 'F', 'F'];
+    var removidasGV=[0, 0, 0, 0, 0, 0, 0, 0]
     socket.emit('estadoGavetas');
     socket.emit('estadoFerramentas');
 
     //document.getElementById('dialogErroRelatorio').showModal();
     //document.getElementById('dialogRelatorioEnviado').showModal();
     //document.getElementById('dialogFalhaCamera').showModal();
+    //document.getElementById('dialogFalhaCapturaImagem').showModal();
 
     //document.getElementById('dialogGVTrancada').close();
     //document.getElementById('dialogGVTrancada').showModal();
@@ -331,12 +350,25 @@
       document.getElementById('frame-footer').style.pointerEvents = "auto"
       location.reload();
     }
+
+    function falhaCapturaImagemOk(){
+      document.getElementById('dialogFalhaCapturaImagem').close();
+    }
     
     function abreGaveta(data){
       if (estadoGV[data-1]=='A'){
         socket.emit('fechaGaveta', data);}
       else{
         socket.emit('abreGaveta', data);}
+    }
+
+    function exibeRetiradas(data){
+      if (removidasGV[data-1] == 404){
+        document.getElementById('dialogFalhaCapturaImagem').showModal();
+      }
+      else{
+        window.location = "/usuarios/retiradas" + data;
+      }
     }
 
     function openCalc(){
@@ -434,6 +466,7 @@
  		});
 
     socket.on('estadoFerramentas', function(data){
+      removidasGV = data;
       for (var i=0; i<8; i++){
         if (acessoGavetas[i]==0){
           document.getElementById('resultgav'+(i+1)).className = "button_resultgaveta_hidden"

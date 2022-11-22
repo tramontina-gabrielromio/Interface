@@ -80,7 +80,7 @@
 
 .create-user .first-column {
     height: 100%;
-    margin-right: 0px;
+    margin-right: 435px;
 }
 
 .create-user .first-column .row {
@@ -132,7 +132,7 @@
   background: url('../img/admin-menu-1.svg') no-repeat;
   width: 66px;
   height: 66px;
-  margin-right: 8px;
+  margin-right: 13.67px;
   border: none;
 }
 
@@ -177,6 +177,32 @@
   background-position: top;
   margin-top: 2px;
   background-size: auto 40%;
+}
+
+.create-user .first-column .btns {
+    background: url('../img/button-opacity-default-281.svg') no-repeat;
+    width: 281px;
+    height: 65px;
+    justify-content: space-between;
+    border: none;
+    display: flex;
+}
+
+.create-user .first-column .btns:focus {
+    background: url('../img/button-opacity-default-281.svg') no-repeat;
+    width: 281px;
+    height: 65px;
+    opacity: 0.5;
+}
+
+.create-user .first-column .btns p {
+    font-family: 'Coda', Arial, Helvetica, sans-serif;
+    color: #FAEFC0;
+    margin: auto 10px;
+    font-size: 25px;
+    margin-left: 0;
+    width: 250px;
+    text-align: center;
 }
 
 .create-user .second-column {

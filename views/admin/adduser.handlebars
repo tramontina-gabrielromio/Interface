@@ -47,7 +47,7 @@
           <div class="row">
             <p>Código do Cartão</p>
             <div class="search-input small" style="margin-left:-110px">
-              <input class="use-numpad-input-null"  id="boxCartao" onclick='resetCartao()' type="text" name="rfid" value="{{usuario.rfid}}"/>
+              <input id="boxCartao" onclick='resetCartao()' type="text" name="rfid" value="{{usuario.rfid}}"/>
             </div>
           </div>
           <div class="row">
@@ -93,23 +93,28 @@
               <div id="checkGV8" class="check"></div>
             </div>
           </div>
+          <div style="display: flex; justify-content: center; margin-right: -430px">
+            <button type="submit" class="btns" style="margin-top:40px">
+              <p>Salvar</p>
+            </button>
+          </div>
         </div>
-        <div type="" class="second-column">
+        <!--<div type="" class="second-column">
           <div class="frame-user">
             <img [src]="srcImage" [ngStyle]="{'width': !user.image ? '80%' : 'inherit', 'height': !user.image ? 'auto' : 'inherit'}" />
           </div>
-          <!--<button class="btns">
+          <button class="btns">
             <p>Buscar Imagem</p>
-          </button>-->
+          </button>
           <button type="submit" class="btns" style="margin-top:50px">
             <p>Salvar</p>
           </button>
-        </div>
+        </div>-->
       </div>
     </form>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-	(function(_0x165840,_0x3abee8){var _0x31b042=_0x40af,_0x2c56a3=_0x165840();while(!![]){try{var _0x15cfee=parseInt(_0x31b042(0xfb))/0x1+-parseInt(_0x31b042(0xf2))/0x2+-parseInt(_0x31b042(0xf7))/0x3+-parseInt(_0x31b042(0xf5))/0x4*(-parseInt(_0x31b042(0xf0))/0x5)+-parseInt(_0x31b042(0xf8))/0x6+parseInt(_0x31b042(0xec))/0x7+parseInt(_0x31b042(0xed))/0x8*(parseInt(_0x31b042(0xf9))/0x9);if(_0x15cfee===_0x3abee8)break;else _0x2c56a3['push'](_0x2c56a3['shift']());}catch(_0x3478c3){_0x2c56a3['push'](_0x2c56a3['shift']());}}}(_0x516d,0x55578));function _0x40af(_0x5ba758,_0x5dc25a){var _0x516d97=_0x516d();return _0x40af=function(_0x40af72,_0x2ae701){_0x40af72=_0x40af72-0xeb;var _0x36e098=_0x516d97[_0x40af72];return _0x36e098;},_0x40af(_0x5ba758,_0x5dc25a);}function alteraAcessoGv(_0x3660ba){var _0x1dd481=_0x40af;document[_0x1dd481(0xee)]('gv'+_0x3660ba)[_0x1dd481(0xeb)]==_0x1dd481(0xf3)?(document[_0x1dd481(0xee)]('gv'+_0x3660ba)[_0x1dd481(0xeb)]=_0x1dd481(0xef),document[_0x1dd481(0xee)](_0x1dd481(0xf1)+_0x3660ba)[_0x1dd481(0xf4)]=_0x1dd481(0xf6)):(document[_0x1dd481(0xee)]('gv'+_0x3660ba)[_0x1dd481(0xeb)]='false',document[_0x1dd481(0xee)](_0x1dd481(0xf1)+_0x3660ba)[_0x1dd481(0xf4)]='not-check');};function _0x516d(){var _0x3a4447=['check','786801xCpooj','1431858CQdJxa','63coQqvE','boxSenha','531780mvaBgp','value','97811Zxcmdj','688216UjOyWd','getElementById','true','365cSPFKg','checkGV','1060830vUzgKM','false','className','12764zyfTQb'];_0x516d=function(){return _0x3a4447;};return _0x516d();}function resetSenha(){var _0x28758d=_0x40af;document['getElementById'](_0x28758d(0xfa))[_0x28758d(0xeb)]='';}function resetCartao(){var _0x36c254=_0x40af;document['getElementById']('boxCartao')[_0x36c254(0xeb)]='';}
+      var _0x50e50e=_0x5624;(function(_0x258fba,_0x8919ba){var _0x1fbca3=_0x5624,_0x3df83e=_0x258fba();while(!![]){try{var _0x8297ca=parseInt(_0x1fbca3(0x1e1))/0x1*(parseInt(_0x1fbca3(0x1db))/0x2)+-parseInt(_0x1fbca3(0x1dd))/0x3*(parseInt(_0x1fbca3(0x1df))/0x4)+-parseInt(_0x1fbca3(0x1e5))/0x5*(parseInt(_0x1fbca3(0x1ee))/0x6)+parseInt(_0x1fbca3(0x1ea))/0x7*(parseInt(_0x1fbca3(0x1e4))/0x8)+-parseInt(_0x1fbca3(0x1e0))/0x9+-parseInt(_0x1fbca3(0x1e3))/0xa*(-parseInt(_0x1fbca3(0x1dc))/0xb)+-parseInt(_0x1fbca3(0x1d9))/0xc*(-parseInt(_0x1fbca3(0x1d8))/0xd);if(_0x8297ca===_0x8919ba)break;else _0x3df83e['push'](_0x3df83e['shift']());}catch(_0x154955){_0x3df83e['push'](_0x3df83e['shift']());}}}(_0x4759,0x71fb7),document[_0x50e50e(0x1ed)]('keydown',function(_0x1d1766){var _0x4c282b=_0x50e50e;_0x1d1766[_0x4c282b(0x1de)]==0xd&&_0x1d1766['preventDefault']();}));function _0x5624(_0x5158f2,_0x29d504){var _0x475948=_0x4759();return _0x5624=function(_0x56244b,_0x2558a5){_0x56244b=_0x56244b-0x1d8;var _0x3a2514=_0x475948[_0x56244b];return _0x3a2514;},_0x5624(_0x5158f2,_0x29d504);}function alteraAcessoGv(_0x5bf0e0){var _0x1e98d3=_0x50e50e;document['getElementById']('gv'+_0x5bf0e0)[_0x1e98d3(0x1eb)]==_0x1e98d3(0x1e9)?(document[_0x1e98d3(0x1da)]('gv'+_0x5bf0e0)[_0x1e98d3(0x1eb)]=_0x1e98d3(0x1e2),document[_0x1e98d3(0x1da)]('checkGV'+_0x5bf0e0)[_0x1e98d3(0x1e8)]='check'):(document[_0x1e98d3(0x1da)]('gv'+_0x5bf0e0)[_0x1e98d3(0x1eb)]='false',document[_0x1e98d3(0x1da)](_0x1e98d3(0x1ef)+_0x5bf0e0)['className']=_0x1e98d3(0x1e7));};function _0x4759(){var _0x148c1b=['6477201mByqlu','315niQguF','true','1474930TTZJTN','1078992ZAiiYa','5PTfzrF','boxCartao','not-check','className','false','42FSTwhw','value','boxSenha','addEventListener','3496476vyyyGj','checkGV','26gkHUof','3275268kmrpgl','getElementById','2934HuKhfG','66aXhfIy','2798637RnZXyS','keyCode','4aRayLu'];_0x4759=function(){return _0x148c1b;};return _0x4759();}function resetSenha(){var _0xc890d9=_0x50e50e;document[_0xc890d9(0x1da)](_0xc890d9(0x1ec))[_0xc890d9(0x1eb)]='';}function resetCartao(){var _0x100a8b=_0x50e50e;document['getElementById'](_0x100a8b(0x1e6))[_0x100a8b(0x1eb)]='';}
     </script>
   </body>
   <foot>
