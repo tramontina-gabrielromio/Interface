@@ -110,7 +110,10 @@
                 <p style="margin-top:0px">de Uso</p>
             </div>
             <div class="apps columns">
-                <button onclick="enviaRelatorio()" class="button_relatorio"></button>
+                <button id="btnEnviarRelatorio" onclick="enviaRelatorio()" class="button_relatorio" style="display:visible"></button>
+                <div id="enviandoRelatorio" class="btn_relatorio" style="display:none">
+                  <div class='relatorio_loader'></div>
+                </div>
                 <p>Enviar</p>
                 <p style="margin-top:0px">Relatório</p>
             </div>
