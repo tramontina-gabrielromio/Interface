@@ -507,6 +507,28 @@
     opacity: 0.5;
 }
 
+.page-user .apps .button_relatorio {
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    background-image: url('../img/enviar relatorio.svg');
+    background-size: 100%;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: transparent
+}
+
+.page-user .apps .button_relatorio:focus {
+    background: url('../img/enviar relatorio.svg') no-repeat;
+    width: 90px;
+    height: 90px;
+    background-size: 100%;
+    opacity: 0.5;
+}
+
 .page-user .apps .button_composicao {
     width: 90px;
     height: 90px;

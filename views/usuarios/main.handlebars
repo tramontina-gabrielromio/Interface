@@ -27,7 +27,7 @@
           <button onclick="abreGaveta(2)" id="botgav2" class="button_abregaveta">
             <p>2</p>
           </button>
-          <button onclick="exibeRetiradas(2)" sstyle="margin-left: 85px" id="resultgav2" class="button_resultgaveta_hidden"><p id="textgav2"></p></button>
+          <button onclick="exibeRetiradas(2)" style="margin-left: 85px" id="resultgav2" class="button_resultgaveta_hidden"><p id="textgav2"></p></button>
         </div>
         <div id="gav3" class="gaveta_button">
           <a href="/usuarios/gaveta3" id="viewgav3" class="button_viewgaveta_hidden" type="button"></a>
@@ -110,8 +110,9 @@
                 <p style="margin-top:0px">de Uso</p>
             </div>
             <div class="apps columns">
-                <button onclick="openCalc()" class="button_calculadora"></button>
-                <p>Calculadora</p>
+                <button onclick="enviaRelatorio()" class="button_relatorio"></button>
+                <p>Enviar</p>
+                <p style="margin-top:0px">Relatório</p>
             </div>
         </div>
           {{#if admin}}
@@ -147,7 +148,7 @@
               </div>
           {{else}}
             <div class="apps">
-              <div class="historico-resumido" style="margin-left: 10px">
+              <div class="historico-resumido" style="margin-left: 10px; margin-top: 15px">
                 <div class="lista-eventos">
                     <table id='Tabela4'>
                         <tr style="height:50px">
@@ -175,14 +176,6 @@
               </div>
             </div>
           {{/if}}
-          <div class="apps" style="margin-top: 65px; margin-right: 85px">
-            <button id="btnEnviarRelatorio" class="btn_relatorio" onclick="enviaRelatorio()" style="display:visible">
-              <p>Enviar relatório</p>
-            </button>
-            <div id="enviandoRelatorio" class="btn_relatorio" style="display:none">
-              <div class='relatorio_loader'></div>
-            </div>
-          </div>
       </div>
       <div id="demo" style="color:white"></div>
   </div>
