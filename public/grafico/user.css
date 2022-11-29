@@ -728,7 +728,7 @@
 }
 
 .page-user .apps .btn_relatorio {
-  background: url('../img/admin-menu-1.svg') no-repeat;
+  background: url('../img/fundo_btn.svg') no-repeat;
   width: 90px;
   height: 90px;
   justify-content: space-between;
@@ -737,7 +737,7 @@
 }
 
 .page-user .apps .btn_relatorio:active {
-  background: url('../img/admin-menu-1.svg') no-repeat;
+  background: url('../img/fundo_btn.svg') no-repeat;
   width: 90px;
   height: 90px;
   opacity: 0.5;
