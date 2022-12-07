@@ -23,19 +23,19 @@
           <div class="row">
             <p>Nome Completo</p>
             <div class="search-input big">
-              <input class="use-keyboard-input" type="text" name="nome" value="{{usuario.nome}}" required/>
+              <input spellcheck="false" class="use-keyboard-input" type="text" name="nome" value="{{usuario.nome}}" required/>
             </div>
           </div>
           <div class="row">
             <p>Setor</p>
             <div class="search-input big">
-              <input class="use-keyboard-input" type="text" name="setor" value="{{usuario.setor}}" required/>
+              <input spellcheck="false" class="use-keyboard-input" type="text" name="setor" value="{{usuario.setor}}" required/>
             </div>
           </div>
           <div class="row">
             <p>Login</p>
             <div class="search-input big">
-              <input class="use-keyboard-input" type="text" name="login" value="{{usuario.login}}" required/>
+              <input spellcheck="false" class="use-keyboard-input" type="text" name="login" value="{{usuario.login}}" required/>
             </div>
           </div>
           <div class="row">
@@ -47,7 +47,7 @@
           <div class="row">
             <p>Código do Cartão</p>
             <div class="search-input small" style="margin-left:-110px">
-              <input id="boxCartao" onclick='resetCartao()' type="text" name="rfid" value="{{usuario.rfid}}"/>
+              <input spellcheck="false" id="boxCartao" onclick='openRfid()' type="text" name="rfid" value="{{usuario.rfid}}" style="caret-color:transparent"/>
             </div>
           </div>
           <div class="row">
@@ -112,9 +112,28 @@
         </div>-->
       </div>
     </form>
+
+    <dialog id="dialogRfid" style="background: none; border: transparent">
+      <form method="dialog" >
+        <div class="janela-rfid">
+          <div class="contents" style="margin-top: 20px">
+            <div class="logoRfid"></div>
+          </div>
+          <div class="contents">
+            <p id="textFalhaCameras" style="margin-top: 20px">Aproxime o cartão do leitor</p>
+          </div>
+          <div class="contents" style="margin-top: 18px">
+            <button class="btns" onclick="closeRfid()">
+              <p>Cancelar</p>
+            </button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
     <script src="/socket.io/socket.io.js"></script>
     <script>
-      var _0x50e50e=_0x5624;(function(_0x258fba,_0x8919ba){var _0x1fbca3=_0x5624,_0x3df83e=_0x258fba();while(!![]){try{var _0x8297ca=parseInt(_0x1fbca3(0x1e1))/0x1*(parseInt(_0x1fbca3(0x1db))/0x2)+-parseInt(_0x1fbca3(0x1dd))/0x3*(parseInt(_0x1fbca3(0x1df))/0x4)+-parseInt(_0x1fbca3(0x1e5))/0x5*(parseInt(_0x1fbca3(0x1ee))/0x6)+parseInt(_0x1fbca3(0x1ea))/0x7*(parseInt(_0x1fbca3(0x1e4))/0x8)+-parseInt(_0x1fbca3(0x1e0))/0x9+-parseInt(_0x1fbca3(0x1e3))/0xa*(-parseInt(_0x1fbca3(0x1dc))/0xb)+-parseInt(_0x1fbca3(0x1d9))/0xc*(-parseInt(_0x1fbca3(0x1d8))/0xd);if(_0x8297ca===_0x8919ba)break;else _0x3df83e['push'](_0x3df83e['shift']());}catch(_0x154955){_0x3df83e['push'](_0x3df83e['shift']());}}}(_0x4759,0x71fb7),document[_0x50e50e(0x1ed)]('keydown',function(_0x1d1766){var _0x4c282b=_0x50e50e;_0x1d1766[_0x4c282b(0x1de)]==0xd&&_0x1d1766['preventDefault']();}));function _0x5624(_0x5158f2,_0x29d504){var _0x475948=_0x4759();return _0x5624=function(_0x56244b,_0x2558a5){_0x56244b=_0x56244b-0x1d8;var _0x3a2514=_0x475948[_0x56244b];return _0x3a2514;},_0x5624(_0x5158f2,_0x29d504);}function alteraAcessoGv(_0x5bf0e0){var _0x1e98d3=_0x50e50e;document['getElementById']('gv'+_0x5bf0e0)[_0x1e98d3(0x1eb)]==_0x1e98d3(0x1e9)?(document[_0x1e98d3(0x1da)]('gv'+_0x5bf0e0)[_0x1e98d3(0x1eb)]=_0x1e98d3(0x1e2),document[_0x1e98d3(0x1da)]('checkGV'+_0x5bf0e0)[_0x1e98d3(0x1e8)]='check'):(document[_0x1e98d3(0x1da)]('gv'+_0x5bf0e0)[_0x1e98d3(0x1eb)]='false',document[_0x1e98d3(0x1da)](_0x1e98d3(0x1ef)+_0x5bf0e0)['className']=_0x1e98d3(0x1e7));};function _0x4759(){var _0x148c1b=['6477201mByqlu','315niQguF','true','1474930TTZJTN','1078992ZAiiYa','5PTfzrF','boxCartao','not-check','className','false','42FSTwhw','value','boxSenha','addEventListener','3496476vyyyGj','checkGV','26gkHUof','3275268kmrpgl','getElementById','2934HuKhfG','66aXhfIy','2798637RnZXyS','keyCode','4aRayLu'];_0x4759=function(){return _0x148c1b;};return _0x4759();}function resetSenha(){var _0xc890d9=_0x50e50e;document[_0xc890d9(0x1da)](_0xc890d9(0x1ec))[_0xc890d9(0x1eb)]='';}function resetCartao(){var _0x100a8b=_0x50e50e;document['getElementById'](_0x100a8b(0x1e6))[_0x100a8b(0x1eb)]='';}
+	(function(_0x53e563,_0x26e74c){var _0x5680c1=_0x5749,_0x53e244=_0x53e563();while(!![]){try{var _0x1f1c2d=parseInt(_0x5680c1(0x7f))/0x1+-parseInt(_0x5680c1(0x7d))/0x2+parseInt(_0x5680c1(0x7b))/0x3*(parseInt(_0x5680c1(0x72))/0x4)+parseInt(_0x5680c1(0x70))/0x5*(-parseInt(_0x5680c1(0x75))/0x6)+parseInt(_0x5680c1(0x71))/0x7+-parseInt(_0x5680c1(0x6a))/0x8+-parseInt(_0x5680c1(0x6d))/0x9;if(_0x1f1c2d===_0x26e74c)break;else _0x53e244['push'](_0x53e244['shift']());}catch(_0xe0b4e3){_0x53e244['push'](_0x53e244['shift']());}}}(_0x46f1,0x57795));var rfidOpen=0x0;document['addEventListener']('keydown',function(_0x23aa89){var _0x58d897=_0x5749;rfidOpen==0x1&&(rfidOpen=0x0,document[_0x58d897(0x74)](_0x58d897(0x6c))[_0x58d897(0x7c)]()),_0x23aa89['keyCode']==0xd&&(_0x23aa89[_0x58d897(0x79)](),document[_0x58d897(0x74)]('boxCartao')[_0x58d897(0x78)]());});function openRfid(){var _0x30b655=_0x5749;rfidOpen=0x1,document[_0x30b655(0x74)]('boxCartao')['value']='',document[_0x30b655(0x74)]('dialogRfid')[_0x30b655(0x6f)]();}function closeRfid(){var _0x5756e8=_0x5749;rfidOpen=0x0,document[_0x5756e8(0x74)](_0x5756e8(0x6c))[_0x5756e8(0x7c)](),document[_0x5756e8(0x74)](_0x5756e8(0x73))[_0x5756e8(0x78)]();}function _0x5749(_0x420531,_0x1a830b){var _0x46f19a=_0x46f1();return _0x5749=function(_0x5749d4,_0x2fef95){_0x5749d4=_0x5749d4-0x6a;var _0x2cdf9c=_0x46f19a[_0x5749d4];return _0x2cdf9c;},_0x5749(_0x420531,_0x1a830b);}function _0x46f1(){var _0xd02f0b=['getElementById','24UVKLBu','checkGV','not-check','blur','preventDefault','className','426093DdzHHw','close','442508bNpbcm','value','291357nYXfWD','boxSenha','2106008ZtCvGF','false','dialogRfid','291816hJRLmP','true','showModal','829925psLiHQ','4757767qHGMzu','16AzmQMo','boxCartao'];_0x46f1=function(){return _0xd02f0b;};return _0x46f1();}function alteraAcessoGv(_0x5a0169){var _0x17adec=_0x5749;document[_0x17adec(0x74)]('gv'+_0x5a0169)['value']==_0x17adec(0x6b)?(document[_0x17adec(0x74)]('gv'+_0x5a0169)['value']=_0x17adec(0x6e),document[_0x17adec(0x74)]('checkGV'+_0x5a0169)[_0x17adec(0x7a)]='check'):(document[_0x17adec(0x74)]('gv'+_0x5a0169)[_0x17adec(0x7e)]='false',document[_0x17adec(0x74)](_0x17adec(0x76)+_0x5a0169)[_0x17adec(0x7a)]=_0x17adec(0x77));};function resetSenha(){var _0x552252=_0x5749;document[_0x552252(0x74)](_0x552252(0x80))[_0x552252(0x7e)]='';}
     </script>
   </body>
   <foot>

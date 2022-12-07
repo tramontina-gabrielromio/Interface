@@ -84,7 +84,7 @@
                         <div class="img"></div>
                       </div>
                       <div>
-                        <input class="use-keyboard-input" id="CampoBusca" type="text" name="toolSearch" placeholder="Buscar Ferramenta"></input>
+                        <input spellcheck="false" class="use-keyboard-input" id="CampoBusca" type="text" name="toolSearch" placeholder="Buscar Ferramenta"></input>
                       </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
       <div class="janela-gavetaTrancada">
         <div class="contents" style="margin-top: 40px; margin-left: 40px">
           <div class="error" style="margin-top: 20px"></div>
-          <p style="width: 520px">Falha ao enviar o relatório, verifique a conexão de rede e tente novamente.</p>
+          <p id="textFalhaEnviarRelatorio" style="width: 520px"></p>
         </div>
         <div class="contents" style="margin-top: 30px; margin-left: 424px">
           <button class="btns" onclick="fechaErroRelatorio()">
@@ -321,10 +321,16 @@
         document.getElementById('dialogRelatorioEnviado').showModal();
         document.getElementById("btnEnviarRelatorio").style = "display:visible";
         document.getElementById("enviandoRelatorio").style = "display:none";
-      }else{ //Falha ao emitir relatório
+      }else if(data==2){ //Falha ao emitir relatório - nenhum e-mail cadastrado
         document.getElementById('dialogErroRelatorio').showModal();
         document.getElementById("btnEnviarRelatorio").style = "display:visible";
         document.getElementById("enviandoRelatorio").style = "display:none";
+        document.getElementById('textFalhaEnviarRelatorio').innerHTML = "Não há nenhum e-mail válido cadastrado.";
+      }else{ //Falha ao emitir relatório - erro ao estabelecer conexão de rede
+        document.getElementById('dialogErroRelatorio').showModal();
+        document.getElementById("btnEnviarRelatorio").style = "display:visible";
+        document.getElementById("enviandoRelatorio").style = "display:none";
+        document.getElementById('textFalhaEnviarRelatorio').innerHTML = "Falha ao enviar o relatório, verifique a conexão de rede e tente novamente.";
       }
     })
 

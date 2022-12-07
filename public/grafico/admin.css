@@ -244,6 +244,63 @@
     margin-bottom: 15px;
 }
 
+/* ========== Janela leitor RFID ========== */
+
+.janela-rfid {
+  height:400px;
+  width:600px;
+  background-color: #FEFCF2;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.janela-rfid .contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.janela-rfid .contents p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 25px;
+  margin-left: 20px;
+  margin-top: 28px;
+  text-align: center;
+}
+
+.janela-rfid .contents .logoRfid {
+  width: 315px;
+  height: 192px;
+  background-image: url('../img/msg_rfid.svg');
+}
+
+.janela-rfid .contents .btns {
+  background: url('../img/button msg 224x64.svg') no-repeat;
+  width: 224px;
+  height: 64px;
+  margin-left: 20px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+}
+
+.janela-rfid .contents .btns:active {
+  background: url('../img/button msg 224x64.svg') no-repeat;
+  width: 224px;
+  height: 64px;
+  opacity: 0.5;
+}
+
+.janela-rfid .contents .btns p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: #FAEFC0;
+  margin: auto 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
 /* ========== Atualizacao do dispositivo ========== */
 .frame-update {
   flex-direction: row;

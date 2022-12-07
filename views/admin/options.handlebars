@@ -50,6 +50,13 @@
               </button>
             </div>
             <div>
+              <button onclick='editIdentificacao()' class="line">
+                <div class="line-l"><p>Identificação do dispositivo</p></div>
+                <div class="line-r"></div>
+                <div class="line-r"><div id="line-8" class="select"></div></div>
+              </button>
+            </div>
+            <div>
               <button onclick='telaAtualizacao()' class="line">
                 <div class="line-l"><p>Atualizações do dispositivo</p></div>
                 <div class="line-r"></div>
@@ -123,19 +130,28 @@
               <div style="align: center">
                 <div style="margin-top: 30px">
                   <p>E-mail 1:</p>
-                  <div class="search-input medium" autocomplete="off">
-                    <input autocomplete="off" id="boxEmail" value="{{configuracoes.email}}" onclick='resetEmail()' class="use-keyboard-input-null" type="email" style="text-align: center; font-size: 20px;"></input>
+                  <div id="divEmail1" class="search-input medium" autocomplete="off">
+                    <input spellcheck="false" autocomplete="off" id="boxEmail" value="{{configuracoes.email}}" class="use-keyboard-input" type="text" style="text-align: center; font-size: 20px;"></input>
+                  </div>
+                  <div class="email-invalido">
+                    <p id="msgEmail1"></p> 
                   </div>
                   <p>E-mail 2:</p>
-                  <div class="search-input medium" autocomplete="off">
-                    <input autocomplete="off" id="boxEmail2" value="{{configuracoes.email2}}" onclick='resetEmail2()' class="use-keyboard-input-null" type="email" style="text-align: center; font-size: 20px;"></input>
+                  <div id="divEmail2" class="search-input medium" autocomplete="off">
+                    <input spellcheck="false" autocomplete="off" id="boxEmail2" value="{{configuracoes.email2}}" class="use-keyboard-input" type="text" style="text-align: center; font-size: 20px;"></input>
+                  </div>
+                  <div class="email-invalido">
+                    <p id="msgEmail2"></p>
                   </div>
                   <p>E-mail 3:</p>
-                  <div class="search-input medium" autocomplete="off">
-                    <input autocomplete="off" id="boxEmail3" value="{{configuracoes.email3}}" onclick='resetEmail3()' class="use-keyboard-input-null" type="email" style="text-align: center; font-size: 20px;"></input>
+                  <div id="divEmail3" class="search-input medium" autocomplete="off">
+                    <input spellcheck="false" autocomplete="off" id="boxEmail3" value="{{configuracoes.email3}}" class="use-keyboard-input" type="text" style="text-align: center; font-size: 20px;"></input>
+                  </div>
+                  <div class="email-invalido">
+                    <p id="msgEmail3"></p> 
                   </div>
                 </div>
-                <div style="margin-top:30px; margin-left: 138px">
+                <div style="margin-top:30px; margin-left: 137px">
                   <button type="submit" class="btns" onclick="setEmail()">
                     <p>Confirmar</p>
                   </button>
@@ -208,6 +224,23 @@
               </div>
             </div>
           </div>
+          <div id='Tab8' style="display:none">
+            <div class='enterData'>
+              <div style="align: center">
+                <div style="margin-top: 143px">
+                  <p>Identifição:</p>
+                  <div class="search-input medium" autocomplete="off">
+                    <input spellcheck="false" autocomplete="off" id="boxIdentificacao" value="{{configuracoes.identificacao}}" class="use-keyboard-input" style="text-align: center; font-size: 20px;"></input>
+                  </div>
+                </div>
+                <div style="margin-top:30px; margin-left: 137px">
+                  <button type="submit" class="btns" onclick="setIdentificacao()">
+                    <p>Confirmar</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div id='Tab6' style="display:none">
             <div class='enterData'>
               <div style="align: left">
@@ -266,18 +299,20 @@
       var emailAtual = document.getElementById("boxEmail").value;
       var emailAtual2 = document.getElementById("boxEmail2").value;
       var emailAtual3 = document.getElementById("boxEmail3").value;
+      var identificacao = document.getElementById("boxIdentificacao").value;
       var strDesligamento = ['15 min', '30 min', '1 hora', '2 horas', 'Nunca']
       var strEncerrarSessao = ['1 min', '3 min', '5 min', '10 min', 'Nunca']
       //var mail = document.getElementById("email").innerHTML;
       //confEmail = document.getElementById("email").innerHTML;
 	  
-        document.getElementById("line-1").style = "display:none";
-        document.getElementById("line-2").style = "display:none";
-        document.getElementById("line-3").style = "display:none";
-        document.getElementById("line-4").style = "display:none";
-        document.getElementById("line-5").style = "display:none";
-        document.getElementById("line-6").style = "display:none";
-        document.getElementById("line-7").style = "display:none";
+      document.getElementById("line-1").style = "display:none";
+      document.getElementById("line-2").style = "display:none";
+      document.getElementById("line-3").style = "display:none";
+      document.getElementById("line-4").style = "display:none";
+      document.getElementById("line-5").style = "display:none";
+      document.getElementById("line-6").style = "display:none";
+      document.getElementById("line-7").style = "display:none";
+      document.getElementById("line-8").style = "display:none";
       
       editCheckEncerrarSessao(confEncerrarSessao)
 
@@ -314,6 +349,8 @@
         document.getElementById("line-6").style = "display:none";
         document.getElementById("Tab7").style = "display:none";
         document.getElementById("line-7").style = "display:none";
+        document.getElementById("Tab8").style = "display:none";
+        document.getElementById("line-8").style = "display:none";
       }
 
       function setFechamento(data){
@@ -365,6 +402,8 @@
         document.getElementById("line-6").style = "display:none";
         document.getElementById("Tab7").style = "display:none";
         document.getElementById("line-7").style = "display:none";
+        document.getElementById("Tab8").style = "display:none";
+        document.getElementById("line-8").style = "display:none";
       }
 
       function setDesligamento(data){
@@ -389,14 +428,20 @@
 
       function resetEmail(){
         document.getElementById("boxEmail").value = '';
+        document.getElementById("divEmail1").style = 'border: 1px solid #808080';
+        document.getElementById("msgEmail1").innerHTML = '';
       }
 
       function resetEmail2(){
         document.getElementById("boxEmail2").value = '';
+        document.getElementById("divEmail2").style = 'border: 1px solid #808080';
+        document.getElementById("msgEmail2").innerHTML = '';
       }
 
       function resetEmail3(){
         document.getElementById("boxEmail3").value = '';
+        document.getElementById("divEmail3").style = 'border: 1px solid #808080';
+        document.getElementById("msgEmail3").innerHTML = '';
       }
 
       function editEmail(){
@@ -404,6 +449,12 @@
         document.getElementById("boxEmail").value = emailAtual;
         document.getElementById("boxEmail2").value = emailAtual2;
         document.getElementById("boxEmail3").value = emailAtual3;
+        document.getElementById("divEmail1").style = 'border: 1px solid #808080';
+        document.getElementById("msgEmail1").innerHTML = '';
+        document.getElementById("divEmail2").style = 'border: 1px solid #808080';
+        document.getElementById("msgEmail2").innerHTML = '';
+        document.getElementById("divEmail3").style = 'border: 1px solid #808080';
+        document.getElementById("msgEmail3").innerHTML = ''
         document.getElementById("SelectOptions").style = "visibility:visible";
         document.getElementById("Tab1").style = "display:none";
         document.getElementById("line-1").style = "display:none";
@@ -419,6 +470,8 @@
         document.getElementById("line-6").style = "display:none";
         document.getElementById("Tab7").style = "display:none";
         document.getElementById("line-7").style = "display:none";
+        document.getElementById("Tab8").style = "display:none";
+        document.getElementById("line-8").style = "display:none";
       }
 
       function deletarRegistros(){
@@ -438,6 +491,8 @@
         document.getElementById("line-6").style = "display:none";
         document.getElementById("Tab7").style = "display:none";
         document.getElementById("line-7").style = "display:none";
+        document.getElementById("Tab8").style = "display:none";
+        document.getElementById("line-8").style = "display:none";
       }
 
       function telaAtualizacao(){
@@ -457,15 +512,66 @@
         document.getElementById("line-6").style = "display:visible";
         document.getElementById("Tab7").style = "display:none";
         document.getElementById("line-7").style = "display:none";
+        document.getElementById("Tab8").style = "display:none";
+        document.getElementById("line-8").style = "display:none";
+      }
+
+      function validarEmail(email){
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
       }
 
       function setEmail(){
         //confEmail = document.getElementById("email").value
         //document.getElementById("email").innerHTML = document.getElementById("boxEmail").value;
+        var email1Valido = validarEmail(document.getElementById("boxEmail").value)==1 || document.getElementById("boxEmail").value == "";
+        var email2Valido = validarEmail(document.getElementById("boxEmail2").value)==1 || document.getElementById("boxEmail2").value == "";
+        var email3Valido = validarEmail(document.getElementById("boxEmail3").value)==1 || document.getElementById("boxEmail3").value == "";
+        if(email1Valido && email2Valido && email3Valido){
+          setTimeout(function(){
+            document.getElementById("SelectOptions").style = "visibility:hidden";
+            document.getElementById("Tab3").style = "display:none";
+            document.getElementById("line-3").style = "display:none";
+            document.getElementById("divEmail1").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail1").innerHTML = '';
+            document.getElementById("divEmail2").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail2").innerHTML = '';
+            document.getElementById("divEmail3").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail3").innerHTML = '';}, 100)
+          salvaConfig();
+        }else{
+          if(email1Valido==0){
+            document.getElementById("divEmail1").style = 'border: 1px solid red';
+            document.getElementById("msgEmail1").innerHTML = 'E-mail inválido';
+            document.getElementById("divEmail2").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail2").innerHTML = '';
+            document.getElementById("divEmail3").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail3").innerHTML = '';
+          }
+          if(email2Valido==0){
+            document.getElementById("divEmail1").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail1").innerHTML = '';
+            document.getElementById("divEmail2").style = 'border: 1px solid red';
+            document.getElementById("msgEmail2").innerHTML = 'E-mail inválido';
+            document.getElementById("divEmail3").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail3").innerHTML = '';
+          }
+          if(email3Valido==0){
+            document.getElementById("divEmail1").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail1").innerHTML = '';
+            document.getElementById("divEmail2").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail2").innerHTML = '';
+            document.getElementById("divEmail3").style = 'border: 1px solid red';
+            document.getElementById("msgEmail3").innerHTML = 'E-mail inválido';
+          }
+        }
+      }
+
+      function setIdentificacao(){
         setTimeout(function(){
           document.getElementById("SelectOptions").style = "visibility:hidden"
-          document.getElementById("Tab3").style = "display:none"
-          document.getElementById("line-3").style = "display:none";}, 100)
+          document.getElementById("Tab8").style = "display:none"
+          document.getElementById("line-8").style = "display:none";}, 100)
         salvaConfig();
       }
 
@@ -473,10 +579,12 @@
         var confEmail = document.getElementById("boxEmail").value
         var confEmail2 = document.getElementById("boxEmail2").value
         var confEmail3 = document.getElementById("boxEmail3").value
+        var confIdentificacao = document.getElementById("boxIdentificacao").value
         emailAtual = confEmail
         emailAtual2 = confEmail2
         emailAtual3 = confEmail3
-        socket.emit('salvaConfiguracoes', confFechamento, confCartao, confDesligamento, confEmail, confEmail2, confEmail3, confEncerrarSessao)
+        identificacao = confIdentificacao
+        socket.emit('salvaConfiguracoes', confFechamento, confCartao, confDesligamento, confEmail, confEmail2, confEmail3, confIdentificacao, confEncerrarSessao)
       }
 
       function excluirRegistros(data){
@@ -508,6 +616,8 @@
         document.getElementById("line-6").style = "display:none";
         document.getElementById("Tab7").style = "display:visible";
         document.getElementById("line-7").style = "display:visible";
+        document.getElementById("Tab8").style = "display:none";
+        document.getElementById("line-8").style = "display:none";
       }
 
       function setEncerrarSessao(data){
@@ -530,6 +640,27 @@
         document.getElementById("encer["+data+"]").style = "display:visible";
       }
 
+      function editIdentificacao(){
+        document.getElementById("boxIdentificacao").value = identificacao;
+        document.getElementById("SelectOptions").style = "visibility:visible";
+        document.getElementById("Tab1").style = "display:none";
+        document.getElementById("line-1").style = "display:none";
+        document.getElementById("Tab2").style = "display:none"; 
+        document.getElementById("line-2").style = "display:none";
+        document.getElementById("Tab3").style = "display:none";
+        document.getElementById("line-3").style = "display:none";
+        document.getElementById("Tab4").style = "display:none";
+        document.getElementById("line-4").style = "display:none";
+        document.getElementById("Tab5").style = "display:none";
+        document.getElementById("line-5").style = "display:none";
+        document.getElementById("Tab6").style = "display:none";
+        document.getElementById("line-6").style = "display:none";
+        document.getElementById("Tab7").style = "display:none";
+        document.getElementById("line-7").style = "display:none";
+        document.getElementById("Tab8").style = "display:visible";
+        document.getElementById("line-8").style = "display:visible";
+      }
+
       //function atualizarDispositivo(){
       //  socket.emit('auxAtualizaDispositivo')
       //}
@@ -541,6 +672,7 @@
       document.getElementById("line-5").style = "display:none";
       document.getElementById("line-6").style = "display:none";
       document.getElementById("line-7").style = "display:none";
+      document.getElementById("line-8").style = "display:none";
 
 
       // ===== Configurações de data e hora =====
@@ -581,6 +713,8 @@
         document.getElementById("line-6").style = "display:none";
         document.getElementById("Tab7").style = "display:none";
         document.getElementById("line-7").style = "display:none";
+        document.getElementById("Tab8").style = "display:none";
+        document.getElementById("line-8").style = "display:none";
       }
 
       function up_dia(){

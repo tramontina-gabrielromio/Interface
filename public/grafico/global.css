@@ -1115,15 +1115,28 @@
 }
 
 .search-table2 .c_loader {
-  animation: is-rotating 1.5s linear infinite;
-  border: 6px solid #FAEFC0;
-  border-radius: 50%;
-  border-top-color: #F37021;
-  background-color: transparent;
-  margin-top: 12px;
-  margin-left: 94px;
-  height: 40px;
-  width: 40px;
+    animation: is-rotating 1.5s linear infinite;
+    border: 6px solid #FAEFC0;
+    border-radius: 50%;
+    border-top-color: #F37021;
+    background-color: transparent;
+    margin-top: 12px;
+    margin-left: 94px;
+    height: 40px;
+    width: 40px;
+}
+
+.search-table2 .second-column .enterData .email-invalido {
+    width: 500px;
+    height: 0px;
+}
+
+.search-table2 .second-column .enterData .email-invalido p{
+    color: red;
+    margin-top: 0px;
+    margin-right: 300px;
+    width: 500px;
+    text-align: right;
 }
 
 .search-table2 .c_loader p{

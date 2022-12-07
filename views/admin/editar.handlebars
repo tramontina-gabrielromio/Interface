@@ -24,19 +24,19 @@
           <div class="row">
             <p>Nome Completo</p>
             <div class="search-input big">
-              <input class="use-keyboard-input" type="text" name="nome" value="{{usuario.nome}}" required/>
+              <input spellcheck="false" class="use-keyboard-input" type="text" name="nome" value="{{usuario.nome}}" required/>
             </div>
           </div>
           <div class="row">
             <p>Setor</p>
             <div class="search-input big">
-              <input class="use-keyboard-input" type="text" name="setor" value="{{usuario.setor}}" required/>
+              <input spellcheck="false" class="use-keyboard-input" type="text" name="setor" value="{{usuario.setor}}" required/>
             </div>
           </div>
           <div class="row">
             <p>Login</p>
             <div class="search-input big">
-              <input class="use-keyboard-input" type="text" name="login" value="{{usuario.login}}" required/>
+              <input spellcheck="false" class="use-keyboard-input" type="text" name="login" value="{{usuario.login}}" required/>
             </div>
           </div>
           <div class="row">
@@ -48,7 +48,7 @@
           <div class="row">
             <p>Código do Cartão</p>
             <div class="search-input small" style="margin-left:-110px">
-              <input id="boxCartao" onclick='resetCartao()' type="text" name="rfid" value="{{usuario.rfid}}"/>
+              <input spellcheck="false" id="boxCartao" onclick='openRfid()' type="text" name="rfid" value="{{usuario.rfid}}" style="caret-color:transparent"/>
             </div>
           </div>
           <div id="selectGavetas" class="row">
@@ -102,13 +102,57 @@
         </div>
       </div>
     </form>
+
+    <dialog id="dialogRfid" style="background: none; border: transparent">
+      <form method="dialog" >
+        <div class="janela-rfid">
+          <div class="contents" style="margin-top: 20px">
+            <div class="logoRfid"></div>
+          </div>
+          <div class="contents">
+            <p id="textFalhaCameras" style="margin-top: 20px">Aproxime o cartão do leitor</p>
+          </div>
+          <div class="contents" style="margin-top: 18px">
+            <button class="btns" onclick="closeRfid()">
+              <p>Cancelar</p>
+            </button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
     <script src="/socket.io/socket.io.js"></script>
     <script>
+      var rfidOpen = 0
+      
       document.addEventListener("keydown", function(e){ //Prevenir o "enter" ao ler cartão rfid
+        if(rfidOpen == 1){
+          rfidOpen = 0;
+          document.getElementById('dialogRfid').close();
+        }
         if(e.keyCode == 13){
           e.preventDefault();
+          document.getElementById('boxCartao').blur();
         }
       })
+
+      function openRfid(){
+        rfidOpen = 1;
+        document.getElementById("boxCartao").value = '';
+        document.getElementById('dialogRfid').showModal();
+      }
+
+      function closeRfid(){
+        rfidOpen = 0;
+        document.getElementById('dialogRfid').close();
+        document.getElementById('boxCartao').blur();
+      }
+
+      //document.addEventListener("keydown", function(e){ //Prevenir o "enter" ao ler cartão rfid
+      //  if(e.keyCode == 13){
+      //    e.preventDefault();
+      //  }
+      //})
       
       if ({{usuario.nivel}}!='0'){
         document.getElementById('selectGavetas').style = "display:none";
@@ -137,13 +181,13 @@
         }
       };
 	  
-	  function resetSenha(){
+	    function resetSenha(){
         document.getElementById("boxSenha").value = '';
       }
 	  
-	  function resetCartao(){
-        document.getElementById("boxCartao").value = '';
-      }
+	    //function resetCartao(){
+      //  document.getElementById("boxCartao").value = '';
+      //}
     </script>
   </body>
   <foot>
