@@ -543,26 +543,26 @@
           if(email1Valido==0){
             document.getElementById("divEmail1").style = 'border: 1px solid red';
             document.getElementById("msgEmail1").innerHTML = 'E-mail inválido';
-            document.getElementById("divEmail2").style = 'border: 1px solid #808080';
-            document.getElementById("msgEmail2").innerHTML = '';
-            document.getElementById("divEmail3").style = 'border: 1px solid #808080';
-            document.getElementById("msgEmail3").innerHTML = '';
+          }
+          else{
+            document.getElementById("divEmail1").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail1").innerHTML = '';
           }
           if(email2Valido==0){
-            document.getElementById("divEmail1").style = 'border: 1px solid #808080';
-            document.getElementById("msgEmail1").innerHTML = '';
             document.getElementById("divEmail2").style = 'border: 1px solid red';
             document.getElementById("msgEmail2").innerHTML = 'E-mail inválido';
-            document.getElementById("divEmail3").style = 'border: 1px solid #808080';
-            document.getElementById("msgEmail3").innerHTML = '';
           }
-          if(email3Valido==0){
-            document.getElementById("divEmail1").style = 'border: 1px solid #808080';
-            document.getElementById("msgEmail1").innerHTML = '';
+          else{
             document.getElementById("divEmail2").style = 'border: 1px solid #808080';
             document.getElementById("msgEmail2").innerHTML = '';
+          }
+          if(email3Valido==0){
             document.getElementById("divEmail3").style = 'border: 1px solid red';
             document.getElementById("msgEmail3").innerHTML = 'E-mail inválido';
+          }
+          else{
+            document.getElementById("divEmail3").style = 'border: 1px solid #808080';
+            document.getElementById("msgEmail3").innerHTML = '';
           }
         }
       }
