@@ -17,13 +17,13 @@
           {{#each usuarios}}
             {{#if nivel}}
             <div>
-              <a href="/usuarios/login/{{nome}}"><button class="btn btn-admin" style="color:#FAEFC0; font-size:20px; font-family:Coda">
+              <a href="/usuarios/login/{{login}}"><button class="btn btn-admin" style="color:#FAEFC0; font-size:20px; font-family:Coda">
                 {{login}}
               </button></a>
             </div>
             {{else}}
             <div>
-              <a href="/usuarios/login/{{nome}}"><button class="btn btn-user" style="color:#FAEFC0; font-size:20px; font-family:Coda">
+              <a href="/usuarios/login/{{login}}"><button class="btn btn-user" style="color:#FAEFC0; font-size:20px; font-family:Coda">
                 {{login}}
               </button></a>
             </div>
@@ -33,7 +33,7 @@
       </div>
     </div>
     <form action="/usuarios/loginrfid" method="POST" autocomplete="off">
-      <input class="input-hidden" onkeypress="resetInput()" name="nome" id="inputLogin" onblur="this.focus()" autofocus></input>
+      <input class="input-hidden" onkeypress="resetInput()" name="login" id="inputLogin" onblur="this.focus()" autofocus></input>
           <input id="pass" type="hidden" name="senha" value="0"></input>
       <button id="btn_submit" type="submit" style="background: none; border: none"></button>
     </form>

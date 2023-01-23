@@ -1283,6 +1283,178 @@
   text-align: center;
 }
 
+/* ========== Janela para confirmar exclusao ========== */
+.janela-confirmaRestauracao {
+  height:280px;
+  width:700px;
+  background-color: #FEFCF2;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.janela-confirmaRestauracao .contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.janela-confirmaRestauracao .contents p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 25px;
+  margin-left: 20px;
+  margin-top: 28px;
+  text-align: center;
+}
+
+.janela-confirmaRestauracao .contents .atencao {
+  width: 96px;
+  height: 96px;
+  background-image: url('../img/alert.svg');
+}
+
+.janela-confirmaRestauracao .contents .btns {
+  background: url('../img/button msg 224x64.svg') no-repeat;
+  width: 224px;
+  height: 64px;
+  margin-left: 20px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+}
+
+.janela-confirmaRestauracao .contents .btns:active {
+  background: url('../img/button msg 224x64.svg') no-repeat;
+  width: 224px;
+  height: 64px;
+  opacity: 0.5;
+}
+
+.janela-confirmaRestauracao .contents .btns p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: #FAEFC0;
+  margin: auto 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* ========== Tela de opções de sistema ========== */
+
+.bg-confirmacao .janela-systemoptions {
+  height:510px;
+  width:610px;
+  background-color: #FEFCF2;
+  border: 1px solid #FAEFC0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-confirmacao .janela-systemoptions .contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-right: 80px;
+}
+
+.bg-confirmacao .janela-systemoptions .contents p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.bg-confirmacao .janela-systemoptions .contents .question {
+  width: 96px;
+  height: 96px;
+  margin-left: 0px;
+  display: flex;
+  background-color: transparent;
+  border: transparent;
+  background-image: url('../img/question.svg');
+}
+
+.bg-confirmacao .janela-systemoptions .contents .btns {
+  background: url('../img/button msg 224x64.svg') no-repeat;
+  width: 224px;
+  height: 64px;
+  margin-left: 20px;
+  margin-top: -10px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+}
+
+.bg-confirmacao .janela-systemoptions .contents .btns:active {
+  background: url('../img/button msg 224x64.svg') no-repeat;
+  width: 224px;
+  height: 64px;
+  opacity: 0.5;
+}
+
+.bg-confirmacao .janela-systemoptions .contents .btns p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: #FAEFC0;
+  margin: auto 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* ========== Tela de login bloqueado ========== */
+.bg-loginblocked {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-loginblocked .janela-timer {
+  height:280px;
+  width:700px;
+  background-color: #FEFCF2;
+  border: 1px solid #FAEFC0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-loginblocked .janela-timer .contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bg-loginblocked .janela-timer .contents .error {
+  width: 96px;
+  height: 96px;
+  background-image: url('../img/error msg 96x96.svg');
+}
+
+.bg-loginblocked .janela-timer .contents p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 25px; 
+  width: 520px; 
+  margin-left: 20px;
+}
+
+.bg-loginblocked .janela-timer .timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg-loginblocked .janela-timer .timer p {
+  font-family: 'Coda', Arial, Helvetica, sans-serif;
+  color: red;
+  font-size: 40px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 /* ========== Tabela 1 ========== */
 #Tabela1{
   width:1192px;

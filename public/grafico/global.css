@@ -1165,6 +1165,21 @@
   font-size: 22px;
 }
 
+.errorOptions {
+  margin-top: 20px;
+  margin-left: 0;
+  width: 100%;
+  height: 50px;
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+}
+
 /* ========== Teclado Virtual ========== */
 .keyboard {
     position: fixed;

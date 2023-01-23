@@ -5,23 +5,69 @@
   </head>
   <body>
     <div class="bg-confirmacao">
-      <div class="janela-confirmacao">
-        <div class="contents" style="margin-top: 80px">
-          <div class="question" style="margin-left: 30px"></div>
+      <div class="janela-systemoptions">
+        <div class="contents" style="margin-top: 20px">
+          <!--<div class="question" style="margin-left: 30px"></div>-->
           <div style="margin-left: 20px">
-            <p>Deseja iniciar o sistema sem estar completamente carregado?</p>
+            <p style="width: 520px">Iniciar o sistema sem carregar as redes neurais</p>
           </div>
         </div>
-        <div class="contents" style="margin-top: 85px; margin-left: 190px">
-          <a href="/"><button class="btns">
-            <p>Não</p>
-          </button></a>
+        <div class="contents" style="margin-top: 0px; margin-left: 190px">
           <a href="/usuarios"><button class="btns">
-            <p>Sim</p>
+            <p>Confirmar</p>
+          </button></a>
+        </div>
+        <div class="contents" style="margin-top: 20px">
+          <div style="margin-left: 20px">
+            <p style="width: 520px">Iniciar o sistema como usuário técnico Tramontina</p>
+          </div>
+        </div>
+        <div class="contents" style="margin-top: 0px; margin-left: 190px">
+          <a href="/usuarios/login/TecTramontina"><button class="btns">
+            <p>Confirmar</p>
+          </button></a>
+        </div>
+        <div class="contents" style="margin-top: 20px">
+          <div style="margin-left: 20px">
+            <p style="width: 520px">Restaurar o sistema original de fábrica</p>
+          </div>
+        </div>
+        <div class="contents" style="margin-top: 0px; margin-left: 190px">
+          <button class="btns" onclick='auxConfirmaRestauracao()'>
+            <p>Confirmar</p>
+          </button>
+        </div>
+        <div class="contents" style="margin-top: 52px; margin-right: 9px">
+          <a href="/"><button class="btns">
+            <p>Cancelar</p>
           </button></a>
         </div>
       </div>
     </div>
+
+    <dialog id="dialogConfirmaRestauracao" style="background: none; border: transparent">
+      <form method="dialog">
+        <div class="janela-confirmaRestauracao">
+          <div class="contents" style="margin-top: 40px; margin-left: 30px">
+            <div class="atencao"  style="margin-top: 20px"></div>
+            <p style="width: 520px">Tem certeza de que deseja restaurar o sistema?</p>
+          </div>
+          <div class="contents" style="margin-top: 30px; margin-left: 180px">
+            <button class="btns" onclick="confirmaRestauracao()">
+              <p>Confirmar</p>
+            </button>
+            <button class="btns" onclick="fechaDialogRestauracao()">
+              <p>Cancelar</p>
+            </button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      function _0x4c54(_0x50b9f9,_0x41da66){var _0x42b863=_0x42b8();return _0x4c54=function(_0x4c546a,_0x2c5640){_0x4c546a=_0x4c546a-0x16e;var _0x5674c6=_0x42b863[_0x4c546a];return _0x5674c6;},_0x4c54(_0x50b9f9,_0x41da66);}var _0x19077c=_0x4c54;function _0x42b8(){var _0xc61ccb=['406rsMSlJ','showModal','close','/restaurar','dialogConfirmaRestauracao','839000tUOLXS','5381UeZoCM','emit','6XHjMgC','restauraSistema','910sNTEEM','266rKiPll','17410811KEELiA','2681820ycoLlf','connect','105064YPoZXf','49671sNYqUH','location','3930790iWcUql','getElementById'];_0x42b8=function(){return _0xc61ccb;};return _0x42b8();}(function(_0x1d1e5f,_0x3b29c6){var _0x99618d=_0x4c54,_0x50d935=_0x1d1e5f();while(!![]){try{var _0x3b703b=parseInt(_0x99618d(0x178))/0x1*(-parseInt(_0x99618d(0x172))/0x2)+-parseInt(_0x99618d(0x17f))/0x3+parseInt(_0x99618d(0x177))/0x4+parseInt(_0x99618d(0x170))/0x5*(parseInt(_0x99618d(0x17a))/0x6)+parseInt(_0x99618d(0x17d))/0x7*(parseInt(_0x99618d(0x181))/0x8)+-parseInt(_0x99618d(0x16e))/0x9*(parseInt(_0x99618d(0x17c))/0xa)+parseInt(_0x99618d(0x17e))/0xb;if(_0x3b703b===_0x3b29c6)break;else _0x50d935['push'](_0x50d935['shift']());}catch(_0x1f48ad){_0x50d935['push'](_0x50d935['shift']());}}}(_0x42b8,0x8fdc3));var socket=io[_0x19077c(0x180)]();function auxConfirmaRestauracao(){var _0x4ad867=_0x19077c;document['getElementById'](_0x4ad867(0x176))[_0x4ad867(0x173)]();}function confirmaRestauracao(){var _0x12eade=_0x19077c;socket[_0x12eade(0x179)](_0x12eade(0x17b)),window[_0x12eade(0x16f)]=_0x12eade(0x175);}function fechaDialogRestauracao(){var _0x23b81c=_0x19077c;document[_0x23b81c(0x171)](_0x23b81c(0x176))[_0x23b81c(0x174)]();}
+    </script>
   </body>
   <foot>
   </foot>
