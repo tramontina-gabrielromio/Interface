@@ -570,7 +570,7 @@
     display: flex;
 }
 
-.search-table1 .second-column .btns:active {
+.search-table1 .second-column .btns:focus {
     background: url('../img/button-opacity-default-281.svg') no-repeat;
     width: 281px;
     height: 65px;
@@ -608,7 +608,7 @@
     background-size: auto 50%;
 }
 
-.search-table1 .button-132 .zoom-gaveta:active {
+.search-table1 .button-132 .zoom-gaveta:focus {
     background: url('../img/cabinet-tool-search-2.svg') no-repeat;
     width: 132px;
     height: 66px;
@@ -822,7 +822,7 @@
     display: flex;
 }
 
-.search-table2 .first-column .conexaoAtual .btns:active {
+.search-table2 .first-column .conexaoAtual .btns:focus {
     background: url('../img/button msg 224x64.svg') no-repeat;
     width: 224px;
     height: 64px;
@@ -859,7 +859,7 @@
     display: flex;
 }
 
-.search-table2 .first-column .frameReload .btns_reload:active {
+.search-table2 .first-column .frameReload .btns_reload:focus {
     background: url('../img/button msg 224x64.svg') no-repeat;
     width: 224px;
     height: 64px;
@@ -891,6 +891,16 @@
 .search-table2 .first-column .conexaoAtual p {
     font-family: 'Coda', Arial, Helvetica, sans-serif;
     color: black;
+    margin: auto 0px;
+    margin-left: 0;
+    margin-top: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+.search-table2 .first-column .enderecoMac {
+    font-family: 'Coda', Arial, Helvetica, sans-serif;
+    color: white;
     margin: auto 0px;
     margin-left: 0;
     margin-top: 2px;
@@ -1114,6 +1124,37 @@
     outline:0;
 }
 
+.search-table2 .second-column .enterData .show-password {
+    width: 100%;
+    height: 46px;
+    background-color: #FEFCF2;
+    border: none;
+    margin-left: 0px;
+    margin-top: 1px;
+    display: flex;
+}
+
+.search-table2 .second-column .enterData .show-password .checkbox {
+    border: 1px solid #808080;
+    background: white;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 15px;
+    display: flex;
+}
+
+.search-table2 .second-column .enterData .show-password .checkbox .selected {
+    background: url('../img/Checkmark.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    display: flex;
+    margin-top:4px;
+    margin-left: -3px;
+    margin-right: -4px;
+}
+
 .search-table2 .c_loader {
     animation: is-rotating 1.5s linear infinite;
     border: 6px solid #FAEFC0;
@@ -1224,7 +1265,7 @@
     position: relative;
 }
 
-.keyboard__key:active {
+.keyboard__key:focus {
     background: rgba(255, 255, 255, 0.3);
 }
 
@@ -1299,7 +1340,7 @@
     position: relative;
 }
 
-.numpad__key:active {
+.numpad__key:focus {
     background: rgba(255, 255, 255, 0.3);
 }
 

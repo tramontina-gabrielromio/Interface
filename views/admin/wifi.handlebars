@@ -79,6 +79,7 @@
             </div>
           </div>
         </div>
+        <div class="enderecoMAC" align="right" style="color:#FAEFC0">MAC: {{mac}}</div>
       </div>
       <div id="wifiConnect" class="second-column" style="visibility:hidden">
         <div class='enterData'>
@@ -95,8 +96,14 @@
               <div class="search-input small">
                 <input id="boxPassword" class="use-keyboard-input" type="password" name="senha" style="text-align: center"/>
               </div>
+              <div class="show-password">
+                <button class="checkbox" onclick="showPassword()">
+                  <div id="check-password"></div>
+                </button>
+                <p>Mostrar senha</p>
+              </div>
             </div>
-            <div style="margin-top:30px; margin-left: 65px">
+            <div style="margin-top:20px; margin-left: 65px">
               <button id="connectSubmit" type="submit" class="btns" onclick="connect()" style="display:visible">
                 <p>Conectar</p>
               </button>
@@ -113,7 +120,10 @@
       var socket = io.connect();
       var tabela = document.getElementById("Tabela2");
       var linhas = tabela.getElementsByTagName("tr");
+      var senhaOculta = 1;
       document.getElementById("errorConnect").value = "";
+
+      //document.getElementById("boxPassword").type = "password";
 
       if({{conectado}}){
         document.getElementById("frameTabela1").style = "display:visible";
@@ -150,9 +160,12 @@
         linha.classList.toggle("selecionado");
         var selecionado = tabela.getElementsByClassName("selecionado")[0];
         selecionado = selecionado.getElementsByTagName("td");
+        document.getElementById("boxPassword").type = "password";
+        senhaOculta=1;
         document.getElementById("wifiConnect").style = "visibility:visible";
         document.getElementById("boxSsid").value = selecionado[0].innerHTML;
         document.getElementById("boxPassword").value = "";
+        document.getElementById("check-password").className = "";
         document.getElementById("errorConnect").style = "display:none";
         if ((selecionado[1].innerHTML)==''){
           document.getElementById("insertPassword").style = "visibility:hidden";
@@ -176,6 +189,24 @@
 
       function reload(){
         location.reload();
+      }
+
+      function showPassword(){
+        const end = document.getElementById("boxPassword").value.length;
+        if (senhaOculta==1){
+          document.getElementById("boxPassword").type = "";
+          senhaOculta=0;
+          document.getElementById("boxPassword").focus();
+          document.getElementById("boxPassword").setSelectionRange(end,end);
+          document.getElementById("check-password").className = "selected";
+        }
+        else{
+          document.getElementById("boxPassword").type = "password";
+          senhaOculta=1;
+          document.getElementById("boxPassword").focus();
+          document.getElementById("boxPassword").setSelectionRange(end,end);
+          document.getElementById("check-password").className = "";
+        }
       }
 
       socket.on('resultadoConexao', function(data, codError){

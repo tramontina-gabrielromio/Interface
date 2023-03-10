@@ -736,7 +736,7 @@
   display: flex;
 }
 
-.page-user .apps .btn_relatorio:active {
+.page-user .apps .btn_relatorio:focus {
   background: url('../img/fundo_btn.svg') no-repeat;
   width: 90px;
   height: 90px;
