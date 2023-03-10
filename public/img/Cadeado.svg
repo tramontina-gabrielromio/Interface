@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 136 136"><defs><style>.cls-1{fill:#faefc0;}</style><symbol id="Bloquear" viewBox="0 0 50 63.88"><path class="cls-1" d="M48,31.88h-5v-14.02h0C42.92,7.99,34.89,0,25,0S7.08,7.99,7.01,17.86h0v14.02H2c-1.1,0-2,.9-2,2v28c0,1.1,.9,2,2,2H48c1.1,0,2-.9,2-2v-28c0-1.1-.9-2-2-2ZM14,17.86s0,.04,0,.05c.04-6.02,4.98-10.92,10.99-10.92s10.95,4.9,10.99,10.92c0-.02,0-.04,0-.05v14.02H14v-14.02Zm14.76,35.08h-7.53l2.42-7.04c-1.54-.55-2.65-2.01-2.65-3.74,0-2.21,1.79-3.99,3.99-3.99s3.99,1.79,3.99,3.99c0,1.73-1.11,3.19-2.65,3.74l2.42,7.04Z"/></symbol></defs><use width="50" height="63.88" transform="translate(31.92 22.54) scale(1.44 1.42)" xlink:href="#Bloquear"/></svg>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+<g id="XMLID_509_">
+	<path id="XMLID_510_" d="M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85
+		S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15
+		s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25
+		C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
