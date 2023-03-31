@@ -19,12 +19,15 @@
               <div id='Tabela1'>
                 <div class="conexaoAtual">
                   {{#each network}}
-                  <div class="wifi_{{signal_level}}" style="margin-top: 70px; height: 90px; width: 90px"></div>
+                  <div class="wifi_{{signal_level}}" style="margin-top: 60px; height: 90px; width: 90px"></div>
                   <div style="margin-top: 20px; font-size:25px">
                     <p>{{ssid}}</p>
                   </div>
                   <div style="margin-top: -10px; font-size:20px">
                     <p>conectado</p>
+                  </div>
+                  <div style="height: 50px">
+                    <p id="enderecoIP" style="margin-top: 10px; font-size:25px"></p>
                   </div>
                   <div style="margin-top: 10px; font-size:25px; flex-direction: row; display: flex">
                     <div class="cadeado"></div>
@@ -94,7 +97,7 @@
             <div id="insertPassword">
               <p>Senha:</p>
               <div class="search-input small">
-                <input id="boxPassword" class="use-keyboard-input" type="password" name="senha" style="text-align: center"/>
+                <input id="boxPassword" spellcheck="false" class="use-keyboard-input" type="password" name="senha" style="text-align: center"/>
               </div>
               <div class="show-password">
                 <button class="checkbox" onclick="showPassword()">
@@ -208,6 +211,10 @@
           document.getElementById("check-password").className = "";
         }
       }
+      verificaIP()
+      function verificaIP(){
+        socket.emit('verificaIP')
+      }
 
       socket.on('resultadoConexao', function(data, codError){
         if(data==1){ //Recarrega a página
@@ -225,6 +232,10 @@
           document.getElementById("errorConnect").style = "display:visible";
           document.getElementById("errorConnect").innerHTML = "Erro ao estabelecer a conexão";
         }
+      })
+
+      socket.on('retornaIP', function(enderecoIP){
+        document.getElementById("enderecoIP").innerHTML = "IP: " + enderecoIP;
       })
 
       socket.on('Desconectado', function(){
