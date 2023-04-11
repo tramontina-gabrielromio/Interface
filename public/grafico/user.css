@@ -35,9 +35,9 @@
 }
 
 .page-user .imagem_manual {
-    margin-top: 30px;
-    width: 889px;
-    height: 500px;
+    margin-top: 0px;
+    width: 989px;
+    height: 700px;
     border: 1px solid #FAEFC0;
     background-color: transparent;
     background-size: 100%;
@@ -85,6 +85,26 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
+}
+
+.img-zoom-container {
+  position: relative;
+  display: flex;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 200px;
+  height: 265px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 400px;
+  height: 530px;
 }
 
 /*.page-user .btn_up {
