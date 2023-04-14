@@ -34,6 +34,20 @@
     background-size: auto 100%;
 }
 
+.page-user .xyFerramenta {
+  background-color:red;
+  opacity: 75%;
+  border:3px solid red;
+  position:absolute;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50%{
+    opacity: 0.25;
+  }
+}
+
 .page-user .imagem_manual {
     margin-top: 0px;
     width: 989px;

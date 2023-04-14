@@ -15,7 +15,12 @@
   <div class="page-user" id="frame-main">
     <div style="margin-left: 100px">
       <div id="titulo" class="title"></div>
-      <div class="imagem_gaveta" style="background-image: url('../imgTools/Gaveta {{gaveta}}.png')"></div>
+      <div style="position: relative" id="testeretangulo">
+        <div class="imagem_gaveta" style="background-image: url('../imgTools/Gaveta {{gaveta}}.png')"></div>
+        {{#each arrayPosRemovidas}}
+          <div class="xyFerramenta" style="left:{{left}}px;top:{{top}}px;width:{{width}}px;height:{{height}}px"></div>
+        {{/each}}
+      </div>
       <div class="page-user" style="margin-top: 33px">
         <!--<form action="/usuarios/gaveta" method="POST">
           <input type=hidden name="gav" id="inputGaveta_up"></input>
@@ -98,13 +103,13 @@
     </form>
   </dialog>
 </body>
-<script  src="/socket.io/socket.io.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 <script>
   var socket = io.connect();
   var estadoGV='F';
   var gavetaAtual = {{gaveta}}
   var pgRetorno = {{pgBack}}
-
+  
   document.getElementById('titulo').innerHTML = "Gaveta " + gavetaAtual;
 
   socket.emit('estadoGavetas');
